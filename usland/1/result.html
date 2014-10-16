@@ -1,13 +1,15 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="avalonStyle">.avalonHide{ display: none!important }</style>
-    
-    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>著名美国兰德心理测试</title>
     	<script type="text/javascript">
 		var _con = {}; _con["num"] = 21;
 	</script>
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script src="./js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/avalon.mobile.min.js"></script>
   <style>
 		        * {
             font-family: '微软雅黑';
@@ -273,15 +275,15 @@
     </style>
 
 </head>
-<body class="" onload="showQ();">
+<body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif">
-		加载中......	</div>
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		正在显示结果......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'" >
+        <div ms-if="item.type=='hello'" style='display:none;'>
 			<div class="mane">著名美国兰德心理测试</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
@@ -318,12 +320,12 @@
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
         </div>
     </div>
-	<script type="text/javascript">
+	<script type="text/javascript" >
 		 var dataForWeixin = {
-			  server: "i.oslook.com/",
+			  server: "i.oslook.com",
 			  TLImg: _con["num"],
 			  url: "http://i.oslook.com/test/",
-			  title: "来自美国非常著名的心里专家测试",
+			  title: "美国很著名的心里专家测试",
 			  desc: "很准的呦,都来试试吧"
 		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
@@ -1253,15 +1255,15 @@
 			}];
             document.body.className = "";
 			function tarShare(score){
-				var url = dataForWeixin.url+"usland/"+score+"share.html";
+				var url = dataForWeixin.url+"shares/"+score+"/"+dataForWeixin.TLImg+"/"+encodeURIComponent(dataForWeixin.title)+"/"+encodeURIComponent(dataForWeixin.desc)+"/"+encodeURIComponent(dataForWeixin.server)+"/";
 				location.href = url;
 				return false;
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://www.oslook.com";
+					var urls = "http://i.oslook.com";
 				}else{
-					var urls = "http://www.oslook.com";
+					var urls = "http://i.oslook.com";
 				}
 				location.href = urls;
 				return false;
@@ -1275,6 +1277,7 @@
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
 			}
+							showAns(1);
 						function testEnd() {
 				if (fen >= 180) {
                    var scores = 6;
@@ -1289,16 +1292,14 @@
                 } else {
                    var scores = 1;
                 }
-			tarShare(scores);
-			showAns(scores);
+				tarShare(scores);
 			}
     </script>
-	<div style="overflow: hidden;position: absolute;bottom:0;" align="center" id="bai">
-		<div style="display: inline;float: left;">
-	</div>
 	<div style="display:none;">
-<script type="text/javascript">
+		<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
-</script></div>
-</body></html>
+</script>
+</div>
+</body>
+</html>
