@@ -208,12 +208,12 @@
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
 		<img style="position: relative;top: 40px;width:80px" src="http://wxfile.2sky.cn/vapp4/load.gif" />
-		正在显示结果......	</div>
+		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'" style='display:none;'>
+        <div ms-if="item.type=='hello'">
 			<div class="mane">回去高考，是学霸or学渣？</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
