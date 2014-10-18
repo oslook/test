@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="no-store, must-revalidate" http-equiv="Cache-Control">
+<meta content="0" http-equiv="expires">
+<title>趣味小测试</title>
+<meta content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport">
+<style type="text/css">
+body {background:#ededed;color: #333;font: 15px 微软雅黑;,Helvetica;overflow: visible;}
+body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea, figure, figcaption, nav, footer, menu {margin: 0;padding: 0;}
+.content, .footer {background-color: #ededed;overflow: hidden;width: 100%;z-index: 1;}
+.mod-app-intro {overflow: hidden;width: 100%;}
+ul, ol, li {list-style: none outside none;}
+.mod-app-intro li { border-bottom: 1px solid #e4e4e4; padding: 10px;position: relative;}
+.mod-app-intro .figure img {border-radius: 8px;display: block;height: 60px;margin: 0 10px 0 0;width: 60px;}
+.mod-app-intro .figcaption {display: block;}
+.mod-app-intro li .tit {height: 22px;line-height: 22px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+.mod-app-intro li p {color: #666;font-size: 12px;height: 22px;line-height: 22px;}
+.mod-app-intro li p span:last-child:after {display: none;}
+.game_list li .btn-g {margin-top: 10px;}
+.btn-g {background-color: #f6ad00;border-radius: 2px;height: 24px;line-height: 22px;}
+.btn {color: #fff !important;display: inline-block;font-size: 14px;min-width: 68px;text-align: center;}
+a {font-weight: normal;text-decoration: none;}
+.mod-app-intro .figure {display: -webkit-box;-webkit-box-align: center;}
+.mod-app-intro .figcaption {-webkit-box-flex: 1;display: block;}
+.logo{overflow: hidden;width:100%;}
+.lis{width:100%;}
+.lis a{float: left;width:33%;}
+</style>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="content">
+		<div class="app-intro">
+			<ul id="j_game_list" class="mod-app-intro game_list">
+<li class='list' data-url='/test/fapang/index.html'><div class='figure'><img src='http://i.oslook.com/test/fapang/image/icon.jpg'><div class='figcaption'><h3 class='tit'>测测你的发胖指数</h3><p>好评 87%</p><p><span>424080人玩过</span></p></div><span class='btn btn-g'>开始测试</span></div></li>
+<li class='list' data-url='/test/gaokao/index.html'><div class='figure'><img src='http://i.oslook.com/test/gaokao/image/icon.jpg'><div class='figcaption'><h3 class='tit'>假如穿越回高考，你是当学霸 or 学渣？</h3><p>好评:88%</p><p><span>474969人玩过</span></p></div><span class='btn btn-g'>开始测试</span></div></li>
+<li class='list' data-url='/test/usland/index.html'><div class='figure'><img src='http://i.oslook.com/test/usland/image/icon.jpg'><div class='figcaption'><h3 class='tit'>著名美国兰德心理测试</h3><p>好评:96%</p><p><span>203558人玩过</span></p></div><span class='btn btn-g'>开始测试</span></div></li>
+<li class='list' data-url='/test/sanguo/index.html'><div class='figure'><img src='http://i.oslook.com/test/sanguo/image/icon.jpg'><div class='figcaption'><h3 class='tit'>测测你是三国杀中的谁？</h3><p>好评:82%</p><p><span>226176人玩过</span></p></div><span class='btn btn-g'>开始测试</span></div></li>
+<li class='list' data-url='/test/xiyou/index.html'><div class='figure'><img src='http://i.oslook.com/test/xiyou/image/icon.jpg'><div class='figcaption'><h3 class='tit'>测测你是西游记中的谁？</h3><p>好评:93%</p><p><span>367536人玩过</span></p></div><span class='btn btn-g'>开始测试</span></div></li>
+<li class='list' data-url='/test/shuihu/index.html'><div class='figure'><img src='http://i.oslook.com/test/shuihu/image/icon.jpg'><div class='figcaption'><h3 class='tit'>测测你是水浒传中的哪个人物？</h3><p>好评:92%</p><p><span>226176人玩过</span></p></div><span class='btn btn-g'>开始测试</span></div></li>
+<li class='list' data-url='/test/shouji/index.html'><div class='figure'><img src='http://i.oslook.com/test/shouji/image/icon.jpg'><div class='figcaption'><h3 class='tit'>手机对你有多重要？</h3><p>好评:90%</p><p><span>288374人玩过</span></p></div><span class='btn btn-g'>开始测试</span></div></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".list").click(function(){
+			var target = $(this).attr("data-url");
+			location.href = target;
+		});
+	</script>
+	<script type="text/javascript">
+	var dataForWeixin = {
+		  appId: "APPID",
+		  TLImg: "",
+		  url: "http://i.oslook.com/test/list/index.html",
+		  title: "趣味小测试",
+		  desc: "趣味小测试"
+	};
+
+	var onBridgeReady = function(){
+		WeixinJSBridge.on('menu:share:appmessage', function(argv){
+			WeixinJSBridge.invoke('sendAppMessage', {
+				"appid": dataForWeixin.appId,
+				"img_url": dataForWeixin.TLImg,
+				"img_width": "120",
+				"img_height": "120",
+				"link": dataForWeixin.url + '?f=wx_hy_bb',
+				"title": dataForWeixin.title,
+				"desc": dataForWeixin.desc 
+			});
+	 setTimeout(function () {location.href = "http://www.oslook.com";}, 1500); 
+		});
+		WeixinJSBridge.on('menu:share:timeline', function(argv){            
+			WeixinJSBridge.invoke('shareTimeline', {
+				"appid": dataForWeixin.appId,
+				"img_url":dataForWeixin.TLImg,
+				"img_width": "120",
+				"img_height": "120",
+				"link": dataForWeixin.url + '?f=wx_pyq_bb',
+				"title": dataForWeixin.title,
+				"desc": dataForWeixin.desc
+			});
+	setTimeout(function () {location.href = "http://www.oslook.com";}, 1500);  
+		});
+	};
+	if(document.addEventListener){
+		document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+	}else if(document.attachEvent){
+		document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+		document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+	}   
+</script>
+	<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+</body>
+</html>
