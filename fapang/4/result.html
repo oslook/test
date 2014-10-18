@@ -8,8 +8,8 @@
     	<script type="text/javascript">
 		var _con = {}; _con["num"] = 28;
 	</script>
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script src="./js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/avalon.mobile.min.js"></script>
   <style>
 		        * {
             font-family: '微软雅黑';
@@ -260,7 +260,7 @@
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./image/mane.png") no-repeat;
+			background:url("../image/mane.png") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -277,13 +277,13 @@
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
-		加载中......	</div>
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		正在显示结果......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'" >
+        <div ms-if="item.type=='hello'"  style="display:none;">
 			<div class="mane">测测你的发胖指数</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
@@ -359,7 +359,7 @@
 						text: "你是否有好的饮食方式和生活习惯，如果你体内已经囤积了多余的脂肪，再不采取行动的话，会越来越胖。根据下列题目进行回答",
 						text1: "点击开始测试咯~  请先选择性别",
 						select: [{
-							img: "./image/sex1.jpg",
+							img: "../image/sex1.jpg",
 							text: "男生",
 							active: false,
 							error: true,
@@ -372,7 +372,7 @@
 							}
 						},
 						{
-							img: "./image/sex0.jpg",
+							img: "../image/sex0.jpg",
 							text: "女生",
 							active: false,
 							error: true,
@@ -744,6 +744,7 @@
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
 			}
+			showAns(4);
 						function testEnd() {
 				if (fen >= 80) {
 					var scores = 4;
