@@ -202,6 +202,21 @@
             margin-left: -140px;
             padding-bottom: 10px;
         }
+       	.mane{
+			width: 84%;
+			margin-bottom:10px;
+			background:url("./image/mane.png") no-repeat;
+			height:60px;
+			color:#ffffff;
+			font-size:21px;
+			line-height:36px;
+			background-size:100%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-break: keep-all;
+			padding:0 25px;
+			overflow: hidden;
+		}
     </style>
 
 </head>
@@ -210,7 +225,7 @@
 		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
 		加载中......	</div>
     <div id="loading">加载中</div>
-    <div class="head"><img src="./image/bg.jpg" /></div>
+    <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
         <div ms-if="item.type=='hello'">
