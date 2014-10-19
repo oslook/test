@@ -4,12 +4,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测测手机对你有多重要？</title>
+    <title>你把金钱看的有多重要？</title>
     	<script type="text/javascript">
 		var _con = {}; _con["num"] = 23;
 	</script>
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script src="./js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/avalon.mobile.min.js"></script>
  <style>
        * {
             font-family: '微软雅黑';
@@ -280,13 +280,13 @@
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
-		加载中......	</div>
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		正在显示结果......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'" >
+        <div ms-if="item.type=='hello'" style="display:none;">
 			<div class="mane">手机对你来说有多重要？</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
@@ -300,7 +300,7 @@
             </div>
         </div>
         <div ms-if="item.type=='select'">
-			<div class="mane">手机对你来说有多重要？</div>
+			<div class="mane">你把金钱看的有多重要？</div>
             <div class="t-c">
                 <div ms-if="item.img" style="margin-bottom:0.5em;">
                     <img ms-attr-src="{{item.img}}">
@@ -328,7 +328,7 @@
 			  server: "i.oslook.com/",
 			  TLImg: _con["num"],
 			  url: "http://i.oslook.com/test/",
-			  title: "手机对你来说有多重要？",
+			  title: "你把金钱看的有多重要？",
 			  desc: "很准的呦,都来试试吧"
 		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
@@ -360,7 +360,7 @@
                 vm.arr = [
                     {
                         type: "hello",
-                        text: "现在手机成为了人们生活中必不可少的部分，甚至已经开始主宰了人们的生活。过度地玩手机对人们的健康没好处，尽早摆脱手机的诱惑吧。测测手机对你来说有多重要",
+                        text: "俗话说“有钱能使鬼推磨”，那么你把金钱看的有多重要呢？快来测试一下就知道了！",
                         select: [
                             {
                                 text: "开始测试",
@@ -376,10 +376,10 @@
                     }, {
                         type: "select",
                         id: 1,
-                        text: "你睡觉时没有关手机的习惯？",
+                        text: "假设你驾着一辆轿车正要进入隧道，当过完隧道后，你觉得会是什么风景呢？",
                         select: [
                             {
-                                text: "不是",
+                                text: "小村庄",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
@@ -387,237 +387,57 @@
                                     });
                                 }
                             }, {
-                                text: "是的",
+                                text: "山",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
                                         model.item = model.arr[3];
                                     });
                                 }
+                            }, {
+                                text: "又一个隧道",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[4];
+                                    });
+                                }
+                            }, {
+                                text: "海边",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[5];
+                                    });
+                                }
+                            }, {
+                                text: "枫树林",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[6];
+                                    });
+                                }
                             }
-                        ]
-                    },
-                    {
-                        type: "select",
-                        id: 2,
-                        text: "当你忘记带手机出门会没安全感？",
-                        select: [
-                          {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[4];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[6];
-                                  });
-                              }
-                          }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 3,
-                        text: "有段时间你特别喜欢玩手机游戏？",
-                        select: [
-                          {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[5];
-                                  });
-                              }
-                          }, {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[8];
-                                  });
-                              }
-                          }
-                        
-                        ]
-                    }, {
-                        type: "select",
-                        id: 4,
-                        text: "你工作或休息时会时不时看看手机，害怕错过信息电话？",
-                        select: [
-                           {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[7];
-                                   });
-                               }
-                           }, {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[9];
-                                   });
-                               }
-                           }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 5,
-                        text: "你经常在聚餐的时候玩手机？",
-                        select: [
-                          {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[6];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[8];
-                                  });
-                              }
-                          }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 6,
-                        text: "你在无聊的时候喜欢摇微信打发时间？",
-                        select: [
-                           {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[7];
-                                   });
-                               }
-                           }, {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[9];
-                                   });
-                               }
-                           }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 7,
-                        text: "你特别喜欢把自己的身边发生的趣事发到微信上？",
-                        select: [
-                           {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[10];
-                                   });
-                               }
-                           }, {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[13];
-                                   });
-                               }
-                           }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 8,
-                        text: "你坐车时会时不时摸摸自己的手机？",
-                        select: [
-                           {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[11];
-                                   });
-                               }
-                           }, {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[10];
-                                   });
-                               }
-                           }
-                        ]
-                    },{
-                        type: "select",
-                        id: 9,
-                        text: "当你一天没收到信息或者电话时会怀疑自己的手机出问题了？",
-                        select: [
-                          {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[12];
-                                  });
-                              }
-                          }, {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[13];
-                                  });
-                              }
-                          }
-                        ]
-                    },{
-                        type: "select",
-                        id: 10,
-                        text: "你经常关注新上市品牌手机？",
-                        select: [
-                          {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[12];
-                                  });
-                              }
-                          }, {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[14];
-                                  });
-                              }
-                          }
+                            
+                         
                         ]
                     },
                     {
                         type: "result",
-                        id: 11
+                        id: 2
                     }, {
                         type: "result",
-                        id: 12
+                        id: 3
                     }, {
                         type: "result",
-                        id: 13
+                        id: 4
                     }, {
                         type: "result",
-                        id: 14
+                        id: 5
+                    }, {
+                        type: "result",
+                        id: 6
                     }
                 ];
                 vm.item = vm.arr[0];
@@ -640,32 +460,36 @@
                 }
                 vm.$watch("item", function (newval) {
                     if (newval.type == 'result') {
-                        tarShare((newval.id-10));
+                        tarShare((newval.id-1));
 						return false;
                     };
                 })
             });
 			var ylist = [{
 				"biao": "A",
-				"t1": "你能击退手机诱惑",
-				"t2": "我能击退手机诱惑，你并不特喜欢玩手机，但是你却容易被手机的魔法功力吸引；当你无聊的时候喜欢玩手机打发时间，玩着玩着就容易上瘾了，但是你内心清楚不能沉迷于手机，不仅浪费时间，而且辐射大。为了阻止手机影响你的正常生活，你会控制自己少玩手机游戏，少上微博、微信、少看手机电视等，所以别担心，通过努力你能摆脱手机的诱惑。",      
+				"t1": "你是钱的管理者",
+				"t2": "很朴素又很不耀眼，可是却很实在，知道如何运用钱，也懂得储蓄之道，不会任意花钱，对每一分钱的花用，都能够详加计划，也不喜欢玩乐的事，只喜欢质朴的生活，所以会被人认为很小气，也会因此而失掉赚钱的机会，改变一下自己略小气的脾气，对你很有帮助。",      
 			},{
 				"biao": "B",
-				"t1": "手机诱惑不了你",
-				"t2": "手机等高科技产品对你正常生活影响并不大，也许你的日常生活工作忙碌，没有多余的时间玩手机，不大可能得手机综合依赖症。但也因为你不关注手机等科技产品，也不容易得知最新的信息，有时候会比较落伍。对你而言，手机只是通讯工具，没有任何的特殊情感，摆脱手机对你生活的影响是轻而易举的事情。",            
+				"t1": "不懂节俭的你",
+				"t2": "很会存钱，看起来好像是个不懂节俭的人，但常在不知不觉的情形下，存了很多钱，而且方法也很合理。你对金钱的态度，认为该花时就不该太吝啬，但不用花的钱，你也不会花，是个心胸相当大的人。",            
 			},{
 				"biao": "C",
-				"t1": "手机能诱惑到你",
-				"t2": "你对手机有着特殊的感情，在你看来手机不仅是通讯工具，更是你的朋友，记录你生活的点点滴滴。你认为手机是神奇的发明，可以用手机联络朋友，可以通过手机关注外界的最新消息，不开心时也可以躲在手机为你设置的虚幻世界里，所以你容易陷入手机情结无法自拔。你把手机看的过于重要，要摆脱手机诱惑要加把劲才行。",            
+				"t1": "对钱相当敏锐的你",
+				"t2": "个性强，很能得人信赖的人，对钱的感觉度敏锐，对于理财技资的经验相当丰富，很擅长投资，认为与其一点一点地存，不如大量的技资，赚取更多的金钱。投资在股票、奖券、赌博等，会让你赚取很多的钱，但相对的，你也会付出相当多的金额，如果能善加利用，好好储蓄，钱会像滚雪球一样，愈滚愈大。",            
 			},{
 				"biao": "D",
-				"t1": "你难敌手机诱惑",
-				"t2": "手机等电子产品成为你生活中必不可少的部分，甚至已经开始主宰你的生活，当你丢失手机时内心会丢失安全感，无所适从的感觉油然而生，这不是一种好现象。如果再这样下去你会成为手机的奴隶，沉迷于手机给你设置的虚拟世界，慢慢地对现实生活漠不关心，而且过度地玩手机对你的健康没好处，尽早摆脱手机的诱惑吧，把手机当做通讯工具使用。",            
-			}];
+				"t1": "钱是要用来花的",
+				"t2": "在你的观念里，认为钱是要用来花的，而不是用来存的，所以，只要是你想要的东西，就不会计较金钱而非买不可。你赚多少钱就会花多少，不会把钱留下来，又加上你的审美观很丰富，所以买的东西价位都相当高。你的个性稍微有点爱好虚荣，所以要特别注意，同时要改掉浪费的坏习惯。",            
+			},{
+				"biao": "E",
+				"t1": "你对钱很不在意",
+				"t2": "你是个很浪漫的人，生活态度也像梦般虚幻。对钱很不在意，只有在感觉钱是很重要的时候，才会加以储蓄。对金钱的运用漫不经心，常会丢掉钱包，借给别人的钱也常常会忘记。由于你浪漫的个性，所以不要等到要救急时才存钱，更要有计划的管理钱财，这样对你才会有帮助。",            
+			}	];
 
             document.body.className = "";
 			function tarShare(score){
-				var url = dataForWeixin.url+"shouji/"+score+"/share.html";
+				var url = dataForWeixin.url+"money/"+score+"/share.html";
 				location.href = url;
 				return false;
 			}
@@ -687,6 +511,7 @@
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
 			}
+			showAns(2);
 			    </script>
 
 	<div style="display:none;">

@@ -8,8 +8,8 @@
     	<script type="text/javascript">
 		var _con = {}; _con["num"] = 23;
 	</script>
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script src="./js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/avalon.mobile.min.js"></script>
  <style>
        * {
             font-family: '微软雅黑';
@@ -263,7 +263,7 @@
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./image/mane.png") no-repeat;
+			background:url("http://wxfile.2sky.cn/vapp4/mane.png") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -280,13 +280,13 @@
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
-		加载中......	</div>
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		正在显示结果......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'" >
+        <div ms-if="item.type=='hello'"  style="display:none;">
 			<div class="mane">手机对你来说有多重要？</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
@@ -680,13 +680,14 @@
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>3){
+				if(ans<0 || ans>4){
 					ans = 1;
 				}
 				$("#sans").show();
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
 			}
+			showAns(4);
 			    </script>
 
 	<div style="display:none;">

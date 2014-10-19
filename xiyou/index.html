@@ -11,12 +11,18 @@
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
     <script src="./js/avalon.mobile.min.js"></script>
   <style>
- html,body {
+ * {
+            font-family: '微软雅黑';
+        }
+
+        html, body {
             margin: 0;
             color: #000;
-            background-color: #daf3ff;
+            background: #ffc2bd;
+            background-size: 100%;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
         }
+
 
         #loading {
             text-align: center;
@@ -24,103 +30,137 @@
             line-height: 400px;
             display: none;
         }
+
         .loading #loading {
             display: block;
         }
+
         .loading .head,
         .loading .main {
             display: none;
         }
+
         .head img {
             width: 100%;
         }
+
         .main {
             padding: 10px;
-            padding-top: 0;
+            padding-top:9%;
             margin-top: -10px;
             text-align: center;
         }
+
         .t-t {
             font-size: 22px;
             line-height: 2em;
             text-align: left;
         }
+
         .t-s {
             padding: 5px;
-            background-color: #fff;
-            max-width: 60%;
+            background-color: #fca9a2;
+            max-width: 100%;
             margin: 10px auto;
             text-align: center;
             position: relative;
             -webkit-transition: background-color 0.3s ease;
         }
+
         img {
             max-width: 100%;
         }
+
         .t-s img {
             max-width: 100%;
         }
+
         .t-s span {
-            font-size: 1em;
+            font-size: 1.1em;
             line-height: 1.5em;
+            font-weight: bold;
+            color: #761511;
+			padding:5px 20px;
         }
+
         .t-s.active {
-            background-color: #27AE60;
+            background-color: #e98483;
         }
-        .t-s.active span {
-            color: #fff;
-        }
+
+            .t-s.active span {
+                color: #fff;
+            }
+
         .t-s:after {
             position: absolute;
-            right: 1px;
-            top: 1px;
-            padding: 4px;
+            right:2px;
+            top: 2px;
+            padding: 5px;
             background: rgba(255,255,255,1);
             content: "√";
             display: none;
             opacity: 0;
             -webkit-transition: opacity 0.3s ease;
+			font-size: 1.1em;
         }
+
+        .t-s.error:after {
+            background: rgba(255,0,0,1);
+            content: "×";
+            color: white;
+        }
+
         .t-s.active:after {
             display: block;
             opacity: 1;
         }
+
         .t-c {
             line-height: 1.2em;
-            padding: 10px;
+            padding:10px;
             margin-bottom: 10px;
-            font-size: 1em;
+            font-size: 1.1em;
             text-align: left;
+            color: #761511;
+            overflow: hidden;
         }
+
         .t-s.h {
             max-width: 40%;
             display: inline-block;
             margin-left: 5px;
             margin-right: 5px;
         }
+
         .t-r {
-            margin-bottom: 10px;
+      
+            font-weight: bold;
+            overflow: hidden;
         }
-        .t-r span {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 50px;
-            color: #27AE60;
-            /*color: rgba(0,0,0,0);*/
-            text-shadow: 3px 0 4px #16A085;
-        }
+
+            .t-r span {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 50px;
+                color: #27AE60;
+                /*color: rgba(0,0,0,0);*/
+                text-shadow: 3px 0 4px #16A085;
+            }
+
         .t-img {
             margin-top: 10px;
             margin-bottom: 10px;
         }
-        .t-img img {
-            max-width: 60%;
-        }
+
+            .t-img img {
+                max-width: 60%;
+            }
+
         .t-btn,
         .t-btn:link,
         .t-btn:visited {
-            color: #fff;
-            background-color: #eca702;
+            color: #e1edea;
+            background-color: #f87984;
             padding-top: 12px;
             padding-bottom: 13px;
             padding-left: 15px;
@@ -132,6 +172,9 @@
             border-radius: 7px;
             text-decoration: none;
         }
+		.t-btn{
+			font-size:1.1em;
+		}
         .share {
             position: fixed;
             top: 0;
@@ -142,13 +185,15 @@
             display: none;
             z-index: 1000;
         }
-        .share img {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 70%;
-            max-width: 320px;
-        }
+
+            .share img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 70%;
+                max-width: 320px;
+            }
+
         .livetip {
             position: fixed;
             top: 0;
@@ -158,6 +203,7 @@
             background-color: rgba(0,0,0,0.7);
             z-index: 200;
         }
+
         .lt-w {
             position: fixed;
             top: 100px;
@@ -165,35 +211,47 @@
             right: 10px;
             z-index: 300;
         }
-        .lt-w .lt-c {
-            background-color: white;
-            padding-top: 10px;
-            padding-bottom: 20px;
-        }
 
-        .list{
-            list-style:initial;
+            .lt-w .lt-c {
+                background-color: white;
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+
+        .list {
+            list-style: initial;
             text-align: left;
         }
-        .list li {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
+
+            .list li {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+
         a,
         a:link,
         a:visited {
             color: #607fa6;
         }
-        .dialog{
+
+        .dialog {
             position: fixed;
-            left: 0;top: 0;right: 0;bottom: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
         }
-        .dialog-bg{
+
+        .dialog-bg {
             position: absolute;
-            left: 0;top: 0;right: 0;bottom: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
             background-color: rgba(0,0,0,0.7);
         }
-        .dialog-con{
+
+        .dialog-con {
             position: absolute;
             width: 280px;
             top: 100px;
@@ -202,18 +260,33 @@
             margin-left: -140px;
             padding-bottom: 10px;
         }
+		.mane{
+			width: 84%;
+			margin-bottom:10px;
+			background:url("./iamge/mane.png") no-repeat;
+			height:60px;
+			color:#ffffff;
+			font-size:21px;
+			line-height:36px;
+			background-size:100%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-break: keep-all;
+			padding:0 25px;
+			overflow: hidden;
+		}
     </style>
 
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="http://wxfile.2sky.cn/vapp4/load.gif" />
-		正在显示结果......	</div>
+		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
+		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'" style='display:none;'>
+        <div ms-if="item.type=='hello'" >
 			<div class="mane">测测你是《西游记》里的谁？</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
@@ -254,7 +327,7 @@
 		 var dataForWeixin = {
 			  server: "i.oslook.com/",
 			  TLImg: _con["num"],
-			  url: "http://i.oslook.com/test/",
+			  url: "http://i.oslook.com/test/",		
 			  title: "测测你是《西游记》里的谁？",
 			  desc: "很准的呦,都来试试吧"
 		};
@@ -284,584 +357,520 @@
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
             var model = avalon.define("test", function (vm) {
-					vm.arr = [{
-						type: "hello",
-						text: "高考既是人生的一个重要的转折点，也是人生美好的一段回忆，不管成绩如何都不会留有遗憾。如果现在能有一次机会穿越回去高考，你能考上理想的学校，当一个学霸或者学渣呢。赶快来测试一下吧！测试题只是一种娱乐内容，只希望能给大家带来快乐；如果不喜欢的话，也不要动怒，还有更多别的好玩的哦",
-						text1: "点击开始测试咯~   请先选择性别",
-						select: [{
-							img: "http://wxfile.2sky.cn/vapp4/sex1.jpg",
-							text: "男生",
-							active: false,
-							error: true,
-							tap: function(ele, select) {
-								tap(ele, select,
-								function() {
-									model.item = model.arr[1];
-									model.result.sex = 0;
-								});
-							}
-						},
-						{
-							img: "http://wxfile.2sky.cn/vapp4/sex0.jpg",
-							text: "女生",
-							active: false,
-							error: true,
-							tap: function(ele, select) {
-								tap(ele, select,
-								function() {
-									model.item = model.arr[1];
-									model.result.sex = 1;
-								});
-							}
-						}]
-					}, {
-                          type: "select",
-                          id: 1,
-                          text: "平时你总是很注意控制自己的脾气吗？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[2];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[3];
-                                      });
-                                  }
+                vm.arr = [
+                    {
+                        type: "hello",
+                        text: "自小就看《西游记》长大的你，有没有在过家家的时候扮演过其中的角色呢。会七十二变的孙悟空，色色的大耳朵猪八戒，忠厚正直的沙悟净，还有调皮的红孩儿和木纳善良的唐僧，肯定都给你留下了非常深刻的印象。进入测试，来看看你的性格最像其中的谁？",
+                        select: [
+                            {
+                                text: "开始测试",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[1];
+                                        model.result.sex = 0;
+                                    });
+                                }
+                            }
+                        ]
+                    },{
+                        type: "select",
+                        id: 1,
+                        text: "如果给你一个去西天取经的机会，你会去吗?",
+                        select: [
+                            {
+                                text: "会",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[2];
+                                    });
+                                }
+                            }, {
+                                text: "不会",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[3];
+                                    });
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        type: "select",
+                        id: 2,
+                        text: "你是个不会怕生的人?",
+                        select: [
+                             {
+                                 text: "是",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[5];
+                                     });
+                                 }
+                             }, {
+                                 text: "不是",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[3];
+                                     });
+                                 }
+                             }
+                        ]
+                    }, {
+                        type: "select",
+                        id: 3,
+                        text: "即使遇到困难，你也会一往无前?",
+                        select: [
+                          {
+                              text: "是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[6];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 2,
-                          text: "你总在微信或是微博上发自己的照片吗？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[4];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[3];
-                                      });
-                                  }
+                          }, {
+                              text: "不是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[7];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 3,
-                          text: "你喜欢一个人的旅行吗？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[4];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[5];
-                                      });
-                                  }
+                          }
+                        ]
+                    }, {
+                        type: "select",
+                        id: 4,
+                        text: "你曾经独自旅行过?",
+                        select: [
+                             {
+                                 text: "是",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[8];
+                                     });
+                                 }
+                             }, {
+                                 text: "不是",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[5];
+                                     });
+                                 }
+                             } 
+                        ]
+                    }, {
+                        type: "select",
+                        id: 5,
+                        text: "你是一个很能抵御诱惑的人?",
+                        select: [
+                            {
+                                text: "是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[9];
+                                    });
+                                }
+                            }, {
+                                text: "不是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[6];
+                                    });
+                                }
+                            }
+                        ]
+                    }, {
+                        type: "select",
+                        id: 6,
+                        text: "你是否觉得早上叠被子是浪费时间?",
+                        select: [
+                            {
+                                text: "是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[9];
+                                    });
+                                }
+                            }, {
+                                text: "不是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[10];
+                                    });
+                                }
+                            }
+                        ]
+                    }, {
+                        type: "select",
+                        id: 7,
+                        text: "你是否曾对一件事情热衷到忘我的地步?",
+                        select: [
+                            {
+                                text: "是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[14];
+                                    });
+                                }
+                            }, {
+                                text: "不是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[10];
+                                    });
+                                }
+                            }
+                        ]
+                    }, {
+                        type: "select",
+                        id: 8,
+                        text: "你是否曾有短暂失忆的经历？",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[11];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[9];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                   {
+                        type: "select",
+                        id: 9,
+                        text: "你认为自己的好奇心比别人旺盛？",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[12];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[10];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                     {
+                        type: "select",
+                        id: 10,
+                        text: "你觉得自己是个很浪费的人?",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[13];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[14];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                    {
+                        type: "select",
+                        id: 11,
+                        text: "其实你是个很喜欢撒娇的人?",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[18];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[12];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                    {
+                        type: "select",
+                        id: 12,
+                        text: "你是否会被别人说自己很任性?",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[15];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[13];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                   {
+                        type: "select",
+                        id: 13,
+                        text: "你认为障碍越多越有挑战性?",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[16];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[17];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                 {
+                        type: "select",
+                        id: 14,
+                        text: "从装傻和坦白来看，你觉得自己比较适合装傻?",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[21];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[17];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                    {
+                        type: "select",
+                        id: 15,
+                        text: "你会把桌上的东西吃得一干二净?",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[18];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[19];
+                                   });
+                               }
+                           }
+                        ]
+                    },
+                  {
+                        type: "select",
+                        id: 16,
+                        text: "你是否拥有一些别人看来莫名其妙的东西?",
+                        select: [
+                            {
+                                text: "是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[19];
+                                    });
+                                }
+                            }, {
+                                text: "不是",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[20];
+                                    });
+                                }
+                            }
+                        ]
+                  },
+                  {
+                      type: "select",
+                      id: 17,
+                      text: "你是个会被动物喜欢的人?",
+                      select: [
+                          {
+                              text: "是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[21];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 4,
-                          text: "你有没有为喜欢的人写过情书？",
-                          select: [
-                              {
-                                  text: "有过",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[6];
-                                      });
-                                  }
-                              }, {
-                                  text: "没有",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[5];
-                                      });
-                                  }
+                          }, {
+                              text: "不是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[20];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 5,
-                          text: "你对网上征友陪吃饭陪看电影的作法怎么看？",
-                          select: [
-                              {
-                                  text: "很正常",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[7];
-                                      });
-                                  }
-                              }, {
-                                  text: "无所谓",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[6];
-                                      });
-                                  }
-                              }, {
-                                  text: "很无聊",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[8];
-                                      });
-                                  }
+                          }
+                      ]
+                  },
+                  {
+                      type: "select",
+                      id: 18,
+                      text: "你曾因犯过大错而被关过禁闭?",
+                      select: [
+                          {
+                              text: "是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[22];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 6,
-                          text: "你对父母的意见会积极采纳吗？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[9];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[8];
-                                      });
-                                  }
+                          }, {
+                              text: "不是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[23];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 7,
-                          text: "你有没有暗恋过学长或是学妹？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[10];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[9];
-                                      });
-                                  }
+                          }
+                      ]
+                  },
+                  {
+                      type: "select",
+                      id: 19,
+                      text: "你觉得没有风险的人生就太无趣?",
+                      select: [
+                          {
+                              text: "是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[24];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 8,
-                          text: "你平时都是早睡早起吗？",
-                          select: [
-                              {
-                                  text: "是的",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[11];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[10];
-                                      });
-                                  }
+                          }, {
+                              text: "不是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[25];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 9,
-                          text: "你觉得自己的生活习惯正常吗？",
-                          select: [
-                              {
-                                  text: "不正常",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[11];
-                                      });
-                                  }
-                              }, {
-                                  text: "一般",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[12];
-                                      });
-                                  }
+                          }
+                      ]
+                  },
+                  {
+                      type: "select",
+                      id: 20,
+                      text: "你认为适度的妥协是智慧的表现?",
+                      select: [
+                          {
+                              text: "是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[26];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 10,
-                          text: "你觉得自己的思想越来越现实了吗？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[14];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[12];
-                                      });
-                                  }
+                          }, {
+                              text: "不是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[27];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 11,
-                          text: "你的微信里是朋友多还是陌生人多？",
-                          select: [
-                              {
-                                  text: "朋友多",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[14];
-                                      });
-                                  }
-                              }, {
-                                  text: "都差不多",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[13];
-                                      });
-                                  }
-                              }, {
-                                  text: "陌生人多",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[15];
-                                      });
-                                  }
+                          }
+                      ]
+                  },
+                  {
+                      type: "select",
+                      id: 21,
+                      text: "你是否对自己的笑容很有信心?",
+                      select: [
+                          {
+                              text: "是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[28];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 12,
-                          text: "是否有一座城市是你心底的疼痛？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[15];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[16];
-                                      });
-                                  }
+                          }, {
+                              text: "不是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[29];
+                                  });
                               }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 13,
-                          text: "是否因为一个人，害怕听首音乐吃某样食物？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[17];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[15];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 14,
-                          text: "你觉得走入社会的自己，对物质越来越期盼了吗？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[15];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[17];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 15,
-                          text: "你是一个很怀旧的人吗？",
-                          select: [
-                              {
-                                  text: "一般",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[17];
-                                      });
-                                  }
-                              }, {
-                                  text: "是的",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[16];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[18];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 16,
-                          text: "你觉得下哪种状态是最恐怖的？",
-                          select: [
-                              {
-                                  text: " 孤单",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[17];
-                                      });
-                                  }
-                              }, {
-                                  text: "城市很大，却没有属于自己的地方",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[18];
-                                      });
-                                  }
-                              }, {
-                                  text: "恋人不爱自己",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[19];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 17,
-                          text: "你的空间写的东西都是属于？",
-                          select: [
-                              {
-                                  text: "小说故事",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[19];
-                                      });
-                                  }
-                              }, {
-                                  text: "心情日记",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[22];
-                                      });
-                                  }
-                              }, {
-                                  text: "游记影评",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[23];
-                                      });
-                                  }
-                              }, {
-                                  text: "杂七杂八",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[20];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 18,
-                          text: "你讨厌参加同学聚会的原因是？",
-                          select: [
-                              {
-                                  text: "害怕攀比",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[20];
-                                      });
-                                  }
-                              }, {
-                                  text: "怕遇到尴尬的人",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[22];
-                                      });
-                                  }
-                              }, {
-                                  text: "因为无聊",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[23];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 19,
-                          text: "你有没有暗示恋过某人，直到现在TA还不知道？",
-                          select: [
-                              {
-                                  text: "没有",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[21];
-                                      });
-                                  }
-                              }, {
-                                  text: "有",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[23];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 20,
-                          text: "回家的路，你希望会是哪种景象的呢？",
-                          select: [
-                              {
-                                  text: "满是绿植的路",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[24];
-                                      });
-                                  }
-                              }, {
-                                  text: "铺满落叶的路",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[25];
-                                      });
-                                  }
-                              }, {
-                                  text: "开满鲜花的路",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[26];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, {
-                          type: "select",
-                          id: 21,
-                          text: "你觉得自己是一个内敛的人吗？",
-                          select: [
-                              {
-                                  text: "是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[22];
-                                      });
-                                  }
-                              }, {
-                                  text: "不是",
-                                  active: false,
-                                  tap: function (ele, select) {
-                                      tap(ele, select, function () {
-                                          model.item = model.arr[24];
-                                      });
-                                  }
-                              }
-                          ]
-                      }, 
+                          }
+                      ]
+                  },
                     {
                         type: "result",
                         id: 22
@@ -877,6 +886,15 @@
                     }, {
                         type: "result",
                         id: 26
+                    }, {
+                        type: "result",
+                        id: 27
+                    }, {
+                        type: "result",
+                        id: 28
+                    }, {
+                        type: "result",
+                        id: 29
                     }
                 ];
                 vm.item = vm.arr[0];
@@ -906,28 +924,41 @@
             });
 			var ylist = [{
 				"biao": "A",
-				"t1": "重回高考，我考了500分",
-				"t2": "即使你想回去再重新高考，你也坐不住八小时的课桌了，走入社会，东跑西颠，学习的心早就没了，饱经沧桑的老腰也支撑不住了，一颗自由飘荡的心去踏踏实实写作业听课根本是不可能的了，而且你的身体也可能吃不消了。只能当成一个梦，偶尔怀念一下就可以了。",      
+				"t1": "孙悟空",
+				"t2": "以行动为先的你属于悟空一类人，虽然你周围的人会因为你独特的个性而时常陷入麻烦中，但你却有着被人喜欢的独特魅力。",      
 			},{
 				"biao": "B",
-				"t1": "重回高考，我考了400分",
-				"t2": "想当年，起早贪黑学习的生活让你回想起来都寒颤，对你来说应该是段像恶梦一样的生活，你根本不会想回到高中那种冲刺的生活。学习好的同学也未必有出息，上好的大学也不会改变什么，即使回去重考，你可考的还不如从前呢。所以这种假设问题，你根本都不会去想。",            
+				"t1": "唐僧",
+				"t2": "你富有责任感，会为别人着想，虽然有时会因为过于认真而碰到麻烦，但因为你有优秀的领导能力，所以能够带领身边的人解决困难。",            
 			},{
 				"biao": "C",
-				"t1": "重回高考，我考了700分",
-				"t2": "自信又开朗的你，即使重回高考岁月来说，也不算什么，你可能会考的更好，因为你比原来更加的自信，更加有把握。学习对你来说根本不算什么，你需要的是机会，甚至你可能总是回想，当初为什么没有努力或是报考心仪的学校。不过，还是想想就得了，眼前的生活更重要不是吗？",            
+				"t1": "六耳猕猴",
+				"t2": "你的脑子动得非常快，也善于隐藏自己。但是偶尔会行为怪异，让你身边的人对你敬而远之。如果你能够更阳光一点，你的朋友自然会多起来。",            
 			},{
 				"biao": "D",
-				"t1": "重回高考，我考了600分",
-				"t2": "沉闷又阴郁的你，对于高中的岁月，可能让你想起来的只有老师或是某个人，甚至你可能暗恋过某个老师或是某个同学，如果重回高考岁月，你想你肯定不会像曾经那样闷在心里不说，你现在的胆子比原来大多了，什么话都敢说了，回到高考，你可能会勇敢表白。",            
+				"t1": "白龙马",
+				"t2": "你会永远忠于自己的意愿，会不知不觉中对一件事非常执著，但在人际关系方面却可能无法坦白自己。放下心防吧，用真诚去打动别人的心。",            
 			},{
 				"biao": "E",
-				"t1": "重回高考，我考了700分",
-				"t2": "高中时代的你可能就没心思学习，对于学长学妹充满了无限遐想。走入社会之后，你仍然是桃花朵朵开。如今单身或是非单身却还心怀不轨的人你，回到高考时代，也只是为了恋爱，那种纯真又干净的爱情是如今找不到了。所以还是不要重回高考了，你会耽误同学前途的。",            
+				"t1": "沙和尚",
+				"t2": "你是一个个性爽朗可靠的人。平时默默无闻的你，却有许多不为人知的才能，天长日久，身边的人会发现他们已经离不开你。",            
+			},{
+				"biao": "F",
+				"t1": "哪吒",
+				"t2": "虽然与好朋友在一起时你也会开怀大笑，但是平时的你却有点儿冷酷，很容易被人误会。正因如此你才更需要一些体贴的知交，和你共同前进。",            
+			},{
+				"biao": "G",
+				"t1": "猪八戒",
+				"t2": "拥有迷人悠闲的笑容如八戒般的你，喜欢照顾身边的人，因而会被人所喜欢。你的幽默感和笑容是你的法宝之一，危机时你也能冷静分析的优点会帮你渡过难关。 ",            
+			},{
+				"biao": "H",
+				"t1": "牛魔王",
+				"t2": "你是一个性情中人，有时会因为冲动而乱来，因无法克制自己，可能给周围的人造成麻烦。学会克制自己的情感，你会更加让人喜欢。",            
 			}];
-            document.body.className = "";
+       document.body.className = "";
 			function tarShare(score){
-				var url = dataForWeixin.url+"gaokao/"+score+"/share.html";
+			//	var url = dataForWeixin.url+"xiyou/"+score+"/share.html";
+				var url = dataForWeixin.url+"xiyou/index.html";
 				location.href = url;
 				return false;
 			}
@@ -942,7 +973,7 @@
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>3){
+				if(ans<0 || ans>7){
 					ans = 1;
 				}
 				$("#sans").show();
