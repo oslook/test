@@ -10,6 +10,20 @@
 	</script>
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="../js/avalon.mobile.min.js"></script>
+   	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    	<script type="text/javascript">
+	var test = new adwojs({
+		 eid:'spn', //节点id
+		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
+		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
+		 bt: false,
+		 af:true, //是否自动适合ipad平板广告，默认值为true。
+		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
+         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
+		 
+	});
+	test.send();
+	</script>	 
   <style>
 		        * {
             font-family: '微软雅黑';
@@ -758,6 +772,12 @@
 				tarShare(scores);
 			}
     </script>
+    
+    
+        <div style="text-align:center;display:block;font-size:0;width:100%;height:50px;opacity:0.9;">
+    <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
+	</div>
+
 	<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
