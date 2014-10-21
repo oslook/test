@@ -77,10 +77,10 @@ a {font-weight: normal;text-decoration: none;}
 	<script type="text/javascript">
 	var dataForWeixin = {
 		  appId: "",
-		  TLImg: "",
-		  url: "http://i.oslook.com/test/list/index.html",
+		  TLImg: "http://www.oslook.com/image/oslook_test_small.png",
+		  url: "http://www.oslook.com/test.html",
 		  title: "趣味小测试",
-		  desc: "趣味小测试"
+		  desc: "奥斯测试提供最热门的趣味小测试，如果觉得好请分享好友哦。"
 	};
 
 	var onBridgeReady = function(){
@@ -90,7 +90,7 @@ a {font-weight: normal;text-decoration: none;}
 				"img_url": dataForWeixin.TLImg,
 				"img_width": "120",
 				"img_height": "120",
-				"link": dataForWeixin.url + '?f=wx_hy_bb',
+				"link": dataForWeixin.url,
 				"title": dataForWeixin.title,
 				"desc": dataForWeixin.desc 
 			});
@@ -102,7 +102,7 @@ a {font-weight: normal;text-decoration: none;}
 				"img_url":dataForWeixin.TLImg,
 				"img_width": "120",
 				"img_height": "120",
-				"link": dataForWeixin.url + '?f=wx_pyq_bb',
+				"link": dataForWeixin.url,
 				"title": dataForWeixin.title,
 				"desc": dataForWeixin.desc
 			});
