@@ -4,35 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测测你是《西游记》里的谁？</title>
-       <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    <title>测测你的未来“钱途”怎么样？</title>
     	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
-
-	//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
-    
-    	<script type="text/javascript">
-		var _con = {}; _con["num"] = 23;
+		var _con = {}; _con["num"] = 35;
 	</script>
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script src="./js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="http://wxfile.2sky.cn/js/jquery.min.js"></script>
+    <script src="http://wxfile.2sky.cn/js4/avalon.mobile.min.js"></script>
   <style>
- * {
+        * {
             font-family: '微软雅黑';
         }
 
@@ -180,8 +159,8 @@
         .t-btn,
         .t-btn:link,
         .t-btn:visited {
-            color: #e1edea;
-            background-color: #f87984;
+            color: #ffffff;
+            background-color: #00b1ea;
             padding-top: 12px;
             padding-bottom: 13px;
             padding-left: 15px;
@@ -252,7 +231,7 @@
         a,
         a:link,
         a:visited {
-            color: #607fa6;
+            color: #ffffff;
         }
 
         .dialog {
@@ -284,7 +263,7 @@
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./iamge/mane.png") no-repeat;
+			background:url("http://wxfile.2sky.cn/vapp4/mane.png") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -301,14 +280,14 @@
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="http://wxfile.2sky.cn/vapp4/load.gif" />
 		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
         <div ms-if="item.type=='hello'" >
-			<div class="mane">测测你是《西游记》里的谁？</div>
+			<div class="mane">测测你的未来“钱途”怎么样？</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
             </div>
@@ -319,9 +298,10 @@
                 <img ms-attr-src="{{elem.img}}">
                 <span>{{elem.text}}</span>
             </div>
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我想玩其他好玩的</a></div>
         </div>
         <div ms-if="item.type=='select'">
-			<div class="mane">测测你是《西游记》里的谁？</div>
+			<div class="mane">测测你的未来“钱途”怎么样？</div>
             <div class="t-c">
                 <div ms-if="item.img" style="margin-bottom:0.5em;">
                     <img ms-attr-src="{{item.img}}">
@@ -340,16 +320,16 @@
             <div class="t-c" id="sec">
                
             </div>
-            <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注微信：oslook，之后再玩！</a></div>
-			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
+            <!--{<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注我们</a></div>}-->
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
         </div>
     </div>
 	<script type="text/javascript" >
 		 var dataForWeixin = {
-			  server: "i.oslook.com/",
+			  server: "2.gztgn367.gz.1251043815.cee.myqcloud.com",
 			  TLImg: _con["num"],
-			  url: "http://i.oslook.com/test/",		
-			  title: "测测你是《西游记》里的谁？",
+			  url: "http://xiankuai.gz.1251043815.cee.myqcloud.com/",
+			  title: "测测你的未来“钱途”怎么样？",
 			  desc: "很准的呦,都来试试吧"
 		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
@@ -381,7 +361,7 @@
                 vm.arr = [
                     {
                         type: "hello",
-                        text: "自小就看《西游记》长大的你，有没有在过家家的时候扮演过其中的角色呢。会七十二变的孙悟空，色色的大耳朵猪八戒，忠厚正直的沙悟净，还有调皮的红孩儿和木纳善良的唐僧，肯定都给你留下了非常深刻的印象。进入测试，来看看你的性格最像其中的谁？",
+                        text: "未来的你是个普通青年，还是个富有青年呢？每个人的性格里都会有一些成为富翁的潜质。比如毅力、坚强、聪敏，看看你有什么吧！",
                         select: [
                             {
                                 text: "开始测试",
@@ -394,13 +374,13 @@
                                 }
                             }
                         ]
-                    },{
+                    },  {
                         type: "select",
                         id: 1,
-                        text: "如果给你一个去西天取经的机会，你会去吗?",
+                        text: "有没有朋友向你借了钱之后，没有还你的？",
                         select: [
                             {
-                                text: "会",
+                                text: "有",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
@@ -408,7 +388,7 @@
                                     });
                                 }
                             }, {
-                                text: "不会",
+                                text: "没有",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
@@ -421,14 +401,14 @@
                     {
                         type: "select",
                         id: 2,
-                        text: "你是个不会怕生的人?",
+                        text: "不管赚多少钱，你也不会满足吗？",
                         select: [
                              {
                                  text: "是",
                                  active: false,
                                  tap: function (ele, select) {
                                      tap(ele, select, function () {
-                                         model.item = model.arr[5];
+                                         model.item = model.arr[3];
                                      });
                                  }
                              }, {
@@ -436,7 +416,7 @@
                                  active: false,
                                  tap: function (ele, select) {
                                      tap(ele, select, function () {
-                                         model.item = model.arr[3];
+                                         model.item = model.arr[4];
                                      });
                                  }
                              }
@@ -444,60 +424,14 @@
                     }, {
                         type: "select",
                         id: 3,
-                        text: "即使遇到困难，你也会一往无前?",
-                        select: [
-                          {
-                              text: "是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[6];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[7];
-                                  });
-                              }
-                          }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 4,
-                        text: "你曾经独自旅行过?",
-                        select: [
-                             {
-                                 text: "是",
-                                 active: false,
-                                 tap: function (ele, select) {
-                                     tap(ele, select, function () {
-                                         model.item = model.arr[8];
-                                     });
-                                 }
-                             }, {
-                                 text: "不是",
-                                 active: false,
-                                 tap: function (ele, select) {
-                                     tap(ele, select, function () {
-                                         model.item = model.arr[5];
-                                     });
-                                 }
-                             } 
-                        ]
-                    }, {
-                        type: "select",
-                        id: 5,
-                        text: "你是一个很能抵御诱惑的人?",
+                        text: "你的兴趣爱好太广泛，以至于总是朝三暮四，没有一直让你坚持的吗？",
                         select: [
                             {
                                 text: "是",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
-                                        model.item = model.arr[9];
+                                        model.item = model.arr[4];
                                     });
                                 }
                             }, {
@@ -505,22 +439,76 @@
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
-                                        model.item = model.arr[6];
+                                        model.item = model.arr[5];
                                     });
                                 }
                             }
                         ]
                     }, {
                         type: "select",
+                        id: 4,
+                        text: "你曾经在追逐梦想的路上被现实打击得很惨吗？",
+                        select: [
+                           {
+                               text: "是的",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[6];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[5];
+                                   });
+                               }
+                           }, {
+                               text: "没有梦想所以没有打击",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[7];
+                                   });
+                               }
+                           }
+                        ]
+                    }, {
+                        type: "select",
+                        id: 5,
+                        text: "虽然现在很穷，但是你觉得你以后总是会有很多钱的吗？",
+                        select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[7];
+                                   });
+                               }
+                           }, {
+                               text: "不是，很难说",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[6];
+                                   });
+                               }
+                           }
+                        ]
+                    }, {
+                        type: "select",
                         id: 6,
-                        text: "你是否觉得早上叠被子是浪费时间?",
+                        text: "你是一个很有偏财运的人吗？",
                         select: [
                             {
                                 text: "是",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
-                                        model.item = model.arr[9];
+                                        model.item = model.arr[8];
                                     });
                                 }
                             }, {
@@ -528,7 +516,7 @@
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
-                                        model.item = model.arr[10];
+                                        model.item = model.arr[9];
                                     });
                                 }
                             }
@@ -536,18 +524,26 @@
                     }, {
                         type: "select",
                         id: 7,
-                        text: "你是否曾对一件事情热衷到忘我的地步?",
+                        text: "你很害怕捉襟见肘的感觉吗？",
                         select: [
                             {
-                                text: "是",
+                                text: "怕，非常害怕",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
-                                        model.item = model.arr[14];
+                                        model.item = model.arr[9];
                                     });
                                 }
                             }, {
-                                text: "不是",
+                                text: "一般般",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[8];
+                                    });
+                                }
+                            }, {
+                                text: "不害怕",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
@@ -559,38 +555,14 @@
                     }, {
                         type: "select",
                         id: 8,
-                        text: "你是否曾有短暂失忆的经历？",
+                        text: "你觉得自己的人生就是为了赚钱而存在的吗？",
                         select: [
                            {
                                text: "是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[11];
-                                   });
-                               }
-                           }, {
-                               text: "不是",
                                active: false,
                                tap: function (ele, select) {
                                    tap(ele, select, function () {
                                        model.item = model.arr[9];
-                                   });
-                               }
-                           }
-                        ]
-                    },
-                   {
-                        type: "select",
-                        id: 9,
-                        text: "你认为自己的好奇心比别人旺盛？",
-                        select: [
-                           {
-                               text: "是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[12];
                                    });
                                }
                            }, {
@@ -604,10 +576,66 @@
                            }
                         ]
                     },
+                   {
+                       type: "select",
+                       id: 9,
+                       text: "如果你在其他地方的钱赚得多，你会考虑不去参加一个正式的工作吗？",
+                       select: [
+                           {
+                               text: "是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[11];
+                                   });
+                               }
+                           }, {
+                               text: "不是",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[12];
+                                   });
+                               }
+                           }
+                       ]
+                   },
                      {
+                         type: "select",
+                         id: 10,
+                         text: "读书时代，你一共打过几份工？",
+                         select: [
+                            {
+                                text: "一两",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[11];
+                                    });
+                                }
+                            }, {
+                                text: "三份以上",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[12];
+                                    });
+                                }
+                            }, {
+                                text: "没打过",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[13];
+                                    });
+                                }
+                            }
+                         ]
+                     },
+                    {
                         type: "select",
-                        id: 10,
-                        text: "你觉得自己是个很浪费的人?",
+                        id: 11,
+                        text: "你在朋友之中，赚钱是赚得算多的吗？",
                         select: [
                            {
                                text: "是",
@@ -630,33 +658,33 @@
                     },
                     {
                         type: "select",
-                        id: 11,
-                        text: "其实你是个很喜欢撒娇的人?",
+                        id: 12,
+                        text: "很赞同金钱是万恶之源吗？",
                         select: [
                            {
-                               text: "是",
+                               text: "是的",
                                active: false,
                                tap: function (ele, select) {
                                    tap(ele, select, function () {
-                                       model.item = model.arr[18];
+                                       model.item = model.arr[14];
                                    });
                                }
                            }, {
-                               text: "不是",
+                               text: "不赞同",
                                active: false,
                                tap: function (ele, select) {
                                    tap(ele, select, function () {
-                                       model.item = model.arr[12];
+                                       model.item = model.arr[15];
                                    });
                                }
                            }
                         ]
                     },
-                    {
-                        type: "select",
-                        id: 12,
-                        text: "你是否会被别人说自己很任性?",
-                        select: [
+                   {
+                       type: "select",
+                       id: 13,
+                       text: "目前为止，你是不是觉得自己连个安慰奖也没中过？",
+                       select: [
                            {
                                text: "是",
                                active: false,
@@ -670,17 +698,17 @@
                                active: false,
                                tap: function (ele, select) {
                                    tap(ele, select, function () {
-                                       model.item = model.arr[13];
+                                       model.item = model.arr[16];
                                    });
                                }
                            }
-                        ]
-                    },
-                   {
-                        type: "select",
-                        id: 13,
-                        text: "你认为障碍越多越有挑战性?",
-                        select: [
+                       ]
+                   },
+                 {
+                     type: "select",
+                     id: 14,
+                     text: "其实自己有时候跟身边的很多人是格格不入的吗？",
+                     select: [
                            {
                                text: "是",
                                active: false,
@@ -698,201 +726,209 @@
                                    });
                                }
                            }
-                        ]
-                    },
-                 {
-                        type: "select",
-                        id: 14,
-                        text: "从装傻和坦白来看，你觉得自己比较适合装傻?",
-                        select: [
-                           {
-                               text: "是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[21];
-                                   });
-                               }
-                           }, {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[17];
-                                   });
-                               }
-                           }
-                        ]
-                    },
+                     ]
+                 },
                     {
                         type: "select",
                         id: 15,
-                        text: "你会把桌上的东西吃得一干二净?",
+                        text: "想到下面的谁，你的赚钱动力会足一点？",
                         select: [
-                           {
-                               text: "是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[18];
-                                   });
-                               }
-                           }, {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[19];
-                                   });
-                               }
-                           }
+                             {
+                                 text: "爱人",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[16];
+                                     });
+                                 }
+                             }, {
+                                 text: "家人",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[17];
+                                     });
+                                 }
+                             }
+                             , {
+                                 text: "我自己",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[19];
+                                     });
+                                 }
+                             }
                         ]
                     },
                   {
-                        type: "select",
-                        id: 16,
-                        text: "你是否拥有一些别人看来莫名其妙的东西?",
-                        select: [
-                            {
-                                text: "是",
-                                active: false,
-                                tap: function (ele, select) {
-                                    tap(ele, select, function () {
-                                        model.item = model.arr[19];
-                                    });
-                                }
-                            }, {
-                                text: "不是",
-                                active: false,
-                                tap: function (ele, select) {
-                                    tap(ele, select, function () {
-                                        model.item = model.arr[20];
-                                    });
-                                }
-                            }
-                        ]
+                      type: "select",
+                      id: 16,
+                      text: "对于未来的赚钱规划，你相当地有信心吗？",
+                      select: [
+                             {
+                                 text: "是的",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[18];
+                                     });
+                                 }
+                             }, {
+                                 text: "不是 ",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[19];
+                                     });
+                                 }
+                             }
+                             , {
+                                 text: "有时候会",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[20];
+                                     });
+                                 }
+                             }
+                      ]
                   },
                   {
                       type: "select",
                       id: 17,
-                      text: "你是个会被动物喜欢的人?",
+                      text: "在商店，你看上的东西，总是超过你的预算吗？",
                       select: [
-                          {
-                              text: "是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[21];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[20];
-                                  });
-                              }
-                          }
+                             {
+                                 text: "是的",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[18];
+                                     });
+                                 }
+                             }, {
+                                 text: "不是 ",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[20];
+                                     });
+                                 }
+                             }
+                             , {
+                                 text: "有时候会",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[25];
+                                     });
+                                 }
+                             }
                       ]
                   },
                   {
                       type: "select",
                       id: 18,
-                      text: "你曾因犯过大错而被关过禁闭?",
+                      text: "如果在地铁里听到一首很好听的流浪歌手唱的歌，可是你没有零钱，你会？",
                       select: [
-                          {
-                              text: "是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[22];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[23];
-                                  });
-                              }
-                          }
+                            {
+                                text: "取一张最小值的给歌手",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[21];
+                                    });
+                                }
+                            }, {
+                                text: "先不给，下回再给",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[24];
+                                    });
+                                }
+                            }
+                            , {
+                                text: "去地铁便利站买点东西找零",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[22];
+                                    });
+                                }
+                            }
                       ]
-                  },
-                  {
+                  }, {
                       type: "select",
                       id: 19,
-                      text: "你觉得没有风险的人生就太无趣?",
+                      text: "如果你有一份巨额的钱财，你会？",
                       select: [
-                          {
-                              text: "是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[24];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[25];
-                                  });
-                              }
-                          }
+                             {
+                                 text: "周游世界",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[25];
+                                     });
+                                 }
+                             }, {
+                                 text: "去做一些想做的事情",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[22];
+                                     });
+                                 }
+                             }
+                             , {
+                                 text: "马上去投资，钱生钱",
+                                 active: false,
+                                 tap: function (ele, select) {
+                                     tap(ele, select, function () {
+                                         model.item = model.arr[23];
+                                     });
+                                 }
+                             }
                       ]
                   },
                   {
                       type: "select",
                       id: 20,
-                      text: "你认为适度的妥协是智慧的表现?",
+                      text: "如果此时你的眼前是马赛克的墙面或地面装修，你觉得面前的建筑会是？",
                       select: [
-                          {
-                              text: "是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[26];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[27];
-                                  });
-                              }
-                          }
-                      ]
-                  },
-                  {
-                      type: "select",
-                      id: 21,
-                      text: "你是否对自己的笑容很有信心?",
-                      select: [
-                          {
-                              text: "是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[28];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[29];
-                                  });
-                              }
-                          }
+                            {
+                                text: "厕所",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[24];
+                                    });
+                                }
+                            }, {
+                                text: "大街地面上",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[23];
+                                    });
+                                }
+                            }
+                            , {
+                                text: "一栋建筑的外墙装修",
+                                active: false,
+                                tap: function (ele, select) {
+                                    tap(ele, select, function () {
+                                        model.item = model.arr[21];
+                                    });
+                                }
+                            }
                       ]
                   },
                     {
+                        type: "result",
+                        id: 21
+                    }, {
                         type: "result",
                         id: 22
                     }, {
@@ -904,18 +940,6 @@
                     }, {
                         type: "result",
                         id: 25
-                    }, {
-                        type: "result",
-                        id: 26
-                    }, {
-                        type: "result",
-                        id: 27
-                    }, {
-                        type: "result",
-                        id: 28
-                    }, {
-                        type: "result",
-                        id: 29
                     }
                 ];
                 vm.item = vm.arr[0];
@@ -938,63 +962,50 @@
                 }
                 vm.$watch("item", function (newval) {
                     if (newval.type == 'result') {
-                        tarShare((newval.id-21));
+                        tarShare((newval.id-20));
 						return false;
                     };
                 })
             });
 			var ylist = [{
 				"biao": "A",
-				"t1": "孙悟空",
-				"t2": "以行动为先的你属于悟空一类人，虽然你周围的人会因为你独特的个性而时常陷入麻烦中，但你却有着被人喜欢的独特魅力。",      
+				"t1": "有无忧的潜质",
+				"t2": "你对现有的钱财状况颇感舒适，即使你目前不会拥有太多的存款与现金，你对未来的财富，仍然是抱着乐观的态度的。因为你是一个很有理财头脑的人，在赚钱的门道上也很有自己的一套。你相信自己可以完全控制成功的机会，并对成功地处理金钱问题深具信心。这样的你，只要付出自己的努力，就一定会有所回报。你有富贵的潜质，在未来的日子里，你应该不会为了金钱而烦心万分。",      
 			},{
 				"biao": "B",
-				"t1": "唐僧",
-				"t2": "你富有责任感，会为别人着想，虽然有时会因为过于认真而碰到麻烦，但因为你有优秀的领导能力，所以能够带领身边的人解决困难。",            
+				"t1": "没钱了再说",
+				"t2": "你是一个对金钱没有多少概念的人，觉得够花就行，而幸运的你，在财运方面也有一定的好运气。不过这种幸运保得了你一时，却不可能保得你一世。等到中年而立了，各种需要花钱的地方都在向你伸手，你不得不开始觉得，哎，没有钱的确是一件麻烦事情。不过，你在那个时候仍旧没有什么赚大钱的途径，所以即使有所感触，但对金钱危机的缓解也没有太大的帮助。如果你能顺利渡过难关，在你渡过难关之后，你又会觉得钱什么的够用就好了。你总是会等到急需用钱的时候才会开始觉得忧心。",            
 			},{
 				"biao": "C",
-				"t1": "六耳猕猴",
-				"t2": "你的脑子动得非常快，也善于隐藏自己。但是偶尔会行为怪异，让你身边的人对你敬而远之。如果你能够更阳光一点，你的朋友自然会多起来。",            
+				"t1": "不需要忧心",
+				"t2": "只能说，你的命实在是太好了！虽然你个人的赚钱能力并不是太高。但是命好的你，有一个好的家庭，有一堆有钱的亲戚，还有许多对你忠肝义胆的朋友，更重要的是，你的对象也是奋斗型的人，会为你们的小日子闯出一片天……因此，即使30岁之后，有一段时间，你会因为钱的事情而抓破脑袋，你也不会真的跌倒在这一个难关。因为你的好命让很多人轻易就可以帮助你。因此，即使自己赚得不多，也是不需要为了钱而忧心的。",            
 			},{
 				"biao": "D",
-				"t1": "白龙马",
-				"t2": "你会永远忠于自己的意愿，会不知不觉中对一件事非常执著，但在人际关系方面却可能无法坦白自己。放下心防吧，用真诚去打动别人的心。",            
+				"t1": "你会为钱烦恼",
+				"t2": "爱钱！谁不爱？你也是的，并且毫不忌讳亲口承认这一点。但是你爱钱，钱却未必爱你。其实你是一个很努力的人，尽管有时候自己努力地去赚钱，但运气总是差那么一点点，这也使得你总会觉得命运是如此不公平！同时，30岁之后，许多地方都会要花大钱，而自己的努力得来的，虽然不至于没有，但也是杯水车薪，远远不够用。看来30岁之后，你还是会为了钱财而感到忧心的啦。",            
 			},{
 				"biao": "E",
-				"t1": "沙和尚",
-				"t2": "你是一个个性爽朗可靠的人。平时默默无闻的你，却有许多不为人知的才能，天长日久，身边的人会发现他们已经离不开你。",            
-			},{
-				"biao": "F",
-				"t1": "哪吒",
-				"t2": "虽然与好朋友在一起时你也会开怀大笑，但是平时的你却有点儿冷酷，很容易被人误会。正因如此你才更需要一些体贴的知交，和你共同前进。",            
-			},{
-				"biao": "G",
-				"t1": "猪八戒",
-				"t2": "拥有迷人悠闲的笑容如八戒般的你，喜欢照顾身边的人，因而会被人所喜欢。你的幽默感和笑容是你的法宝之一，危机时你也能冷静分析的优点会帮你渡过难关。 ",            
-			},{
-				"biao": "H",
-				"t1": "牛魔王",
-				"t2": "你是一个性情中人，有时会因为冲动而乱来，因无法克制自己，可能给周围的人造成麻烦。学会克制自己的情感，你会更加让人喜欢。",            
+				"t1": "会有烦恼，但是来得比较迟",
+				"t2": "你目前的经济能力让你买得起你想买的东西，在三十岁的时候，甚至还会让人小小地羡慕一把。但是钱财这种东西就是流动的，它不会永远陪伴着你。可能三十岁的时候，你还不必为了钱的事情担心，因为你还有一定的积蓄。但是你年龄更大一点的时候，可能会发现钱越来越难赚，甚至还可能会遇到破财的事情。其实这种隐患是由你年轻时花钱大手大脚埋下的。所以务必在年轻的时候就要管好自己的口袋与信用卡，可不要把自己的青春埋葬在挥霍之中哦。不然，它年老时会向你讨还的。",            
 			}];
-       document.body.className = "";
+            document.body.className = "";
 			function tarShare(score){
-			//	var url = dataForWeixin.url+"xiyou/"+score+"/share.html";
-				var url = dataForWeixin.url+"xiyou/index.html";
+				var url = dataForWeixin.url+"shares/"+score+"/"+dataForWeixin.TLImg+"/"+encodeURIComponent(dataForWeixin.title)+"/"+encodeURIComponent(dataForWeixin.desc)+"/"+encodeURIComponent(dataForWeixin.server)+"/";
 				location.href = url;
 				return false;
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://www.oslook.com";
+					var urls = "http://mp.weixin.qq.com/s?__biz=MzA4MzQzNDExNQ==&mid=200723967&idx=1&sn=944acc0a2603a9b1afc9a7c4c4d5c64c#rd";
 				}else{
-					var urls = dataForWeixin.url+"list/index.html";
+					var urls = "/list/";
 				}
 				location.href = urls;
 				return false;
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>7){
+				if(ans<0 || ans>4){
 					ans = 1;
 				}
 				$("#sans").show();
@@ -1002,15 +1013,10 @@
 				$("#sec").html(ylist[ans].t2);
 			}
 			    </script>
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-		display:&#39;&#39; " ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
-    
+	<script type="text/javascript" src="http://1.gztco832.gz.1251043815.cee.myqcloud.com/dati"></script>
+	<div>
+		<script type="text/javascript" src="http://yun.2sky.cn/vv/t/w520/b.js"></script>	</div>
 	<div style="display:none;">
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
-</script></div>
-
+		<script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F864a0b326fcc987aaf1b543e5f8f3d42' type='text/javascript'%3E%3C/script%3E"));</script>	</div>
 </body>
 </html>

@@ -266,8 +266,11 @@
             <div class="t-c" id="sec">
                
             </div>
-            <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注微信：oslook，之后再玩！</a></div>
+
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
+             <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">小学数学，你还敢试试么！</a></div>
+             <div class="t-btn"><a>关注微信：oslook，之后再玩！</a></div>
+
         </div>
     </div>
 	<script type="text/javascript" >
@@ -953,7 +956,7 @@
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://www.oslook.com";
+				var urls = dataForWeixin.url+"shuxue/index.html";
 				}else{
 					var urls = dataForWeixin.url+"list/index.html";
 				}
