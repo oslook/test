@@ -18,6 +18,11 @@
 		 
 	});
 	test.send();
+		//关闭按钮
+	function closeADFunc() {
+	document.getElementById('hideADbtn').style.display='none';
+	document.getElementById('spn').style.display='none';
+	}
 	</script>	
 	
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -331,9 +336,9 @@
             <div class="t-c" id="sec">
                
             </div>
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">继续趣味测试</a></div>
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">你认准钱吗？</a></div>
             <div class="t-btn"><a>关注微信：oslook</a></div>
-			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
-			<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">浏览主页</a></div>
         </div>
     </div>
 	<script type="text/javascript" >
@@ -744,7 +749,7 @@
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://www.oslook.com";
+ 		var urls = dataForWeixin.url+"money/index.html";
 				}else{
 					var urls = dataForWeixin.url+"list/index.html";
 				}
@@ -774,7 +779,8 @@
 				tarShare(scores);
 			}
     </script>
-    
+        <img id="hideADbtn" src="../../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+		display:&#39;&#39; " ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
 
 

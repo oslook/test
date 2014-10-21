@@ -18,6 +18,12 @@
 		 
 	});
 	test.send();
+
+	//关闭按钮
+	function closeADFunc() {
+	document.getElementById('hideADbtn').style.display='none';
+	document.getElementById('spn').style.display='none';
+	}
 	</script>	
 	
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
@@ -775,6 +781,8 @@
 				tarShare(scores);
 			}
     </script>
+    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+		display:&#39;&#39; " ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
 
 	<div style="display:none;">
