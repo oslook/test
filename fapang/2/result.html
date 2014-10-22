@@ -283,6 +283,8 @@
 			padding:0 25px;
 			overflow: hidden;
 		}
+body {background:#95d15f;color: #333;font: 15px 微软雅黑;,Helvetica;overflow: visible;}
+body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea, figure, figcaption, nav, footer, menu {margin: 0;padding: 0;}
 		
 .content, .footer {background-color: #ededed;overflow: hidden;width: 100%;z-index: 1;}
 .mod-app-intro {overflow: hidden;width: 100%;}
@@ -343,12 +345,9 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
                 <span></span>
             </div>
             <div class="t-c" id="sec">
-               
             </div>
-    
-    			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">继续趣味测试</a></div>
+    		<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">继续趣味测试</a></div>
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">你认准钱吗？</a></div>
-            <div class="t-btn"><a>关注微信：oslook，之后再玩！</a></div>
             
         </div>
     </div>
@@ -776,7 +775,7 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
 			}
-			showAns(1);
+			showAns(2);
 						function testEnd() {
 				if (fen >= 80) {
 					var scores = 4;
