@@ -238,15 +238,7 @@
                 padding-bottom: 20px;
             }
 
-        .list {
-            list-style: initial;
-            text-align: left;
-        }
-
-            .list li {
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
-            }
+   
 
         a,
         a:link,
@@ -295,6 +287,26 @@
 			padding:0 25px;
 			overflow: hidden;
 		}
+		
+body {background:#ffc2bd;color: #333;font: 15px 微软雅黑;,Helvetica;overflow: visible;}
+body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea, figure, figcaption, nav, footer, menu {margin: 0;padding: 0;}
+		
+.content, .footer {background-color: #ededed;overflow: hidden;width: 100%;z-index: 1;}
+.mod-app-intro {overflow: hidden;width: 100%;}
+ul, ol, li {list-style: none outside none;}
+.mod-app-intro li { border-bottom: 1px solid #e4e4e4; padding: 10px;position: relative;}
+.mod-app-intro .figure img {border-radius: 8px;display: block;height: 60px;margin: 0 10px 0 0;width: 60px;}
+.mod-app-intro .figcaption {display: block;}
+.mod-app-intro li .tit {height: 22px;line-height: 22px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+.mod-app-intro li p {color: #666;font-size: 12px;height: 22px;line-height: 22px;}
+.mod-app-intro li p span:last-child:after {display: none;}
+.game_list li .btn-g {margin-top: 10px;}
+.btn-g {background-color: #f6ad00;border-radius: 2px;height: 24px;line-height: 22px;}
+.btn {color: #fff !important;display: inline-block;font-size: 14px;min-width: 68px;text-align: center;}
+.mod-app-intro .figure {display: -webkit-box;-webkit-box-align: center;}
+.mod-app-intro .figcaption {-webkit-box-flex: 1;display: block;}
+		
     </style>
 
 </head>
@@ -340,8 +352,7 @@
                
             </div>
     			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">继续趣味测试</a></div>
-			<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">你能离开手机吗？</a></div>
-            <div class="t-btn"><a>关注微信：oslook，之后再玩！</a></div>
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">测试：你能离开手机吗？</a></div>
             
         </div>
     </div>
@@ -536,6 +547,21 @@
 			showAns(2);
 			    </script>
 
+ 	<div class="content">
+		<div class="app-intro">
+			<ul id="j_game_list" class="mod-app-intro game_list">
+		<li class='list' data-url='http://i.oslook.com/test/shuxue/'><div class='figure'><img src='http://i.oslook.com/test/shuxue/image/icon.jpg'><div class='figcaption'><h3 class='tit'>考智商，小学数学你能得几分？！</h3><p>神呐！60%以上的人不及格啊。</p><p><span>1424230人玩过</span></p></div><span class='btn btn-g'>开始考试</span></div></li>
+			</ul>
+		</div>
+	</div>
+    	<script type="text/javascript">
+		$(".list").click(function(){
+			var target = $(this).attr("data-url");
+			location.href = target;
+		});
+	</script>
+	
+	
             <img id="hideADbtn" src="../../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
 		display:&#39;&#39; " ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
