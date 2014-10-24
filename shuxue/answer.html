@@ -27,8 +27,8 @@
     	<script type="text/javascript">
 		var _con = {}; _con["num"] = 34;
 	</script>
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script src="./js/avalon.mobile.min.js"></script>
   <style>
 		        * {
             font-family: '微软雅黑';
@@ -279,7 +279,7 @@
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("../image/mane.png") no-repeat;
+			background:url("./image/mane.png") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -296,13 +296,13 @@
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
-		正在显示结果......	</div>
+		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
+		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'"  style='display:none;' >
+        <div ms-if="item.type=='hello'" >
 			<div class="mane">小学数学，你能得几分</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
@@ -339,7 +339,6 @@
 
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
              <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">高考，你还敢试试么！</a></div>
-             <div class="t-btn"><a href="../answer.html">查看答案</a></div>
 
         </div>
     </div>
@@ -383,7 +382,7 @@
                         text: "小学数学，你能得几分？ 友情提示：不准携带通讯工具，不准交头接耳、 一经发现，取消考试成绩，并终生禁止再次参与本考试！一定要记得哦！",
                         select: [
                             {
-                                text: "开始测试",
+                                text: "查看答案",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
@@ -420,7 +419,7 @@
 						    }
 						},
 						{
-						    text: "9",
+						    text: "9√ 按下继续",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
@@ -459,7 +458,7 @@
 					        }
 					    },
                          {
-                             text: "6",
+                             text: "6√ 按下继续",
                              active: false,
                              error: false,
                              tap: function (ele, select) {
@@ -520,7 +519,7 @@
 						    }
 						},
 						{
-						    text: "16",
+						    text: "16√ 按下继续",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
@@ -548,7 +547,7 @@
 					    id: 4,
 					    text: "一个人唱一首歌要2分钟，现在3个人合唱这首歌，要几分钟？",
 					    select: [{
-					        text: "2",
+					        text: "2√ 按下继续",
 					        active: false,
 					        error: false,
 					        tap: function (ele, select) {
@@ -609,7 +608,7 @@
 					        }
 					    },
                          {
-                             text: "45",
+                             text: "45√ 按下继续",
                              active: false,
                              error: false,
                              tap: function (ele, select) {
@@ -681,7 +680,7 @@
                              }
                          },
                          {
-                             text: "30",
+                             text: "30√ 按下继续",
                              active: false,
                              error: false,
                              tap: function (ele, select) {
@@ -709,7 +708,7 @@
 					        }
 					    },
 						{
-						    text: "8",
+						    text: "8√ 按下继续",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
@@ -759,7 +758,7 @@
 					        }
 					    },
 						{
-						    text: "2401",
+						    text: "2401√ 按下继续",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
@@ -798,7 +797,7 @@
                         id: 9,
                         text: "小明比爸爸大明小31岁，比妈妈小25岁，爸爸比妈妈大几岁？",
                         select: [{
-                            text: "6",
+                            text: "6√ 按下继续",
                             active: false,
                             error: false,
                             tap: function (ele, select) {
@@ -881,7 +880,7 @@
 						    }
 						},
 						{
-						    text: "不确定",
+						    text: "不确定√ 按下继续",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
@@ -1008,7 +1007,7 @@
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>10){
+				if(ans<0 || ans>5){
 					ans = 1;
 				}
 				$("#sans").show();
@@ -1019,30 +1018,29 @@
 				 if (fen == 0) {
                    var scores = 1;
                 }else if (fen >= 1 && fen <= 59) {
-                   var scores = 2;
+                   var scores = 1;
                 }else if (fen == 60) {
-                    var scores = 3;
+                    var scores = 2;
                 }else if (fen == 66) {
-                   var scores = 4;
+                   var scores = 3;
                 }else if (fen >= 61 && fen <= 79) {
-                   var scores = 5;
+                   var scores = 4;
                 }else if (fen == 80) {
-                   var scores = 6;
+                   var scores = 5;
                 }else if (fen >= 81 && fen <= 90) {
-                  var scores = 7;
+                  var scores = 6;
                 }else if (fen >= 91 && fen <= 98) {
-                    var scores = 8;
+                    var scores = 7;
                 }else if (fen == 99) {
-                    var scores = 9;
+                    var scores = 8;
                 }else if (fen == 100) {
-                    var scores = 10;
+                    var scores = 9;
                 }
 				tarShare(scores);
 			}
-			showAns(6);
     </script>
 
-    <img id="hideADbtn" src="../../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
 		display:&#39;&#39; " ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
     
