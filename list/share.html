@@ -89,8 +89,8 @@ var d = request.QueryString("d");
             "imgUrl": "http://i.oslook.com/test/"+spid+"/icon.jpg",
 			"timeLineLink": "",
 			"url": "http://i.oslook.com/test/"+spid+"/index.html",
-			"title": t,
-            "desc": d
+			"title": decodeURIComponent(t),
+            "desc": decodeURIComponent(d)
         };
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 		 WeixinJSBridge.call('showOptionMenu');
