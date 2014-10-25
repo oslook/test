@@ -26,11 +26,9 @@
 	}
 	</script>	
     
-    	<script type="text/javascript">
-		var _con = {}; _con["num"] = 23;
-	</script>
-	<script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script src="./js/avalon.mobile.min.js"></script>
+    
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../js/avalon.mobile.min.js"></script>
   <style>
  * {
             font-family: '微软雅黑';
@@ -301,7 +299,7 @@
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
 		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
@@ -347,7 +345,7 @@
 	<script type="text/javascript" >
 		 var dataForWeixin = {
 			  server: "i.oslook.com/",
-			  TLImg: _con["num"],
+			  TLImg: "",
 			  url: "http://i.oslook.com/test/",		
 			  title: "测测你是《西游记》里的谁？",
 			  desc: "很准的呦,都来试试吧"
@@ -943,42 +941,11 @@
                     };
                 })
             });
-			var ylist = [{
-				"biao": "A",
-				"t1": "孙悟空",
-				"t2": "以行动为先的你属于悟空一类人，虽然你周围的人会因为你独特的个性而时常陷入麻烦中，但你却有着被人喜欢的独特魅力。",      
-			},{
-				"biao": "B",
-				"t1": "唐僧",
-				"t2": "你富有责任感，会为别人着想，虽然有时会因为过于认真而碰到麻烦，但因为你有优秀的领导能力，所以能够带领身边的人解决困难。",            
-			},{
-				"biao": "C",
-				"t1": "六耳猕猴",
-				"t2": "你的脑子动得非常快，也善于隐藏自己。但是偶尔会行为怪异，让你身边的人对你敬而远之。如果你能够更阳光一点，你的朋友自然会多起来。",            
-			},{
-				"biao": "D",
-				"t1": "白龙马",
-				"t2": "你会永远忠于自己的意愿，会不知不觉中对一件事非常执著，但在人际关系方面却可能无法坦白自己。放下心防吧，用真诚去打动别人的心。",            
-			},{
-				"biao": "E",
-				"t1": "沙和尚",
-				"t2": "你是一个个性爽朗可靠的人。平时默默无闻的你，却有许多不为人知的才能，天长日久，身边的人会发现他们已经离不开你。",            
-			},{
-				"biao": "F",
-				"t1": "哪吒",
-				"t2": "虽然与好朋友在一起时你也会开怀大笑，但是平时的你却有点儿冷酷，很容易被人误会。正因如此你才更需要一些体贴的知交，和你共同前进。",            
-			},{
-				"biao": "G",
-				"t1": "猪八戒",
-				"t2": "拥有迷人悠闲的笑容如八戒般的你，喜欢照顾身边的人，因而会被人所喜欢。你的幽默感和笑容是你的法宝之一，危机时你也能冷静分析的优点会帮你渡过难关。 ",            
-			},{
-				"biao": "H",
-				"t1": "牛魔王",
-				"t2": "你是一个性情中人，有时会因为冲动而乱来，因无法克制自己，可能给周围的人造成麻烦。学会克制自己的情感，你会更加让人喜欢。",            
-			}];
+
        document.body.className = "";
 			function tarShare(score){
-				var url = dataForWeixin.url+"xiyou/"+score+"/share.html";
+			var url = dataForWeixin.url+"list/share.html?spid=xiyou&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
+				
 				location.href = url;
 				return false;
 			}
@@ -991,21 +958,12 @@
 				location.href = urls;
 				return false;
 			}
-			function showAns(ans){
-				ans = ans-1;
-				if(ans<0 || ans>7){
-					ans = 1;
-				}
-				$("#sans").show();
-				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
-				$("#sec").html(ylist[ans].t2);
-			}
 			    </script>
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-		display:&#39;&#39; " ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
-    
-	<div style="display:none;">
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+display:&#39;&#39; " ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
+
+<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
