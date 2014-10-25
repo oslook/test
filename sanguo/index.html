@@ -1406,7 +1406,7 @@
 			}];
               document.body.className = "";
 			function tarShare(score){
-			var url = dataForWeixin.url+"list/share.html?spid=sanguo&s=" +score+"&t=" + dataForWeixin.title + "&d=" +dataForWeixin.desc ;
+			var url = dataForWeixin.url+"list/share.html?spid=sanguo&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
 				
 				location.href = url;
 				return false;
