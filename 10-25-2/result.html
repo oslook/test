@@ -4,8 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测测你是《西游记》里的谁？</title>
-       <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    <title>你拥有着什么样的潜在性格</title>
+   	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
     	<script type="text/javascript">
 	var test = new adwojs({
 		 eid:'spn', //节点id
@@ -25,19 +25,17 @@
 	document.getElementById('spn').style.display='none';
 	}
 	</script>	
-    
-    
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script src="../js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/avalon.mobile.min.js"></script>
   <style>
- * {
+        * {
             font-family: '微软雅黑';
         }
 
         html, body {
             margin: 0;
             color: #000;
-            background: #ffc2bd;
+            background: #95d15f;
             background-size: 100%;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
         }
@@ -78,7 +76,7 @@
 
         .t-s {
             padding: 5px;
-            background-color: #fca9a2;
+            background-color: #f9baba;
             max-width: 100%;
             margin: 10px auto;
             text-align: center;
@@ -179,7 +177,7 @@
         .t-btn:link,
         .t-btn:visited {
             color: #e1edea;
-            background-color: #f87984;
+            background-color: #74b651;
             padding-top: 12px;
             padding-bottom: 13px;
             padding-left: 15px;
@@ -250,7 +248,7 @@
         a,
         a:link,
         a:visited {
-            color: #607fa6;
+            color: #ffffff;
         }
 
         .dialog {
@@ -270,32 +268,31 @@
             background-color: rgba(0,0,0,0.7);
         }
 
-    .dialog-con {
-        position: absolute;
-        width: 280px;
-        top: 100px;
-        background-color: white;
-        left: 50%;
-        margin-left: -140px;
-        padding-bottom: 10px;
-    }
-	.mane{
-		width: 84%;
-		margin-bottom:10px;
-		background:url("../image/mane.png") no-repeat;
-		height:60px;
-		color:#ffffff;
-		font-size:21px;
-		line-height:36px;
-		background-size:100%;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		word-break: keep-all;
-		padding:0 25px;
-		overflow: hidden;
-	}
-</style>
-
+        .dialog-con {
+            position: absolute;
+            width: 280px;
+            top: 100px;
+            background-color: white;
+            left: 50%;
+            margin-left: -140px;
+            padding-bottom: 10px;
+        }
+		.mane{
+			width: 84%;
+			margin-bottom:10px;
+			background:url("../image/mane.png") no-repeat;
+			height:60px;
+			color:#ffffff;
+			font-size:21px;
+			line-height:36px;
+			background-size:100%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-break: keep-all;
+			padding:0 25px;
+			overflow: hidden;
+		}
+    </style>
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
@@ -320,9 +317,9 @@
 		 var dataForWeixin = {
 			  server: "i.oslook.com/",
 			  TLImg: "",
-			  url: "http://i.oslook.com/test/",		
-			  title: "测测你是《西游记》里的谁？",
-			  desc: "很准的呦,都来试试吧"
+			   url: "http://i.oslook.com/test/",
+			  title: "你拥有着什么样的潜在性格",
+			desc: "很准的呦,都来试试吧"
 		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
 		function showQ(){
@@ -349,42 +346,25 @@
                 var r = location.search.substr(1).match(reg);
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
-
 			var ylist = [{
 				"biao": "A",
-				"t1": "孙悟空",
-				"t2": "以行动为先的你属于悟空一类人，虽然你周围的人会因为你独特的个性而时常陷入麻烦中，但你却有着被人喜欢的独特魅力。",      
+				"t1": "崇尚完美主义者",
+				"t2": "你其实是个崇尚完美主义者，对问题大都不抱乐观态度。非常在意别人的想法，显得很神经质。注重修饰自己的外表，对新鲜事物最感敏感，最感兴趣。总是站立在时代尖端上。在恋爱中，女孩将表现出很温柔的一面，男孩喜欢性感的女孩。但都会由于你的潜在性格而有些不敢尝试。",      
 			},{
 				"biao": "B",
-				"t1": "唐僧",
-				"t2": "你富有责任感，会为别人着想，虽然有时会因为过于认真而碰到麻烦，但因为你有优秀的领导能力，所以能够带领身边的人解决困难。",            
+				"t1": "充满感情的行动家",
+				"t2": "你是充满感情的行动家，个性爽朗，没心眼，有同情心。会凭直觉及印象，容易不顾一切的蛮干下去，不求结果，只在乎过程，极为重视现在。在恋爱中，女孩格外的纯情，易陷入情网，男孩则是个性独特，我行我素。你的内在性格特征表现出来就是投入快，也许退出的也会快。 ",            
 			},{
 				"biao": "C",
-				"t1": "六耳猕猴",
-				"t2": "你的脑子动得非常快，也善于隐藏自己。但是偶尔会行为怪异，让你身边的人对你敬而远之。如果你能够更阳光一点，你的朋友自然会多起来。",            
+				"t1": "充满矛盾的自信家",
+				"t2": "你是充满矛盾的自信家，天生和平主义者。很热心的做一些对自己没有利益的事。行动尖锐，忽冷忽热，常被视为异端，经常走自我的道路，不会主动投入团体。在恋爱中，女孩喜欢较叛逆的异性，男孩追求纯情，潜在性格使得他们易于陷于单恋的境地。",            
 			},{
 				"biao": "D",
-				"t1": "白龙马",
-				"t2": "你会永远忠于自己的意愿，会不知不觉中对一件事非常执著，但在人际关系方面却可能无法坦白自己。放下心防吧，用真诚去打动别人的心。",            
-			},{
-				"biao": "E",
-				"t1": "沙和尚",
-				"t2": "你是一个个性爽朗可靠的人。平时默默无闻的你，却有许多不为人知的才能，天长日久，身边的人会发现他们已经离不开你。",            
-			},{
-				"biao": "F",
-				"t1": "哪吒",
-				"t2": "虽然与好朋友在一起时你也会开怀大笑，但是平时的你却有点儿冷酷，很容易被人误会。正因如此你才更需要一些体贴的知交，和你共同前进。",            
-			},{
-				"biao": "G",
-				"t1": "猪八戒",
-				"t2": "拥有迷人悠闲的笑容如八戒般的你，喜欢照顾身边的人，因而会被人所喜欢。你的幽默感和笑容是你的法宝之一，危机时你也能冷静分析的优点会帮你渡过难关。 ",            
-			},{
-				"biao": "H",
-				"t1": "牛魔王",
-				"t2": "你是一个性情中人，有时会因为冲动而乱来，因无法克制自己，可能给周围的人造成麻烦。学会克制自己的情感，你会更加让人喜欢。",            
+				"t1": "现实浪漫主义者",
+				"t2": "你是现实浪漫主义者，洞悉全盘大局再采取行动，一旦下定决心，便很难再改变。对善意、恶意很敏感，以信赖感为主轴，有很彻底的同伴意识，喜欢成群结党。在恋爱中，女孩属于天生的热情型，男孩则属于主攻型，如果对方配合，潜在性格会使他们很快体会到爱情的甜蜜。",            
 			}];
-       document.body.className = "";
-
+            document.body.className = "";
+	
 			function tarHref(type){
 				if(type==1){
 					var urls = "http://www.oslook.com";
@@ -396,7 +376,7 @@
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>7){
+				if(ans<0 || ans>3){
 					ans = 1;
 				}
 				$("#sans").show();
@@ -405,16 +385,15 @@
 			}
 			var s = getQueryString("s");
 			showAns(s);
-			</script>
-<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-display:&#39;&#39; " ontouchstart="closeADFunc();">
-<div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>			    
-			    
-<div style="display:none;">
+			    </script>
+    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+		display:&#39;&#39; " ontouchstart="closeADFunc();">
+    <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
+
+	<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
 </script></div>
-
 </body>
 </html>
