@@ -7,9 +7,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <title>分享给朋友</title>
-	<script type="text/javascript">
-		var _con = {}; _con["num"] = 21; _con["type"] = "weit4";
-	</script>
     <script type="text/javascript" src="../js/jquery.min.js"></script>
 <body style="TEXT-ALIGN: center;overflow-y:hidden;height:500px;">
 <style>
@@ -60,23 +57,39 @@ z-index: 20000;
 </style>
     <div id="sharemcover0" class="sharemcover" style=" display:block;">
 		<img src="http://www.oslook.com/share.png" style="width:100%;heigth:100%;">
-		 <!--{<a style="font-size:40px;color:#ffffff;position: relative;top:80px;" href="javascript:;" onclick="returnBack();">返回</a>}-->
     </div>
 	    <script type="text/javascript">
-		function returnBack(){
-			location.href = "http://i.oslook.com/test/fapang/4/result.html";
-		}
 		var mebtnopenurl = 'http://i.oslook.com/test/fapang/4/result.html';
         var dataForWeixin = {
 			"appId": "",
             "imgUrl": "http://i.oslook.com/test/fapang/image/icon.jpg",
 			"timeLineLink": "",
-			"url": "http://i.oslook.com/test/fapang/index.html",
+			"url": "http://i.oslook.com/test/10-25-4/index.html",
 			"title": "测测你的发胖指数",
             "desc": "很准的呦,最近火的不得了,你还不试试？"
         };
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 		 WeixinJSBridge.call('showOptionMenu');
+		WeixinJSBridge.on("menu:general:share",function(s){
+			s.generalShare({
+				"appid": dataForWeixin.appId,
+				"img_url": dataForWeixin.imgUrl,
+				"img_width": "640",
+				"img_height": "640",
+				"link": dataForWeixin.url,
+				"desc": dataForWeixin.desc,
+				"title": dataForWeixin.title
+				},function(e){
+					if(e.err_msg=="general_share:ok"){
+					//share ok:
+						setTimeout(function () {location.href = mebtnopenurl;}, 1500);
+					}else{
+					//share err:
+					
+					};
+				});
+		});
+		
 		WeixinJSBridge.on('menu:share:appmessage', function(argv) {
 				WeixinJSBridge.invoke('sendAppMessage', {
 				   "appid": dataForWeixin.appId,

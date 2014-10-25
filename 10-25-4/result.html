@@ -4,8 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测试你被一见钟情的可能性？</title>
-   	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    <title>测测你的发胖指数</title>
+    	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
     	<script type="text/javascript">
 	var test = new adwojs({
 		 eid:'spn', //节点id
@@ -18,20 +18,19 @@
 		 
 	});
 	test.send();
-
-	//关闭按钮
+		//关闭按钮
 	function closeADFunc() {
 	document.getElementById('hideADbtn').style.display='none';
 	document.getElementById('spn').style.display='none';
 	}
 	</script>	
+	
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="../js/avalon.mobile.min.js"></script>
   <style>
         * {
             font-family: '微软雅黑';
         }
-
         html, body {
             margin: 0;
             color: #000;
@@ -39,8 +38,6 @@
             background-size: 100%;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
         }
-
-
         #loading {
             text-align: center;
             font-size: 20px;
@@ -63,8 +60,8 @@
 
         .main {
             padding: 10px;
-            padding-top:9%;
-            margin-top: -10px;
+            padding-top:3%;
+            margin-top: -1px;
             text-align: center;
         }
 
@@ -235,20 +232,11 @@
                 padding-bottom: 20px;
             }
 
-        .list {
-            list-style: initial;
-            text-align: left;
-        }
-
-            .list li {
-                margin-top: 0.5em;
-                margin-bottom: 0.5em;
-            }
 
         a,
         a:link,
         a:visited {
-            color: #ffffff;
+            color: #607fa6;
         }
 
         .dialog {
@@ -292,7 +280,28 @@
 			padding:0 25px;
 			overflow: hidden;
 		}
+body {background:#95d15f;color: #333;font: 15px 微软雅黑;,Helvetica;overflow: visible;}
+body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea, figure, figcaption, nav, footer, menu {margin: 0;padding: 0;}
+		
+.content, .footer {background-color: #ededed;overflow: hidden;width: 100%;z-index: 1;}
+.mod-app-intro {overflow: hidden;width: 100%;}
+ul, ol, li {list-style: none outside none;}
+.mod-app-intro li { border-bottom: 1px solid #e4e4e4; padding: 10px;position: relative;}
+.mod-app-intro .figure img {border-radius: 8px;display: block;height: 60px;margin: 0 10px 0 0;width: 60px;}
+.mod-app-intro .figcaption {display: block;}
+.mod-app-intro li .tit {height: 22px;line-height: 22px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
+.mod-app-intro li p {color: #666;font-size: 12px;height: 22px;line-height: 22px;}
+.mod-app-intro li p span:last-child:after {display: none;}
+.game_list li .btn-g {margin-top: 10px;}
+.btn-g {background-color: #f6ad00;border-radius: 2px;height: 24px;line-height: 22px;}
+.btn {color: #fff !important;display: inline-block;font-size: 14px;min-width: 68px;text-align: center;}
+.mod-app-intro .figure {display: -webkit-box;-webkit-box-align: center;}
+.mod-app-intro .figcaption {-webkit-box-flex: 1;display: block;}
+
+		
     </style>
+
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
@@ -307,7 +316,6 @@
                 <span></span>
             </div>
             <div class="t-c" id="sec">
-               
             </div>
             <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注oslook,不再寂寞！</a></div>
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
@@ -318,8 +326,8 @@
 			  server: "i.oslook.com/",
 			  TLImg: "",
 			   url: "http://i.oslook.com/test/",
-			  title: "测试你被一见钟情的可能性？",
-			desc: "很准的呦,都来试试吧"
+			  title: "测测你的发胖指数",
+			  desc: "很准的呦,都来试试吧"
 		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
 		function showQ(){
@@ -346,29 +354,30 @@
                 var r = location.search.substr(1).match(reg);
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
+
 			var ylist = [{
 				"biao": "A",
-				"t1": "一见钟情指数：60%",
-				"t2": "人与人相识最初阶段是外表的认知，所谓一见钟情，大多被外表和谈吐吸引，这是感性化的表现，在你看来没什么大惊小怪的，因此被人一见钟情，也是很正常的事情。因为你有这样的自信，给人十分良好的印象。加之你后天，尤其是现在，也十分注重提升自己的品位与谈吐，外表更是会注重，所以你还是很容易被人一见钟情的。而你也因为见识蛮广，所以就算被人一见钟情了，你也不会轻易地让感情付出相对应的部分，除非你也对对方一见钟情了。",      
+				"t1": "脂肪率在10%以下",
+				"t2": "脂肪率在10%以下。你有很好的饮食习惯以及作息时间，希望能够再接再厉，危险指数：0",      
 			},{
 				"biao": "B",
-				"t1": "一见钟情指数：50%",
-				"t2": "很多人都觉得，一见钟情是年轻青春时才会发生的事情，那个时候人是自然的单纯的，像天然无污染的风景一般，自然也容易被人一见钟情。而随着人渐渐长大，眼睛中不再天真无邪，有时候工作、学业、生活、赚钱、感情之类的问题，也会让人的灵气消磨殆尽，又哪里还有能量能吸引人来一见钟情？不过这个问题在你这里就是一个例外了。因为有的人一见钟是冲着单纯无邪，而你的成熟与优雅，照样是杀人于无形的特质，让人一见钟情，并不是难事哦。",            
+				"t1": "脂肪率在10-25%之间",
+				"t2": "脂肪率在10-25%之间。虽然目前你仍很苗条，但保持好的饮食方式和生活习惯是保持你良好身材的最佳途径。危险指数：2",            
 			},{
 				"biao": "C",
-				"t1": "一见钟情指数：40%",
-				"t2": "你是一个没有什么安全感的人，在见到陌生人时，往往会本能地在心里建筑起一道防御工事，有时候甚至不惜以挫伤人家的自尊心为代价。为此，你很难让对方看到你的优秀的一面，当然，倘若你是长得倾国倾城，那另当别论，但作为芸芸众生中的一员，这种情况也会让你对对方表现出抗拒的一面，对方极难长驱直入，直指你心，对你产生一见钟情的火花。不过也不是不可能被人一见钟情上，毕竟你只是对人有一些距离，而眼缘却不需要太近的距离，倘若遇到了那种保护欲望非常强烈的类型，你还是很有可能被对方一见钟情的哦。",            
+				"t1": "脂肪率在25%-30%之间",
+				"t2": "你的体内脂肪率在25%-30%之间。你看起来虽然不胖，但很结实。这可能也说明你正一步步向肥胖靠近，赶快改变饮食方式与生活习惯，并开始做运动。危险指数：5",            
 			},{
 				"biao": "D",
-				"t1": "一见钟情指数：30%",
-				"t2": "作为一个颜控，别人对你一见钟情不钟情是其次，你对别人一见钟情很重要。而因为眼光还算不错，所以你对别人一见钟情的概率还是很高的。每次一见钟情，你都能从对方那里嗅到一阵芳香，心中激起一阵荡漾。觉得对方就算什么都不说，你只要静静地看着他，你的人生在，那一刻天地清朗，你的嘴角也不觉绽出欢欣的笑容。这种节奏，说穿了，你是容易犯花痴的类型。不过你也知道，你一见钟情只是钟情人家的浮面上的东西，并不会非君不嫁的那种无底线钟情。",            
-			},{
-				"biao": "E",
-				"t1": "一见钟情指数：20%",
-				"t2": "有的人，见到了陌生人，便会生出一个念头，便是要把自己最好的一面展现给对方，让对方也注意到，甚至也喜欢上你。这种人不管好坏对错，最终一定会被人一见钟情，因为她的心中有这样的理想与意念，各方面也会相对应地表现出来。但是你这类型的，则是懒得费尽心机要让人一见钟情。生活中有些随意的你，会觉得，一见钟情之类的实在不必要，因为知人知面不知心，感情中也不寄托于一见钟情，所以还是把平时的一面表现出来就好了。倘若这种情况有人对你一见钟情，那一定是真爱。",            
+				"t1": "脂肪率在30%以上",
+				"t2": "说明你身体的脂肪率在30%以上。你体内已经囤积了多余的脂肪，再不采取行动的话，你会越来越胖。危险指数：8",            
 			}];
             document.body.className = "";
-
+			function tarShare(score){
+				var url = dataForWeixin.url+"fapang/"+score+"/share.html";
+				location.href = url;
+				return false;
+			}
 			function tarHref(type){
 				if(type==1){
 					var urls = "http://www.oslook.com";
@@ -380,7 +389,7 @@
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>4){
+				if(ans<0 || ans>5){
 					ans = 1;
 				}
 				$("#sans").show();
@@ -389,10 +398,38 @@
 			}
 			var s = getQueryString("s");
 			showAns(s);
-			    </script>
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-		display:&#39;&#39; " ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
+						function testEnd() {
+				if (fen >= 80) {
+					var scores = 4;
+				} else if (fen >=50) {
+					var scores = 3;
+				} else if (fen >=20) {
+					var scores = 2;
+				} else {
+					var scores = 1;
+				}
+				tarShare(scores);
+			}
+    </script>
+    
+	<div class="content">
+		<div class="app-intro">
+			<ul id="j_game_list" class="mod-app-intro game_list">
+		<li class='list' data-url='http://i.oslook.com/bear/'><div class='figure'><img src='http://i.oslook.com/bear/img/object2.jpg'><div class='figcaption'><h3 class='tit'>揍狗熊：我能200下，不只是说着玩！</h3><p>好评 99.9%</p><p><span>1424230人玩过</span></p></div><span class='btn btn-g'>开始游戏</span></div></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(".list").click(function(){
+		var target = $(this).attr("data-url");
+		location.href = target;
+	});
+	</script>
+	
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+	display:&#39;&#39; " ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;right:0;height:50px;width:320px;"></div>
+
 
 	<div style="display:none;">
 <script type="text/javascript">
