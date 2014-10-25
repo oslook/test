@@ -60,21 +60,20 @@ z-index: 20000;
 		 <!--{<a style="font-size:40px;color:#ffffff;position: relative;top:80px;" href="javascript:;" onclick="returnBack();">返回</a>}-->
     </div>
 <script type="text/javascript">
-url = document.location.href; 
-get = url.split("?")[1]; 
-//得到当前网页的URL 
-para = null; 
-//为了防止当页面没有外部变量时程序出错，因此将para的值设为空 
-if(get!=null && get.length>0){ 
-para = get.split("&");} 
-//以“&”为分割符获得变量字符串 
-for(i=0; para!=null && i<para.length;i++){ 
-vars = para[i].split("="); 
-eval_r("var "+vars[0] +"='"+vars[1]+"'");} 
+//获得参数的方法
+var request =
+{
+QueryString : function(val)
+{
+var uri = window.location.search;
+var re = new RegExp("" +val+ "=([^&?]*)", "ig");
+return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
+}
+}
 
 //调用方法获得参数
-var gameid = vars[1];
-var score = vars[3];
+var gameid = request.QueryString("gameid");
+var score = request.QueryString("score");
 
 		function returnBack(){
 			location.href = "http://i.oslook.com/test/"+gameid+"/" + score + ".html";
