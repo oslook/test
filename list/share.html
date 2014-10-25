@@ -63,30 +63,34 @@ z-index: 20000;
 //获得参数的方法
 var request =
 {
-QueryString : function(val)
-{
-var uri = window.location.search;
-var re = new RegExp("" +val+ "=([^&?]*)", "ig");
-return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
-}
+	QueryString : function(val)
+	{
+	var uri = window.location.search;
+	var re = new RegExp("" +val+ "=([^&?]*)", "ig");
+	return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
+	}
 }
 
 //调用方法获得参数
-var gameid = request.QueryString("spid");
-var score = request.QueryString("score");
+var spid = request.QueryString("spid");
+var s = request.QueryString("s");
+var t = request.QueryString("t");
+var d = request.QueryString("d");
+</script>
 
+<script type="text/javascript">
 		function returnBack(){
-			location.href = "http://i.oslook.com/test/"+spid+"/" + score + ".html";
+			location.href = "http://i.oslook.com/test/"+spid+"/result.html?s="+s;
 		}
 
-		var mebtnopenurl = "http://i.oslook.com/test/"+spid+"/" + score + ".html";
+		var mebtnopenurl = "http://i.oslook.com/test/"+spid+"/result.html?s="+s;
         var dataForWeixin = {
 			"appId": "",
             "imgUrl": "http://i.oslook.com/test/"+spid+"/icon.jpg",
 			"timeLineLink": "",
 			"url": "http://i.oslook.com/test/"+spid+"/index.html",
-			"title": "测试你被一见钟情的可能性？",
-            "desc": "很准的呦,最近火的不得了,你还不试试？"
+			"title": t,
+            "desc": d
         };
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 		 WeixinJSBridge.call('showOptionMenu');

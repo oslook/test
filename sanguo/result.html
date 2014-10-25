@@ -6,6 +6,21 @@
 <title>测测你是三国杀里的谁</title>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
 <script src="../js/avalon.mobile.min.js"></script>
+<script type="text/javascript">
+//获得参数的方法
+var request =
+{
+	QueryString : function(val)
+	{
+	var uri = window.location.search;
+	var re = new RegExp("" +val+ "=([^&?]*)", "ig");
+	return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
+	}
+}
+
+//调用方法获得参数
+var s = request.QueryString("s");
+
 <style>
     * {
         font-family: '微软雅黑';
@@ -315,7 +330,7 @@
             <div class="t-c" id="sec">
                
             </div>
-            <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注微信：oslook，之后再玩！</a></div>
+            <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注oslook,不再寂寞！</a></div>
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
         </div>
     </div>
@@ -1406,7 +1421,7 @@
 			}];
               document.body.className = "";
 			function tarShare(score){
-			var url = dataForWeixin.url+"list/share.html?spid=sanguo&s=" +score+"&t=" + dataForWeixin.title + "&d=" +dataForWeixin.desc ;
+			var url = dataForWeixin.url+"list/share.html?spid=sanguo&score=" +score+"&t=" + dataForWeixin.title + "&d=" +dataForWeixin.desc ;
 				
 				location.href = url;
 				return false;
@@ -1429,6 +1444,8 @@
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
 			}
+			
+			showAns(s);
 			</script>
 <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
 display:&#39;&#39; " ontouchstart="closeADFunc();">
