@@ -20,7 +20,7 @@ var request =
 
 //调用方法获得参数
 var s = request.QueryString("s");
-
+</script>
 <style>
     * {
         font-family: '微软雅黑';
@@ -297,7 +297,7 @@ var s = request.QueryString("s");
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
-        <div ms-if="item.type=='hello'" >
+        <div ms-if="item.type=='hello'"  style="display:none;">
 			<div class="mane">测测你是三国杀里的谁</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
