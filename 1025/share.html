@@ -59,11 +59,25 @@ z-index: 20000;
 		<img src="http://www.oslook.com/share.png" style="width:100%;heigth:100%;">
 		 <!--{<a style="font-size:40px;color:#ffffff;position: relative;top:80px;" href="javascript:;" onclick="returnBack();">返回</a>}-->
     </div>
-	    <script type="text/javascript">
+<script type="text/javascript">
+//获得参数的方法
+var request =
+{
+QueryString : function(val)
+{
+var uri = window.location.search;
+var re = new RegExp("" +val+ "=([^&?]*)", "ig");
+return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
+}
+
+//调用方法获得参数
+var gameid = request.QueryString("gameid");
+var score = request.QueryString("score");
+
 		function returnBack(){
 			location.href = "http://i.oslook.com/test/"+gameid+"/" + score + ".html";
 		}
-		var gameid,score;
+
 		var mebtnopenurl = "http://i.oslook.com/test/"+gameid+"/" + score + ".html";
         var dataForWeixin = {
 			"appId": "",
