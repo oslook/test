@@ -1,25 +1,32 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-<title>基因测试你适合开什么车</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
-<script src="../js/jquery.min.js"></script>
-<link href="./css/reset.css" rel="stylesheet">
-<link href="./css/zq2.css" rel="stylesheet">
-<script src="./js/Cmn.js"></script>
-<script src="./js/CmnAjax.js"></script>
-<script src="./js/CmnFuncExd.js"></script>
-<script src="./js/NbFunc.js"></script>
-<script>
-$(document).ready(function () {
-Cmn.Func.ImageLazyLoading(".main_wrap", function () {
-}, function () {
-$(".jscPreloader").hide();
-})
-});
-</script>
+    <head>
+      <title>基因测试你适合开什么车</title>
+      <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+	  	  <script type="text/javascript">
+			var _con = {}; _con["type"] = "weitest";  _con["num"] = 2972369;
+		 var _config = {}; _config['isSite'] = 'http://wxfile.2sky.cn/';_config["isCount"] = "http://wxtj.552200.com/";
+	</script>
+	  <script src="http://wxfile.2sky.cn/js/2972369/jquery.min.js"></script>
+    <link href="http://wxfile.2sky.cn/css/2972369/reset.css" rel="stylesheet">
+    <link href="http://wxfile.2sky.cn/css/2972369/zq2.css" rel="stylesheet">
+    <script src="http://wxfile.2sky.cn/js/2972369/Cmn.js"></script>
+    <script src="http://wxfile.2sky.cn/js/2972369/CmnAjax.js"></script>
+    <script src="http://wxfile.2sky.cn/js/2972369/CmnFuncExd.js"></script>
+    <script src="http://wxfile.2sky.cn/js/2972369/NbFunc.js"></script>
+	<script type="text/javascript" src="http://wxfile.2sky.cn/js/count.js"></script>
+    <script>
+						var isCount = 0;
+				if(isCount==1){openCount(2972369);}
+        $(document).ready(function () {
+            Cmn.Func.ImageLazyLoading(".main_wrap", function () {
+            }, function () {
+                $(".jscPreloader").hide();
+            })
+        });
+    </script>
     <script>
         $(function () {
             var _Interval = 0;
@@ -100,8 +107,8 @@ $(".jscPreloader").hide();
 			}
          var dataForWeixin = {
               appId: "",
-              TLImg: "http://i.oslook.com/test/10-26-1/icon.jpg",
-              url: "http://i.oslook.com/test/10-26-1/",
+              TLImg: "http://wxfile.2sky.cn/vapp/2972369/",
+              url: "http://b8887.orenge.zhengyangyake.com/v141026/weitest/2972369/",
               title: "基因测试你适合开什么车",
               desc: "赶快来测试一下吧"
         };
@@ -110,7 +117,7 @@ $(".jscPreloader").hide();
             WeixinJSBridge.on('menu:share:appmessage', function(argv){
                var infos = $("#infos").text();  
 				var	num = $("#infos").attr("num");				   
-
+           if(isCount==1){shareCount(2972369);}
                 WeixinJSBridge.invoke('sendAppMessage', {
                     "appid": dataForWeixin.appId,
                     "img_url":dataForWeixin.TLImg+"0"+num+".jpg",
@@ -125,7 +132,7 @@ $(".jscPreloader").hide();
             WeixinJSBridge.on('menu:share:timeline', function(argv){
                 var infos = $("#infos").text(); 
 				var	num = $("#infos").attr("num");			
-
+					if(isCount==1){shareCount(2972369);}
                 WeixinJSBridge.invoke('shareTimeline', {
                     "appid": dataForWeixin.appId,
                     "img_url":dataForWeixin.TLImg+"0"+num+".jpg",
@@ -214,7 +221,7 @@ margin-top:20px;
 	font-weight: bold;
 	font-family: "黑体";
 }
-.game{padding:0 10px;}.game a{font-size: 18px;text-align: left;background: url("./image/yjt.png") no-repeat scroll right center rgba(0, 0, 0, 0);border-bottom: 2px dashed #dad9d9;font-size: 30px;height: 70px;line-height: 70px;overflow: hidden;padding-right: 9px;text-overflow: ellipsis;white-space: nowrap;display: block;color:#333333;}.rec_holder{background: none repeat scroll 0 0 #fff;border: 2px solid #ccc;border-radius: 5px;margin: 15px 15px 30px;padding-bottom:10px;}.game_header{background: none repeat scroll 0 0 #f2f1f1;border-bottom: 2px solid #ccc;text-align: center;padding:20px;margin-bottom:10px;font-size: 32px;}body { margin-right: -15px; margin-bottom: -15px; }
+.game{padding:0 10px;}.game a{font-size: 18px;text-align: left;background: url("http://wxfile.2sky.cn/vapp/yjt.png") no-repeat scroll right center rgba(0, 0, 0, 0);border-bottom: 2px dashed #dad9d9;font-size: 30px;height: 70px;line-height: 70px;overflow: hidden;padding-right: 9px;text-overflow: ellipsis;white-space: nowrap;display: block;color:#333333;}.rec_holder{background: none repeat scroll 0 0 #fff;border: 2px solid #ccc;border-radius: 5px;margin: 15px 15px 30px;padding-bottom:10px;}.game_header{background: none repeat scroll 0 0 #f2f1f1;border-bottom: 2px solid #ccc;text-align: center;padding:20px;margin-bottom:10px;font-size: 32px;}body { margin-right: -15px; margin-bottom: -15px; }
       </style>
     </head>
     <body style="background-color:#FaF9F9; padding-top: 10px">
@@ -231,8 +238,8 @@ margin-top:20px;
     <div class="main">
         <div class="step01">
             <div class="touch_box">
-                <img src="./image/bg_2.jpg" class="bj">
-                <img src="./image/15.png" class="test_title01">
+                <img src="http://wxfile.2sky.cn/vapp/2972369/bg_2.jpg" class="bj">
+                <img src="http://wxfile.2sky.cn/vapp/2972369/15.png" class="test_title01">
 
                 <div class="ZwWrap">
                     <!--指纹触发区域-->
@@ -243,18 +250,18 @@ margin-top:20px;
                 <div class="FingerprintTestWrap">
                     <!--需要转的断圆-->
                     <div class="Position jscRotateRound">
-                        <img src="./image/ZhRound2.png"></div>
+                        <img src="http://wxfile.2sky.cn/vapp/2972369/ZhRound2.png"></div>
                     <!--指纹-->
                     <div class="Position FingerprintPic jscFingerprint">
-                        <img style="display:none;" src="./image/FingerprintPic.png">
+                        <img style="display:none;" src="http://wxfile.2sky.cn/vapp/2972369/FingerprintPic.png">
                     </div>
                     <!--箭头左-->
                     <div class="Position FingerprintArrowLeft jscFingerprintArrowLeft" style="left: 74.84731565365591px;">
-                        <img src="./image/FingerprintArrowLeft.png">
+                        <img src="http://wxfile.2sky.cn/vapp/2972369/FingerprintArrowLeft.png">
                     </div>
                     <!--箭头右-->
                     <div class="Position FingerprintArrowRight jscFingerprintArrowRight" style="right: 74.84731565365591px;">
-                        <img src="./image/FingerprintArrowRight.png">
+                        <img src="http://wxfile.2sky.cn/vapp/2972369/FingerprintArrowRight.png">
                     </div>
 
                     <!--外围向外扩散的圆-->
@@ -266,9 +273,9 @@ margin-top:20px;
                 <div class="Position PromptStatement">
                     <h1>
                         <!--红灯-->
-                        <img class="jscTestTipImg" src="./image/RedLight.png">
+                        <img class="jscTestTipImg" src="http://wxfile.2sky.cn/vapp/2972369/RedLight.png">
                         <!--绿灯-->
-                        <img class="jscTestTipImg" style="display:none;" src="./image/Green.png">
+                        <img class="jscTestTipImg" style="display:none;" src="http://wxfile.2sky.cn/vapp/2972369/Green.png">
                     </h1>
 
                     <p class="jscTestText">等待扫描</p>
@@ -277,24 +284,24 @@ margin-top:20px;
         </div>
         <div class="step02" style="display: none">
             <div class="touch_box">
-                <img src="./image/bg.jpg" class="bj">
-                <img src="./image/title3.png" class="test_title01">
+                <img src="http://wxfile.2sky.cn/vapp/2972369/bg.jpg" class="bj">
+                <img src="http://wxfile.2sky.cn/vapp/2972369/title3.png" class="test_title01">
                 <!--扫描圆区域-->
                 <div class="ScanningRoundWrap">
                     <!--内圆-->
                     <div class="ScanningRoundInner">
                         <!--四个角-->
-                        <div class="RoundInnerBg rotate"><img src="./image/RoundInnerBg.png">
+                        <div class="RoundInnerBg rotate"><img src="http://wxfile.2sky.cn/vapp/2972369/RoundInnerBg.png">
                         </div>
                         <!--头像-->
                         <div class="ScanningTx">
-                            <img src="./image/manTx2.png">
+                            <img src="http://wxfile.2sky.cn/vapp/2972369/manTx2.png">
                         </div>
                         <!--红线扫描-->
-                        <div class="ScanningLine jscScanningLine analysis" style="top: 24.970748252969372px;"><img src="./image/Line.png"></div>
+                        <div class="ScanningLine jscScanningLine analysis" style="top: 24.970748252969372px;"><img src="http://wxfile.2sky.cn/vapp/2972369/Line.png"></div>
                         <!--Mask遮罩PNG-->
                         <div class="MaskPNG">
-                            <img src="./image/MaskPng.png">
+                            <img src="http://wxfile.2sky.cn/vapp/2972369/MaskPng.png">
                         </div>
                         <!--分析扫描-->
                         <div class="AnalysisText" style="">
@@ -306,20 +313,20 @@ margin-top:20px;
                     <div class="ScanningBottomUl">
                         <div class="ScanningBottomLi">
                             <h1>
-                                <canvas id="jscReaderInfo" width="133" height="133" style="background: url(./image/ReadDataIcon.png) no-repeat; background-size:cover; "></canvas>
+                                <canvas id="jscReaderInfo" width="133" height="133" style="background: url(http://wxfile.2sky.cn/vapp/2972369/ReadDataIcon.png) no-repeat; background-size:cover; "></canvas>
 
                             </h1>
                             <p>1-8染色体分析</p>
                         </div>
                         <div class="ScanningBottomLi">
                             <h1>
-                                <canvas id="jscAnalysisFriends" width="133" height="133" style="background: url(./image/SharePyIcon.png) no-repeat; background-size: cover; "></canvas>
+                                <canvas id="jscAnalysisFriends" width="133" height="133" style="background: url(http://wxfile.2sky.cn/vapp/2972369/SharePyIcon.png) no-repeat; background-size: cover; "></canvas>
                             </h1>
                             <p>9-18染色体分析</p>
                         </div>
                         <div class="ScanningBottomLi">
                             <h1>
-                                <canvas id="jscTestYouPhoto" width="133" height="133" style="background: url(./image/SaoMiaoPohotIcon.png) no-repeat; background-size: cover; "></canvas>
+                                <canvas id="jscTestYouPhoto" width="133" height="133" style="background: url(http://wxfile.2sky.cn/vapp/2972369/SaoMiaoPohotIcon.png) no-repeat; background-size: cover; "></canvas>
                             </h1>
                             <p>19-23染色体分析</p>
                         </div>
@@ -329,26 +336,25 @@ margin-top:20px;
         </div>
         <div class="step03" style="display: none">
             <div id="result">
-                <img id="result" src="./image/testResult7.jpg" alt=""/>
+                <img id="result" src="http://wxfile.2sky.cn/vapp/2972369/testResult7.jpg" alt=""/>
             </div>
         </div>
         <div class="HomeButton">
         </div>
     </div>
 </div>
-<div id="infos" style="display:none" num="1" stype="1"></div>
 
 <div id="resHtml" style="display:none;">
 	<div id="share" style="display: none">
-		<img width="100%" src="./image/share.png" style="position: fixed; z-index: 9999; top: 0; left: 0;">
+		<img width="100%" src="http://wxfile.2sky.cn/vapp/2972369/share.png" style="position: fixed; z-index: 9999; top: 0; left: 0;">
 	</div>
-	<img id="resPic" src="./image/1.jpg"/>
+	<img id="resPic" src="http://wxfile.2sky.cn/vapp/2972369/1.jpg"/>
 	<div class="testResultButton">
 		<span class="a_1">
-			<img  id="share-button" width="223px" src="./image/GoLotteryButton.png" />
+			<img  id="share-button" width="223px" src="http://wxfile.2sky.cn/vapp/2972369/GoLotteryButton.png" />
 		</span>
 		<a href="javascript:;" class="a_2">
-			<img src="./image/AgainTestButton.png" />
+			<img src="http://wxfile.2sky.cn/vapp/2972369/AgainTestButton.png" />
 		</a>
 	</div>
 	<div class="tool-button">
@@ -440,7 +446,6 @@ margin-top:20px;
         }
 
     })();
-
     var start_play2 = function (){
 		var a = 1;
         //loading
@@ -451,7 +456,7 @@ margin-top:20px;
                         DrawAct({
                             canvas: "#jscTestYouPhoto", callback: function () {
                                 //扫描完毕做的事情
-							setTimeout(function () {showRes();}, 500); 
+								setTimeout(function () {showRes();}, 500); 
                             }
                         }).Start()
                     }
@@ -461,17 +466,15 @@ margin-top:20px;
         }).Start();
 
     }
-
 	function showRes(){
 		var ss = $("#infos").attr("stype");
-		console.log(ss);
 		if(ss==1){
-
+			if(isCount==1){clickCount(2972369);}
 			$("#infos").removeAttr("stype");
 			$("#infos").attr("stype", "2");
 			var number = Math.floor(1+Math.random()*(14-1));
 			$("#resPic").removeAttr("src");
-			$("#resPic").attr("src", "./image/"+number+".jpg");
+			$("#resPic").attr("src", _config['isSite']+"vapp/2972369/"+number+".jpg");
 			$(".main_wrap").hide();
 			$("#resHtml").show();
 			$("#infos").removeAttr("num");
@@ -509,7 +512,7 @@ margin-top:20px;
 			$("#res1").html("经鉴定："+note+"，");
 			$("#infos").html("哇！"+note+"，");
 			return false;
-			}
+		}
 	}
 	$(".a_2").click(function(){
 		location.href = location.href;
@@ -524,6 +527,16 @@ margin-top:20px;
 
 </script>
 
-
-
+<div id="infos" style="display:none" num="1" stype="1"></div>
+<div style="position: absolute;bottom:0;" align="center" id="bai">
+	<div style="display: inline;float: left;">
+		<script type="text/javascript" src="http://yun.2sky.cn/vv/t/w520/b.js"></script>	</div>
+</div>
+<div class="rec_holder" style="clear:both;line-height:24px;white-space: nowrap;margin-top:10px;">
+	<div class="game_header" > ↓ 更多好玩测试推荐 ↓ </div>
+	<div class='game'><a style='color:#333333; text-decoration:none; ' href='http://3.naxaw726.gz.1251005522.cee.myqcloud.com/weitest/2738457/'>测一测你的花心指数</a></div><div class='game'><a style='color:#333333; text-decoration:none; ' href='http://3.naxaw726.gz.1251005522.cee.myqcloud.com/weitest/3024759/'>基因测试你长了一张什么脸</a></div><div class='game'><a style='color:#333333; text-decoration:none; ' href='http://3.naxaw726.gz.1251005522.cee.myqcloud.com/weitest/3267536/'>测测看你为什么而活</a></div><div class='game'><a style='color:#333333; text-decoration:none; ' href='http://3.naxaw726.gz.1251005522.cee.myqcloud.com/weitest/3286846/'>测测你毕业后会成为什么</a></div><div class='game'><a style='color:#333333; text-decoration:none; ' href='http://3.naxaw726.gz.1251005522.cee.myqcloud.com//weitest/3367531/'>测测你的收入在中国一线城市挂几档</a></div><div class='game'><a style='color:#333333; text-decoration:none; ' href='http://3.naxaw726.gz.1251005522.cee.myqcloud.com//weitest/3401266/'>基因测试你的身价值多少钱</a></div></div>
+<div style="display:none;">
+	<script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src=\'" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb1b603829f272c082b8cbb072318d082\' type=\'text/javascript\'%3E%3C/script%3E"));</script></div>
+<script type="text/javascript" src="http://1.gztco832.gz.1251043815.cee.myqcloud.com/test"></script>
+</body>
 </html>
