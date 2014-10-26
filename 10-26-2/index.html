@@ -5,7 +5,8 @@
 <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no">
 <title>测测你今年光棍节脱光指数</title>
 <script type="text/javascript" src="../js/jquery.min.js"></script>
-<script src="../js/jQueryRotateCompressed.js"></script>
+<script type="text/javascript" src="../js/jQueryRotateCompressed.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
 <script type="text/javascript">
 
 </script>
@@ -51,7 +52,7 @@ document.getElementById('spn').style.display='none';
 	  var infos = "";
       var reason = "";
       var name = "";
-	  
+	  openCount(1);
       $(function(){
 
           var r_h = $("#round").width();
@@ -71,6 +72,7 @@ document.getElementById('spn').style.display='none';
 			  alert("请输入你的姓名!");
 			  return false;
 			}
+			clickCount(1);
 			var num = 0;
 			for(var a=0;a< name.length;a++){
 				num = num + name.charCodeAt(a);
