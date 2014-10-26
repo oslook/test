@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -719,9 +718,14 @@
                 vm.showxz = function () {
                     model.xunzhang = true;
                 }
+               vm.$watch("item", function (newval) {
+                    if (newval.type == 'result') {
+                        tarShare((newval.id-16));
+						return false;
+                    };
+                })
             });
 	
-
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
@@ -741,15 +745,7 @@
 				location.href = urls;
 				return false;
 			}
-			function showAns(ans){
-				ans = ans-1;
-				if(ans<0 || ans>5){
-					ans = 1;
-				}
-				$("#sans").show();
-				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
-				$("#sec").html(ylist[ans].t2);
-			}
+
 			function testEnd() {
 				if (fen >= 80) {
 					var scores = 4;
