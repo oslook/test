@@ -148,7 +148,7 @@ var answers = [
  ];
 $(document).ready(function(){
 	
-	openCount(10-26-3);
+	openCount("10-26-3");
 	var w = $(window).width();
 	var h = $(window).height();
 	$("#q-l").width(w*0.4);
@@ -335,7 +335,7 @@ document.addEventListener('WeixinJSBridgeReady',function(){
 			desc:"",
 			link:location.href
 		},function(){});
-		shareCount(10-26-3);
+		shareCount("10-26-3");
 	});
 	WeixinJSBridge.on('menu:share:timeline',function(argv){
 		shareTimeline({
@@ -345,7 +345,7 @@ document.addEventListener('WeixinJSBridgeReady',function(){
 			link:location.href
 		},function(){});
 		
-		shareCount(10-26-3);
+		shareCount("10-26-3");
 	});
 	
     WeixinJSBridge.call('showOptionMenu');
