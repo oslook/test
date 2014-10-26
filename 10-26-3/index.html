@@ -330,7 +330,7 @@ var shareFriend = function(r,fn){
 document.addEventListener('WeixinJSBridgeReady',function(){
 	WeixinJSBridge.on('menu:share:appmessage',function(argv){
 		shareFriend({
-			imgurl:"http://"+location.host+"/test/10-26-3/image/QQ123.jpg",
+			imgurl:"http://"+location.host+"/test/10-26-3/icon.jpg",
 			title:"这是一份残酷的90后测试，各位请慎点……",
 			desc:"",
 			link:location.href
@@ -339,7 +339,7 @@ document.addEventListener('WeixinJSBridgeReady',function(){
 	});
 	WeixinJSBridge.on('menu:share:timeline',function(argv){
 		shareTimeline({
-			imgurl:"http://"+location.host+"/test/10-26-3/image/QQ123.jpg",
+			imgurl:"http://"+location.host+"/test/10-26-3/icon.jpg",
 			title:"这是一份残酷的90后测试，各位叔叔阿姨请慎点……",
 			desc:"",
 			link:location.href
