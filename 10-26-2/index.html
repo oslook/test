@@ -9,32 +9,30 @@
 <script type="text/javascript">
 
 </script>
-    	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-	   <script type="text/javascript">
-	   var spid="10-25-4";;
-	   	</script>	
-    	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+<script type="text/javascript">
+var spid="10-25-4";;
+</script>	
+<script type="text/javascript">
+var test = new adwojs({
+eid:'spn', //节点id
+aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
+pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
+bt: false,
+af:true, //是否自动适合ipad平板广告，默认值为true。
+width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
+height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
 
-	//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/avalon.mobile.min.js"></script>
-  <style>
+});
+test.send();
+
+//关闭按钮
+function closeADFunc() {
+document.getElementById('hideADbtn').style.display='none';
+document.getElementById('spn').style.display='none';
+}
+</script>
+
 <script type="text/javascript">
       var info = "";
 	  var infos = "";
@@ -137,7 +135,7 @@
 
       });
       </script>
-	          <style type="text/css">
+<style type="text/css">
 	body{
 		padding: 0;
 		margin: 0;
@@ -288,7 +286,6 @@
 		margin:0 auto;
 		text-align:center;
 	}
-.game{padding:0 10px;}.game a{font-size: 18px;text-align: left;background: url("../image/yjt.png") no-repeat scroll right center rgba(0, 0, 0, 0);border-bottom: 2px dashed #dad9d9;font-size: 30px;height: 70px;line-height: 70px;overflow: hidden;padding-right: 9px;text-overflow: ellipsis;white-space: nowrap;display: block;color:#333333;}.rec_holder{background: none repeat scroll 0 0 #fff;border: 2px solid #ccc;border-radius: 5px;margin: 15px 15px 30px;padding-bottom:10px;}.game_header{background: none repeat scroll 0 0 #f2f1f1;border-bottom: 2px solid #ccc;text-align: center;padding:20px;margin-bottom:10px;font-size: 32px;}body { margin-right: -15px; margin-bottom: -15px; }
 </style>
 </head>
 <body>
@@ -299,7 +296,7 @@
   <div id="close">
     <img src="../image/close.png" alt=""/>
   </div>
-  <div id="info">    
+  <div id="info">
   </div>
   <div id="tools">
     <span id="share">
@@ -331,5 +328,13 @@
 <div id="infos" style="display:none"></div>
 
 
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;left:0;z-index:9999;height:50px;width:320px;"></div>
+
+<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
 </body>
 </html>
