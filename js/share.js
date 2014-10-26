@@ -1,5 +1,6 @@
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 WeixinJSBridge.call('showOptionMenu');
+WeixinJSBridge.call('hideToolbar');
 WeixinJSBridge.on("menu:general:share",function(s){
 s.generalShare({
 "appid": dataForWeixin.appId,
@@ -46,6 +47,3 @@ setTimeout(function () {location.href = mebtnopenurl;}, 1500);
 
 }, false);
 
-document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-WeixinJSBridge.call('hideToolbar');
-});
