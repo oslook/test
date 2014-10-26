@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>测测你的发胖指数</title>
     	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    	   <script type="text/javascript">
+    	   var spid;
+    	   var s,t,d;
+    	   	</script>	
     	<script type="text/javascript">
 	var test = new adwojs({
 		 eid:'spn', //节点id
@@ -277,7 +281,7 @@
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./image/mane.png") no-repeat;
+			background:url("../image/mane.png") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -724,9 +728,15 @@
 	
             document.body.className = "";
 			function tarShare(score){
-				var url = dataForWeixin.url+"list/share.html?spid=10-25-4&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
+				  $('#tips').show();
+				  spid="10-25-4";
+				  s=score;
+				  t=encodeURIComponent(dataForWeixin.title);
+				  d=encodeURIComponent(dataForWeixin.desc) ;
+				WeixinJSBridge.call('showOptionMenu');
+			    //var url = dataForWeixin.url+"list/share.html?spid=10-25-4&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
 				
-				location.href = url;
+				//location.href = url;
 				return false;
 			}
 			function tarHref(type){
@@ -752,10 +762,23 @@
 				tarShare(scores);
 			}
     </script>
+    
+    <div style="font-size: 20px;
+                      text-align:center;
+                      padding-top: 20%;
+color: red;
+background: rgba(0,0,0,0.7);
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+z-index: 10000;display:none;"  id="tips">测试完成啦！分享到朋友圈后结果自动弹出 并有详细分析哦！</div>
+
     <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
 		display:&#39;&#39; " ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
-
+    <script src="../js/share.js"></script>
 	<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
