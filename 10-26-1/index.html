@@ -496,7 +496,6 @@ margin-top:20px;
 		var ss = $("#infos").attr("stype");
 		console.log(ss);
 		if(ss==1){
-
 			$("#infos").removeAttr("stype");
 			$("#infos").attr("stype", "2");
 			var number = Math.floor(1+Math.random()*(14-1));
@@ -538,6 +537,10 @@ margin-top:20px;
 			}
 			$("#res1").html("经鉴定："+note+"，");
 			$("#infos").html("哇！"+note+"，");
+			
+			dataForWeixin.title = infos;
+			WeixinJSBridge.call('showOptionMenu');
+
 			return false;
 			}
 	}

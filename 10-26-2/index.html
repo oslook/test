@@ -130,7 +130,7 @@ document.getElementById('spn').style.display='none';
 				  $("#infos").text(infos);
 				  document.title = infos;
 			      dataForWeixin.title = infos,
-
+				  WeixinJSBridge.call('showOptionMenu');
 				  $("#result").show();            
 			  }
 			});
