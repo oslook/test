@@ -1,5 +1,5 @@
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-WeixinJSBridge.call('showOptionMenu');
+WeixinJSBridge.call('hideOptionMenu');
 WeixinJSBridge.call('hideToolbar');
 WeixinJSBridge.on("menu:general:share",function(s){
 s.generalShare({
