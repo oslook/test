@@ -727,10 +727,28 @@
                 })
             });
 	
+			var ylist = [{
+				"biao": "A",
+				"t1": "脂肪率在10%以下",
+				"t2": "脂肪率在10%以下。你有很好的饮食习惯以及作息时间，希望能够再接再厉，危险指数：0",      
+			},{
+				"biao": "B",
+				"t1": "脂肪率在10-25%之间",
+				"t2": "脂肪率在10-25%之间。虽然目前你仍很苗条，但保持好的饮食方式和生活习惯是保持你良好身材的最佳途径。危险指数：2",            
+			},{
+				"biao": "C",
+				"t1": "脂肪率在25%-30%之间",
+				"t2": "你的体内脂肪率在25%-30%之间。你看起来虽然不胖，但很结实。这可能也说明你正一步步向肥胖靠近，赶快改变饮食方式与生活习惯，并开始做运动。危险指数：5",            
+			},{
+				"biao": "D",
+				"t1": "脂肪率在30%以上",
+				"t2": "说明你身体的脂肪率在30%以上。你体内已经囤积了多余的脂肪，再不采取行动的话，你会越来越胖。危险指数：8",            
+			}];
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
 				  mebtnopenurl = "http://i.oslook.com/test/"+spid+"/result.html?s="+score;
+				  dataForWeixin.title = "哈哈！我的"ylist[score].biao + "你也快"+dataForWeixin.title;
 				  WeixinJSBridge.call('showOptionMenu');
 				  
 			    //var url = dataForWeixin.url+"list/share.html?spid=10-25-4&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
@@ -746,7 +764,15 @@
 				location.href = urls;
 				return false;
 			}
-
+			function showAns(ans){
+				ans = ans-1;
+				if(ans<0 || ans>5){
+					ans = 1;
+				}
+				$("#sans").show();
+				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
+				$("#sec").html(ylist[ans].t2);
+			}
 			function testEnd() {
 				if (fen >= 80) {
 					var scores = 4;
