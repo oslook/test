@@ -8,11 +8,9 @@ function openCount(id){
 	});
 }
 function clickCount(id){
-	$.getJSON("http://ostest.jd-app.com/count.php?gid=?", id, function(data){});
-//	$.getJSON("http://ostest.jd-app.com/count.php?callback=?", {gid: id, type: 3}, function(data){});
+	$.getJSON("http://ostest.jd-app.com/count.php?callback=?", {gid: id, type: 2}, function(data){});
 
 }
 function shareCount(id){
-		$.getJSON("http://ostest.jd-app.com/count.php?callback=?", {gid: id, type: 3}, function(data){});
-
+	$.getJSON("http://ostest.jd-app.com/count.php?callback=?", {gid: id, type: 3}, function(data){});
 }
