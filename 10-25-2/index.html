@@ -698,14 +698,15 @@
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://www.oslook.com";
+					var urls = "http://www.oslook.com/test/";
 				}else{
-					var urls = dataForWeixin.url+"list/index.html";
+					var urls = dataForWeixin.server+"/test/list/";
 				}
 				location.href = urls;
 				return false;
 			}
-			    </script>
+			
+</script>
     <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
 	" ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
