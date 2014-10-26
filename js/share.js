@@ -1,12 +1,3 @@
-var mebtnopenurl = "http://i.oslook.com/test/"+spid+"/result.html?s="+s;
-var dataForWeixin = {
-"appId": "",
-"imgUrl": "http://i.oslook.com/test/"+spid+"/icon.jpg",
-"timeLineLink": "",
-"url": "http://i.oslook.com/test/"+spid+"/index.html",
-"title": decodeURIComponent(t),
-"desc": decodeURIComponent(d)
-};
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 WeixinJSBridge.call('showOptionMenu');
 WeixinJSBridge.on("menu:general:share",function(s){
