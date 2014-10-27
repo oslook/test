@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>你拥有着什么样的潜在性格</title>
+<script type="text/javascript">
+var spid="10-25-2";
+</script>
    	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
     	<script type="text/javascript">
 	var test = new adwojs({
@@ -26,9 +29,10 @@
 	}
 	</script>
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/avalon.mobile.min.js"></script>
+    <script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="../js/count.js"></script>
   <style>
-        * {
+		        * {
             font-family: '微软雅黑';
         }
 
@@ -296,7 +300,7 @@
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="http://wxfile.2sky.cn/vapp4/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
 		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
@@ -691,9 +695,12 @@
 
             document.body.className = "";
 			function tarShare(score){
-			var url = dataForWeixin.url+"list/share.html?spid=10-25-2&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
-				
-				location.href = url;
+				  $('#tips').show();
+				  mebtnopenurl = "http://i.oslook.com/test/"+spid+"/result.html?s="+score;
+				  WeixinJSBridge.call('showOptionMenu');
+				  
+			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
+				//location.href = url;
 				return false;
 			}
 			function tarHref(type){
@@ -707,10 +714,22 @@
 			}
 			
 </script>
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-	" ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
+    <div style="font-size: 20px;
+                      text-align:center;
+                      padding-top: 20%;
+color: red;
+background: rgba(0,0,0,0.7);
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+z-index: 10000;display:none;"  id="tips">测试完成啦！分享到朋友圈后结果自动弹出 并有详细分析哦！</div>
 
+    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
+    <div id="spn" style="position:fixed; bottom:0;left:0;z-index:9999;height:50px;width:320px;"></div>
+
+   	<script type="text/javascript" src="../js/share.js"></script>
 	<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

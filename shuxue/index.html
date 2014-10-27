@@ -281,7 +281,7 @@ var spid="10-27-5";
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./image/mane.png") no-repeat;
+			background:url("../image/mane.png") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -298,7 +298,7 @@ var spid="10-27-5";
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
 		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
@@ -339,16 +339,15 @@ var spid="10-27-5";
                
             </div>
 
-			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
-             <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">高考，你还敢试试么！</a></div>
-             <div class="t-btn"><a>关注微信：oslook，之后再玩！</a></div>
+            <!--{<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注我们</a></div>}-->
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
 
         </div>
     </div>
 	<script type="text/javascript" >
 		 var dataForWeixin = {
 			  server: "http://www.oslook.com",
-			  TLImg: _con["num"],
+			  TLImg: "",
 			  url: "http://i.oslook.com/test/",
 			  title: "小学数学，你能得几分",
 			  desc: "很准的呦,都来试试吧"

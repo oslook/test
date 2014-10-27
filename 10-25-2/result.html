@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>你拥有着什么样的潜在性格</title>
+<script type="text/javascript">
+var spid="10-25-2";
+</script>	
    	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
     	<script type="text/javascript">
 	var test = new adwojs({
@@ -297,7 +300,7 @@
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
 		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
-		加载中......	</div>
+		正在显示结果......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
@@ -382,6 +385,9 @@
 				$("#sans").show();
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
+							shareCount(spid);
+				scoreCount(spid,ans);
+				
 			}
 			var s = getQueryString("s");
 			showAns(s);

@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>测试你被一见钟情的可能性？</title>
+<script type="text/javascript">
+var spid="10-25-1";
+</script>	
    	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
     	<script type="text/javascript">
 	var test = new adwojs({
@@ -386,6 +389,9 @@
 				$("#sans").show();
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
+							shareCount(spid);
+				scoreCount(spid,ans);
+				
 			}
 			var s = getQueryString("s");
 			showAns(s);
