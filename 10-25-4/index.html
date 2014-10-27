@@ -6,7 +6,7 @@
     <title>测测你的发胖指数</title>
     	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
 	   <script type="text/javascript">
-	   var spid="10-25-4";;
+	   var spid="10-25-4";
 	   	</script>	
     	<script type="text/javascript">
 	var test = new adwojs({
@@ -28,7 +28,8 @@
 	}
 	</script>	
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/avalon.mobile.min.js"></script>
+    <script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+	<script type="text/javascript" src="../js/count.js"></script>
   <style>
 		        * {
             font-family: '微软雅黑';
@@ -354,6 +355,8 @@
 		function showQ(){
 			$("#zhao").hide();
 		}
+		
+		openCount(spid);
 	 </script>
         <script>
             var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
@@ -772,7 +775,7 @@ top: 0px;
 left: 0px;
 z-index: 10000;display:none;"  id="tips">测试完成啦！分享到朋友圈后结果自动弹出 并有详细分析哦！</div>
 
-    <img id="hideADbtn" src="http://storage.jcloud.com/osimage/closebtn.png?Expires=1414308947&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=nYcc2thmU4eSpJiOJGIXce4tDek%3D" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
+    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;left:0;z-index:9999;height:50px;width:320px;"></div>
 
    	<script type="text/javascript" src="../js/share.js"></script>

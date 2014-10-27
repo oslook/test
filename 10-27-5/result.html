@@ -4,12 +4,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测测你的发胖指数</title>
+    <title>小学数学，你能得几分</title>
 <script type="text/javascript">
-var spid="10-25-4";
+var spid="10-27-5";
 </script>	
-<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-<script type="text/javascript">
+    <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    	<script type="text/javascript">
 	var test = new adwojs({
 		 eid:'spn', //节点id
 		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
@@ -27,12 +27,11 @@ var spid="10-25-4";
 	document.getElementById('spn').style.display='none';
 	}
 	</script>	
-	
+
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="../js/avalon.mobile.min.js"></script>
- 	<script type="text/javascript" src="../js/count.js"></script>   
   <style>
-        * {
+		        * {
             font-family: '微软雅黑';
         }
         html, body {
@@ -64,8 +63,8 @@ var spid="10-25-4";
 
         .main {
             padding: 10px;
-            padding-top:3%;
-            margin-top: -1px;
+            padding-top:9%;
+            margin-top: -10px;
             text-align: center;
         }
 
@@ -236,11 +235,20 @@ var spid="10-25-4";
                 padding-bottom: 20px;
             }
 
+        .list {
+            list-style: initial;
+            text-align: left;
+        }
+
+            .list li {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
 
         a,
         a:link,
         a:visited {
-            color: #607fa6;
+            color: #ffffff;
         }
 
         .dialog {
@@ -284,26 +292,6 @@ var spid="10-25-4";
 			padding:0 25px;
 			overflow: hidden;
 		}
-body {background:#95d15f;color: #333;font: 15px 微软雅黑;,Helvetica;overflow: visible;}
-body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea, figure, figcaption, nav, footer, menu {margin: 0;padding: 0;}
-		
-.content, .footer {background-color: #ededed;overflow: hidden;width: 100%;z-index: 1;}
-.mod-app-intro {overflow: hidden;width: 100%;}
-ul, ol, li {list-style: none outside none;}
-.mod-app-intro li { border-bottom: 1px solid #e4e4e4; padding: 10px;position: relative;}
-.mod-app-intro .figure img {border-radius: 8px;display: block;height: 60px;margin: 0 10px 0 0;width: 60px;}
-.mod-app-intro .figcaption {display: block;}
-.mod-app-intro li .tit {height: 22px;line-height: 22px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
-.mod-app-intro li p {color: #666;font-size: 12px;height: 22px;line-height: 22px;}
-.mod-app-intro li p span:last-child:after {display: none;}
-.game_list li .btn-g {margin-top: 10px;}
-.btn-g {background-color: #f6ad00;border-radius: 2px;height: 24px;line-height: 22px;}
-.btn {color: #fff !important;display: inline-block;font-size: 14px;min-width: 68px;text-align: center;}
-.mod-app-intro .figure {display: -webkit-box;-webkit-box-align: center;}
-.mod-app-intro .figcaption {-webkit-box-flex: 1;display: block;}
-
-		
     </style>
 
 </head>
@@ -320,17 +308,20 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
                 <span></span>
             </div>
             <div class="t-c" id="sec">
+               
             </div>
-            <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注oslook,不再寂寞！</a></div>
+
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
+               <div class="t-btn"><a href="./answer.html">查看答案</a></div>
+
         </div>
     </div>
 	<script type="text/javascript" >
 		 var dataForWeixin = {
 			  server: "http://www.oslook.com",
 			  TLImg: "",
-			   url: "http://i.oslook.com/test/",
-			  title: "测测你的发胖指数",
+			  url: "http://i.oslook.com/test/",
+			  title: "小学数学，你能得几分",
 			  desc: "很准的呦,都来试试吧"
 		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
@@ -358,27 +349,50 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
                 var r = location.search.substr(1).match(reg);
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
-
 			var ylist = [{
-				"biao": "A",
-				"t1": "脂肪率在10%以下",
-				"t2": "脂肪率在10%以下。你有很好的饮食习惯以及作息时间，希望能够再接再厉，危险指数：0",      
+				"biao": "0分",
+				"t1": "",
+				"t2": "我宁愿相信你是天才，答题的时候手抖了吗？",      
 			},{
-				"biao": "B",
-				"t1": "脂肪率在10-25%之间",
-				"t2": "脂肪率在10-25%之间。虽然目前你仍很苗条，但保持好的饮食方式和生活习惯是保持你良好身材的最佳途径。危险指数：2",            
+				"biao": "1-59分",
+				"t1": "",
+				"t2": "再接再厉哦！",            
 			},{
-				"biao": "C",
-				"t1": "脂肪率在25%-30%之间",
-				"t2": "你的体内脂肪率在25%-30%之间。你看起来虽然不胖，但很结实。这可能也说明你正一步步向肥胖靠近，赶快改变饮食方式与生活习惯，并开始做运动。危险指数：5",            
+				"biao": "60分",
+				"t1": "",
+				"t2": "不多不少，及格就好。",            
 			},{
-				"biao": "D",
-				"t1": "脂肪率在30%以上",
-				"t2": "说明你身体的脂肪率在30%以上。你体内已经囤积了多余的脂肪，再不采取行动的话，你会越来越胖。危险指数：8",            
+				"biao": "66分",
+				"t1": "",
+				"t2": "得这个分数真顺啊！",            
+			},{
+				"biao": "61-79分",
+				"t1": "",
+				"t2": "考试及格。",            
+			},{
+				"biao": "80分",
+				"t1": "",
+				"t2": "恭喜您，达标了。",            
+			},{
+				"biao": "81-90分",
+				"t1": "",
+				"t2": "恭喜您，成绩优良。",            
+			},{
+				"biao": "91-98分",
+				"t1": "",
+				"t2": "恭喜您得到高分，貌似平时很努力哦！",            
+			},{
+				"biao": "99分",
+				"t1": "",
+				"t2": "离神人只差一步，您太谦虚了。",            
+			},{
+				"biao": "100分",
+				"t1": "",
+				"t2": "您真是神人级别！",            
 			}];
             document.body.className = "";
 			function tarShare(score){
-				var url = dataForWeixin.url+"fapang/"+score+"/share.html";
+				var url = dataForWeixin.url+"shuxue/"+score+"/share.html";
 				location.href = url;
 				return false;
 			}
@@ -393,54 +407,30 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>5){
+				if(ans<0 || ans>10){
 					ans = 1;
 				}
 				$("#sans").show();
 				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
 				$("#sec").html(ylist[ans].t2);
-				shareCount(spid);
+							shareCount(spid);
 				scoreCount(spid,ans);
+				
 			}
+
 			var s = getQueryString("s");
 			showAns(s);
-						function testEnd() {
-				if (fen >= 80) {
-					var scores = 4;
-				} else if (fen >=50) {
-					var scores = 3;
-				} else if (fen >=20) {
-					var scores = 2;
-				} else {
-					var scores = 1;
-				}
-				tarShare(scores);
-			}
-    </script>
-    
-	<div class="content">
-		<div class="app-intro">
-			<ul id="j_game_list" class="mod-app-intro game_list">
-		<li class='list' data-url='http://i.oslook.com/bear/'><div class='figure'><img src='http://i.oslook.com/bear/img/object2.jpg'><div class='figcaption'><h3 class='tit'>揍狗熊：我能200下，不只是说着玩！</h3><p>好评 99.9%</p><p><span>1424230人玩过</span></p></div><span class='btn btn-g'>开始游戏</span></div></li>
-			</ul>
-		</div>
-	</div>
-	<script type="text/javascript">
-	$(".list").click(function(){
-		var target = $(this).attr("data-url");
-		location.href = target;
-	});
-	</script>
-	
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+ </script>
+
+            <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
 	" ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
-
-
+    
 	<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
 </script></div>
+
 </body>
 </html>

@@ -14,3 +14,8 @@ function clickCount(id){
 function shareCount(id){
 	$.getJSON("http://ostest.jd-app.com/count.php?callback=?", {gid: id, type: 3}, function(data){});
 }
+
+function scoreCount(id,s){
+	$.getJSON("http://ostest.jd-app.com/count.php?callback=?", {gid: id, s:s, type: 2}, function(data){});
+
+}

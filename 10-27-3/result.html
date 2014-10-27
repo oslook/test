@@ -4,12 +4,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测测你的发胖指数</title>
+    <title>测测你的幸福指数有多高？</title>
 <script type="text/javascript">
-var spid="10-25-4";
+var spid="10-27-3";
 </script>	
-<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-<script type="text/javascript">
+ <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    	<script type="text/javascript">
 	var test = new adwojs({
 		 eid:'spn', //节点id
 		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
@@ -27,21 +27,24 @@ var spid="10-25-4";
 	document.getElementById('spn').style.display='none';
 	}
 	</script>	
-	
+
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="../js/avalon.mobile.min.js"></script>
- 	<script type="text/javascript" src="../js/count.js"></script>   
-  <style>
-        * {
+    <script src="../js/count.js"></script>	
+ <style>
+       * {
             font-family: '微软雅黑';
         }
+
         html, body {
             margin: 0;
             color: #000;
-            background: #95d15f;
+            background: #ffc2bd;
             background-size: 100%;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
         }
+
+
         #loading {
             text-align: center;
             font-size: 20px;
@@ -64,8 +67,8 @@ var spid="10-25-4";
 
         .main {
             padding: 10px;
-            padding-top:3%;
-            margin-top: -1px;
+            padding-top:9%;
+            margin-top: -10px;
             text-align: center;
         }
 
@@ -77,7 +80,7 @@ var spid="10-25-4";
 
         .t-s {
             padding: 5px;
-            background-color: #f9baba;
+            background-color: #fca9a2;
             max-width: 100%;
             margin: 10px auto;
             text-align: center;
@@ -177,8 +180,8 @@ var spid="10-25-4";
         .t-btn,
         .t-btn:link,
         .t-btn:visited {
-            color: #e1edea;
-            background-color: #74b651;
+            color: #ffffff;
+            background-color: #00b1ea;
             padding-top: 12px;
             padding-bottom: 13px;
             padding-left: 15px;
@@ -236,11 +239,20 @@ var spid="10-25-4";
                 padding-bottom: 20px;
             }
 
+        .list {
+            list-style: initial;
+            text-align: left;
+        }
+
+            .list li {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
 
         a,
         a:link,
         a:visited {
-            color: #607fa6;
+            color: #ffffff;
         }
 
         .dialog {
@@ -284,26 +296,7 @@ var spid="10-25-4";
 			padding:0 25px;
 			overflow: hidden;
 		}
-body {background:#95d15f;color: #333;font: 15px 微软雅黑;,Helvetica;overflow: visible;}
-body, h1, h2, h3, h4, h5, h6, hr, p, pre, dl, dt, dd, ul, ol, li, th, td, form, fieldset, legend, button, input, textarea, figure, figcaption, nav, footer, menu {margin: 0;padding: 0;}
-		
-.content, .footer {background-color: #ededed;overflow: hidden;width: 100%;z-index: 1;}
-.mod-app-intro {overflow: hidden;width: 100%;}
-ul, ol, li {list-style: none outside none;}
-.mod-app-intro li { border-bottom: 1px solid #e4e4e4; padding: 10px;position: relative;}
-.mod-app-intro .figure img {border-radius: 8px;display: block;height: 60px;margin: 0 10px 0 0;width: 60px;}
-.mod-app-intro .figcaption {display: block;}
-.mod-app-intro li .tit {height: 22px;line-height: 22px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
-.mod-app-intro li p {color: #666;font-size: 12px;height: 22px;line-height: 22px;}
-.mod-app-intro li p span:last-child:after {display: none;}
-.game_list li .btn-g {margin-top: 10px;}
-.btn-g {background-color: #f6ad00;border-radius: 2px;height: 24px;line-height: 22px;}
-.btn {color: #fff !important;display: inline-block;font-size: 14px;min-width: 68px;text-align: center;}
-.mod-app-intro .figure {display: -webkit-box;-webkit-box-align: center;}
-.mod-app-intro .figcaption {-webkit-box-flex: 1;display: block;}
 
-		
     </style>
 
 </head>
@@ -315,11 +308,13 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
+   
         <div id="sans" style="display:none;">
             <div class="t-r" id="fis">
                 <span></span>
             </div>
             <div class="t-c" id="sec">
+               
             </div>
             <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注oslook,不再寂寞！</a></div>
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
@@ -329,8 +324,8 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
 		 var dataForWeixin = {
 			  server: "http://www.oslook.com",
 			  TLImg: "",
-			   url: "http://i.oslook.com/test/",
-			  title: "测测你的发胖指数",
+			  url: "http://i.oslook.com/test/",
+			  title: "测测你的幸福指数有多高？",
 			  desc: "很准的呦,都来试试吧"
 		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
@@ -358,27 +353,50 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
                 var r = location.search.substr(1).match(reg);
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
-
 			var ylist = [{
 				"biao": "A",
-				"t1": "脂肪率在10%以下",
-				"t2": "脂肪率在10%以下。你有很好的饮食习惯以及作息时间，希望能够再接再厉，危险指数：0",      
+				"t1": "幸福指数：78%，有爱即幸福",
+				"t2": "一直在追求着一份真正爱情的你，其实离爱情也是最远的，在你的心中，只有找到了自己的爱情，才会变得幸福起来。其他的即便是有亲情温暖，有一帮子朋友嘻嘻哈哈在一起，日子过得也很快乐，但是爱情是却是无可替代的，缺少了爱情，幸福也将缺失掉一大半。所以如果明年，可以找到爱情，那么或许你才会感觉到幸福降临。",      
 			},{
 				"biao": "B",
-				"t1": "脂肪率在10-25%之间",
-				"t2": "脂肪率在10-25%之间。虽然目前你仍很苗条，但保持好的饮食方式和生活习惯是保持你良好身材的最佳途径。危险指数：2",            
+				"t1": "幸福指数：31%，幸福是浮云",
+				"t2": "曾经天真地以为，幸福就近在咫尺，只要自己伸出双手，就可以拥抱到他。可是一朝肥皂泡破灭，你才真正看清，原来幸福就像是天上飘着的浮云，看以看见，但也只能看到它越飘越远。经历了以前的种种，你越来越觉得自己看得清，幸福不过是浮云，即使是到了现在或以后，这种状况也不会有什么改变，倒不如不要有什么期盼地好。",            
 			},{
 				"biao": "C",
-				"t1": "脂肪率在25%-30%之间",
-				"t2": "你的体内脂肪率在25%-30%之间。你看起来虽然不胖，但很结实。这可能也说明你正一步步向肥胖靠近，赶快改变饮食方式与生活习惯，并开始做运动。危险指数：5",            
+				"t1": "幸福指数：23%，幸福不存在",
+				"t2": "所谓幸福，各人自有各的看法。而你对幸福，却早已经没有什么概念。越来越觉得，人生没有什么趣味的你，早就认定自己是得不到什么幸福的了，所以这日子过一天也就算一天吧。这种处于积极与消极之间的思想已经在你的心中根深蒂固了，除非以后，你真的感受到了前所未有的幸福畅快感觉，你才会认同这个世界上属于你的幸福会存在。",            
 			},{
 				"biao": "D",
-				"t1": "脂肪率在30%以上",
-				"t2": "说明你身体的脂肪率在30%以上。你体内已经囤积了多余的脂肪，再不采取行动的话，你会越来越胖。危险指数：8",            
+				"t1": "我的幸福指数：47%，幸福在前方",
+				"t2": "虽然你在过去的一年里遭遇了许多狗血的事情，但是不管怎么样，你始终相信着自己总有一天会变得越来越顺利，就如你坚信着自己总有一天会得到幸福一样。在你的自信与坚强之下，脚下的路即使目前还坷坎，但也会走走越平坦，幸福离自己也越来越近。乌云即将散去，迎接你的将是温暖灿烂的阳光。",            
+			},{
+				"biao": "E",
+				"t1": "我的幸福指数：13%，幸福是什么",
+				"t2": "幸福？请问什么是幸福？大概当别人提及这两个字的时候，你胸中的怒火便似乎要喷出来了，因为在你的心中，幸福什么的早就已经远离自己而去了。过去的经历让你已经变得不再相信什么幸福狗屁玩艺，幸福什么的就是注定要被丢进太平洋的，跟自己半毛钱关系也没有。所以在未来的一年里，还不如现实一些，追求着现实的人民币。",            
+			},{
+				"biao": "F",
+				"t1": "我的幸福指数：43%，追求着幸福",
+				"t2": "你是一个非常独立且聪明的人，你很清楚地知道自己想要的是什么，所以你会朝着这个目标，一步步奋进，或许在这之前，你注定是要经历一些风雨的，但是你相信在最后一定会幸福。接下来，你所追求的东西，或许还不能真的实现，但是不管怎么样你都会继续在路上努力，虽然看起来还会坎坷，但或许拼搏着的时候，也会有种成就的幸福感吧。",            
+			},{
+				"biao": "G",
+				"t1": "我的幸福指数：50%，看淡的幸福",
+				"t2": "看起来有些参透人生真悟的你，是有些通佛性参禅意的，对幸福的认识，也赞同所谓幸福都是相对于不幸来说的。对于平淡的日子之中不存在什么不幸，一切照旧，那么也将没有什么幸福可言。但是正是看得淡了，要求低了，对幸福的感知也越来越深。都说能吃是福，对你来说，身体健康，家人平安，你就幸福了。",            
+			},{
+				"biao": "H",
+				"t1": "我的幸福指数：90%，物质小幸福",
+				"t2": "你是一个相当注重物质生活的人，然而现代社会的变化常常让人无所适从，不断上涨的物价房价，却唯独不涨工资，这样压力之下的都市生活，难免也使你对自己目前的生活品质喜忧参半，接下来，也不会有所进步，不过好在，你会觉得目前的生活虽然与自己理想中的还是有一定距离，但也算不错了。",            
+			},{
+				"biao": "I",
+				"t1": "我的幸福指数：65%，平淡的幸福",
+				"t2": "目前来说，你的心境是成熟且平淡的，你知道很多事情并不是自己能够强求而来的，所以还不如就近选择，过着平平淡淡却不失幸福的日子。对幸福的定义，你也由之前追求的物质享受，变成了跟自己喜欢的人呆在一起，虽然也会柴米油盐地变得越来越平庸，但是倘若自己可以平静地享受，那么此时的自己就是幸福的。",            
+			},{
+				"biao": "J",
+				"t1": "我的幸福指数：86%，努力要幸福",
+				"t2": "有的人注定是要拥有有爱自己的人陪在身边，才会觉得幸福，但是也有的人，他才不会管什么爱情不爱情，爱情都是一阵风，刮过了就算了。不过，你也不是轻易会放弃自己的人，所以提及幸福二字，情路不顺的你，不管有没有爱情，都会让自己的生活过得有规律，去做喜欢做的事情，看喜欢的风景，吃好吃的食物，也许这也是一种幸福。",            
 			}];
             document.body.className = "";
 			function tarShare(score){
-				var url = dataForWeixin.url+"fapang/"+score+"/share.html";
+				var url = dataForWeixin.url+"lucky/"+score+"/share.html";
 				location.href = url;
 				return false;
 			}
@@ -393,7 +411,7 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
 			}
 			function showAns(ans){
 				ans = ans-1;
-				if(ans<0 || ans>5){
+				if(ans<0 || ans>9){
 					ans = 1;
 				}
 				$("#sans").show();
@@ -404,39 +422,12 @@ h1, h2, h3, h4, h5, h6 {font-size: 100%;font-weight: normal;}
 			}
 			var s = getQueryString("s");
 			showAns(s);
-						function testEnd() {
-				if (fen >= 80) {
-					var scores = 4;
-				} else if (fen >=50) {
-					var scores = 3;
-				} else if (fen >=20) {
-					var scores = 2;
-				} else {
-					var scores = 1;
-				}
-				tarShare(scores);
-			}
-    </script>
-    
-	<div class="content">
-		<div class="app-intro">
-			<ul id="j_game_list" class="mod-app-intro game_list">
-		<li class='list' data-url='http://i.oslook.com/bear/'><div class='figure'><img src='http://i.oslook.com/bear/img/object2.jpg'><div class='figcaption'><h3 class='tit'>揍狗熊：我能200下，不只是说着玩！</h3><p>好评 99.9%</p><p><span>1424230人玩过</span></p></div><span class='btn btn-g'>开始游戏</span></div></li>
-			</ul>
-		</div>
-	</div>
-	<script type="text/javascript">
-	$(".list").click(function(){
-		var target = $(this).attr("data-url");
-		location.href = target;
-	});
-	</script>
-	
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+			    </script>
+
+            <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
 	" ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
-
-
+    
 	<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
