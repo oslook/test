@@ -284,7 +284,7 @@ var spid="10-27-3";
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./image/mane.png") no-repeat;
+			background:url("../image/mane.png") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -301,7 +301,7 @@ var spid="10-27-3";
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="./image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
 		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
@@ -346,12 +346,15 @@ var spid="10-27-3";
         </div>
     </div>
 	<script type="text/javascript" >
-		var mebtnopenurl = "http://AD201410291936.jd-app.com/test/"+spid+"/result.html";
+	var shareDomains = ["AD201410311944.jd-app.com"];
+var shareDomain = "http://"+this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
+
+		var mebtnopenurl = shareDomain+"/test/"+spid+"/result.html";
 		 var dataForWeixin = {
 		 	appId: "",
 			  server: "http://www.oslook.com",
-			  imgUrl: "http://AD201410291936.jd-app.com/test/"+spid+"/icon.jpg",
-			   url: "http://AD201410291936.jd-app.com/test/"+spid+"/index.html",
+	  imgUrl: shareDomain+"/test/"+spid+"/icon.jpg",
+			   url: shareDomain+"/test/"+spid+"/index.html",
 			  title: "测测你的幸福指数有多高？",
 			  desc: "很准的呦,都来试试吧"
 		};
@@ -402,7 +405,7 @@ var spid="10-27-3";
                     }, {
                         type: "select",
                         id: 1,
-                        text: "你觉得幸福不可说，说出来了幸福就会消失吗？",
+                        text: "当欢聚一堂的时候，当朝朝暮暮的时候，你觉得幸福不可说，说出来了幸福就会消失吗？",
                         select: [
                             {
                                 text: "是的",
@@ -426,7 +429,7 @@ var spid="10-27-3";
                     {
                         type: "select",
                         id: 2,
-                        text: "如果在事业与爱情之间选择一下，你还是会选？",
+                        text: "如果在这个选择当中自己认为事业方面的筹码要比爱情的筹码高的多的时候，怎样选择？如果在事业与爱情之间选择一下，你还是会选？",
                         select: [
                            {
                                text: "事业",
@@ -473,7 +476,7 @@ var spid="10-27-3";
                     }, {
                         type: "select",
                         id: 4,
-                        text: "如果你总是运气很差，你的心态是？",
+                        text: "人生必须经历一些事情来历练自己，但往往也不如人意，如果你总是运气很差，你的心态是？",
                         select: [
                            {
                                text: "消极",
@@ -485,6 +488,14 @@ var spid="10-27-3";
                                }
                            }, {
                                text: "想办法转运",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[6];
+                                   });
+                               }
+                           }, {
+                               text: "我是一个很开朗的人",
                                active: false,
                                tap: function (ele, select) {
                                    tap(ele, select, function () {
@@ -523,7 +534,15 @@ var spid="10-27-3";
                                       model.item = model.arr[7];
                                   });
                               }
-                          }
+                          },{
+                              text: "有时候是，有时候不是",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[6];
+                                  });
+                              }
+                          }, 
                         ]
                     }, {
                         type: "select",
@@ -544,6 +563,14 @@ var spid="10-27-3";
                                tap: function (ele, select) {
                                    tap(ele, select, function () {
                                        model.item = model.arr[9];
+                                   });
+                               }
+                           } ,{
+                               text: "都不爱吃",
+                               active: false,
+                               tap: function (ele, select) {
+                                   tap(ele, select, function () {
+                                       model.item = model.arr[8];
                                    });
                                }
                            }
@@ -569,15 +596,31 @@ var spid="10-27-3";
                                       model.item = model.arr[8];
                                   });
                               }
-                          }, {
+                          },  {
+                              text: "家人",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[8];
+                                  });
+                              }
+                          },{
                               text: "谁也不找",
                               active: false,
                               tap: function (ele, select) {
                                   tap(ele, select, function () {
                                       model.item = model.arr[10];
                                   });
+                               }
+                           }, {
+                              text: "好朋友",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[8];
+                                  });
                               }
-                          }
+                           }
                         ]
                     }, {
                         type: "select",
@@ -632,6 +675,14 @@ var spid="10-27-3";
                                       model.item = model.arr[12];
                                   });
                               }
+                          }, {
+                              text: "户外",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[11];
+                                  });
+                              }
                           }
                         ]
                     },
@@ -674,6 +725,14 @@ var spid="10-27-3";
                               }
                           }, {
                               text: "是的",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[14];
+                                  });
+                              }
+                          }, {
+                              text: "时常是",
                               active: false,
                               tap: function (ele, select) {
                                   tap(ele, select, function () {
@@ -731,6 +790,14 @@ var spid="10-27-3";
                               }
                           }, {
                               text: "期待",
+                              active: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select, function () {
+                                      model.item = model.arr[21];
+                                  });
+                              }
+                          },  {
+                              text: "伤感",
                               active: false,
                               tap: function (ele, select) {
                                   tap(ele, select, function () {
@@ -936,7 +1003,7 @@ var spid="10-27-3";
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
-				  mebtnopenurl = "http://AD201410291936.jd-app.com/test/"+spid+"/result.html?s="+score;
+				  mebtnopenurl = shareDomain+"/test/"+spid+"/result.html?s="+score;
 				  WeixinJSBridge.call('showOptionMenu');
 				  
 			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
