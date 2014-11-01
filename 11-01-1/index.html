@@ -1,14 +1,13 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>小学数学，你能得几分</title>
-<script type="text/javascript">
-var spid="10-27-3";
-</script>
-    <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    <title>测测什么穿衣风格比较适合你</title>
+    	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+	   <script type="text/javascript">
+	   var spid="11-01-1";
+	   	</script>	
     	<script type="text/javascript">
 	var test = new adwojs({
 		 eid:'spn', //节点id
@@ -21,7 +20,8 @@ var spid="10-27-3";
 		 
 	});
 	test.send();
-		//关闭按钮
+
+	//关闭按钮
 	function closeADFunc() {
 	document.getElementById('hideADbtn').style.display='none';
 	document.getElementById('spn').style.display='none';
@@ -31,7 +31,7 @@ var spid="10-27-3";
     <script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
 	<script type="text/javascript" src="../js/count.js"></script>
   <style>
-        * {
+		        * {
             font-family: '微软雅黑';
         }
         html, body {
@@ -248,7 +248,7 @@ var spid="10-27-3";
         a,
         a:link,
         a:visited {
-            color: #ffffff;
+            color: #607fa6;
         }
 
         .dialog {
@@ -280,7 +280,7 @@ var spid="10-27-3";
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./image/mane.png") no-repeat;
+			background:url("http://storage.jcloud.com/osimage/mane.png?Expires=1729669068&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=l2UuK%2B0O4H9U0ePmBPzCTLKonpk%3D") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -297,14 +297,15 @@ var spid="10-27-3";
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="http://storage.jcloud.com/osimage/load.gif?Expires=1729669176&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=zzONuGzdEYaz7PL6SH%2BB8dUQW%2Bs%3D" />
 		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
     <div class="main" id="main" ms-controller="test">
         <!-- 测试题 -->
+    <!-- 测试题 -->
         <div ms-if="item.type=='hello'" >
-			<div class="mane">小学数学，你能得几分</div>
+			<div class="mane">测测什么穿衣风格比较适合你</div>
             <div class="t-c" ms-if="item.text">
                 {{item.text}}
             </div>
@@ -318,7 +319,7 @@ var spid="10-27-3";
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我想玩其他好玩的</a></div>
         </div>
         <div ms-if="item.type=='select'">
-			<div class="mane">小学数学，你能得几分</div>
+			<div class="mane">测测什么穿衣风格比较适合你</div>
             <div class="t-c">
                 <div ms-if="item.img" style="margin-bottom:0.5em;">
                     <img ms-attr-src="{{item.img}}">
@@ -330,6 +331,7 @@ var spid="10-27-3";
                 <span>{{elem.text}}</span>
             </div>
         </div>
+
         <div id="sans" style="display:none;">
             <div class="t-r" id="fis">
                 <span></span>
@@ -337,7 +339,6 @@ var spid="10-27-3";
             <div class="t-c" id="sec">
                
             </div>
-
             <!--{<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注我们</a></div>}-->
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
         </div>
@@ -349,10 +350,10 @@ var spid="10-27-3";
 			  server: "http://www.oslook.com",
 			  imgUrl: "http://ad20141031.github.io/test/"+spid+"/icon.jpg",
 			   url: "http://ad20141031.github.io/test/"+spid+"/index.html",
-			  title: "小学数学，你能得几分",
+			  title: "测测什么穿衣风格比较适合你，超准的测试!",
 			  desc: "很准的呦,都来试试吧"
 		};
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
+		
 		function showQ(){
 			$("#zhao").hide();
 		}
@@ -380,13 +381,13 @@ var spid="10-27-3";
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
             var model = avalon.define("test", function (vm) {
-					vm.arr = [
-                    {
-                        type: "hello",
-                        text: "小学数学，你能得几分？ 友情提示：不准携带通讯工具，不准交头接耳、 一经发现，取消考试成绩，并终生禁止再次参与本考试！一定要记得哦！",
-                        select: [
+					vm.arr = [{
+						type: "hello",
+						text: "你不经意的服饰选择，展现了自己的风格与时尚观，更透露了你的性格秘密!怎么穿最适合你?快快完成这个测验，开始探索你的风格!",
+						text1: "点击开始测试咯~",
+						select: [
                             {
-                                text: "查看答案",
+                                text: "开始测试",
                                 active: false,
                                 tap: function (ele, select) {
                                     tap(ele, select, function () {
@@ -396,46 +397,23 @@ var spid="10-27-3";
                                 }
                             }
                         ]
-                    },  {
+					}, {
                         type: "select",
                         id: 1,
-                        text: "小明的左边有5个人，右边有3个人。这一排共有多少人？",
+                        text: "你的脸型比较接近哪一种？ ",
                         select: [{
-                            text: "7",
+                            text: " 圆型或瓜子型",
                             active: false,
                             error: false,
                             tap: function (ele, select) {
                                 tap(ele, select,
 								function () {
-								    model.item = model.arr[2];
+								    model.item = model.arr[3];
 								});
                             }
                         },
 						{
-						    text: "8",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[2];
-								});
-						    }
-						},
-						{
-						    text: "9√ 按下继续",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[2];
-								    fen += 10;
-								});
-						    }
-						},
-						{
-						    text: "10",
+						    text: "方型或长条型",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
@@ -449,49 +427,27 @@ var spid="10-27-3";
 					{
 					    type: "select",
 					    id: 2,
-					    text: "一队动物共有10个，从左数小猫是第5个，从右数它是第几？",
-					    select: [{
-					        text: "5",
-					        active: false,
-					        error: false,
-					        tap: function (ele, select) {
-					            tap(ele, select,
-								function () {
-								    model.item = model.arr[3];
-								});
-					        }
-					    },
+					    text: "嘴唇的颜色是？",
+					    select: [
                          {
-                             text: "6√ 按下继续",
+                             text: "偏无色或淡淡的粉红色 ",
                              active: false,
                              error: false,
                              tap: function (ele, select) {
                                  tap(ele, select,
                                  function () {
-                                     model.item = model.arr[3];
-                                     fen += 10;
+                                     model.item = model.arr[6];
                                  });
                              }
                          },
                          {
-                             text: "7",
+                             text: "偏红色或柔和的桃红色",
                              active: false,
                              error: false,
                              tap: function (ele, select) {
                                  tap(ele, select,
                                  function () {
-                                     model.item = model.arr[3];
-                                 });
-                             }
-                         },
-                         {
-                             text: "8",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[3];
+                                     model.item = model.arr[5];
                                  });
                              }
                          }]
@@ -499,199 +455,111 @@ var spid="10-27-3";
 					{
 					    type: "select",
 					    id: 3,
-					    text: "两箱苹果都是30个，从第二箱拿出8个放入第一箱，现在第二箱比第一箱少几个苹果？",
-					    select: [{
-					        text: "4",
-					        active: false,
-					        error: false,
-					        tap: function (ele, select) {
-					            tap(ele, select,
-								function () {
-								    model.item = model.arr[4];
-								});
-					        }
-					    },
-						{
-						    text: "8",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[4];
-								});
-						    }
-						},
-						{
-						    text: "16√ 按下继续",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[4];
-								    fen += 10;
-								});
-						    }
-						},
-						{
-						    text: "20",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[4];
-								});
-						    }
-						}]
+					    text: "和深红比起来，比较喜欢有点淡淡的粉红色？",
+					    select: [
+                         {
+                             text: "是 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[7];
+                                 });
+                             }
+                         },
+                         {
+                             text: "不是 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[4];
+                                 });
+                             }
+                         }]
 					},
 					{
 					    type: "select",
 					    id: 4,
-					    text: "一个人唱一首歌要2分钟，现在3个人合唱这首歌，要几分钟？",
+					    text: "银色饰品和金色饰品中，比较喜欢金色的饰品？",
+					    select: [
+                          {
+                              text: "是 ",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[8];
+                                  });
+                              }
+                          },
+                          {
+                              text: "不是",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[5];
+                                  });
+                              }
+                          }]
+					},
+					{
+					    type: "select",
+					    id: 5,
+					    text: "眼珠的颜色是哪一种？",
+					    select: [
+                          {
+                              text: "黑色或深咖啡色 ",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[9];
+                                  });
+                              }
+                          },
+                          {
+                              text: "带点绿色的黑或浅咖啡色",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[8];
+                                  });
+                              }
+                          }]
+					},
+					{
+					    type: "select",
+					    id: 6,
+					    text: "不常被人说比实际年龄成熟，反而常被人说和年龄相仿或是更小？",
 					    select: [{
-					        text: "2√ 按下继续",
+					        text: "是的",
 					        active: false,
 					        error: false,
 					        tap: function (ele, select) {
 					            tap(ele, select,
 								function () {
 								    model.item = model.arr[5];
-								    fen += 10;
 								});
 					        }
 					    },
                          {
-                             text: "3",
+                             text: "不是",
                              active: false,
                              error: false,
                              tap: function (ele, select) {
                                  tap(ele, select,
                                  function () {
-                                     model.item = model.arr[5];
-                                 });
-                             }
-                         },
-                         {
-                             text: "6",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[5];
-                                 });
-                             }
-                         },
-                         {
-                             text: "8",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[5];
-                                 });
-                             }
-                         }]
-					},
-					{
-					    type: "select",
-					    id: 5,
-					    text: "有10个小朋友，每2个人照一张合影，一共要照多少张照片？",
-					    select: [{
-					        text: "20",
-					        active: false,
-					        error: false,
-					        tap: function (ele, select) {
-					            tap(ele, select,
-								function () {
-								    model.item = model.arr[6];
-								});
-					        }
-					    },
-                         {
-                             text: "45√ 按下继续",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[6];
-                                     fen += 10;
-                                 });
-                             }
-                         },
-                         {
-                             text: "50",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[6];
-                                 });
-                             }
-                         },
-                         {
-                             text: "90",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[6];
-                                 });
-                             }
-                         }]
-					},
-					{
-					    type: "select",
-					    id: 6,
-					    text: "3个鹅蛋换9个鸡蛋，2个鸡蛋换4个鸽子蛋，5个鹅蛋换几个鸽子蛋？",
-					    select: [{
-					        text: "15",
-					        active: false,
-					        error: false,
-					        tap: function (ele, select) {
-					            tap(ele, select,
-								function () {
-								    model.item = model.arr[7];
-								});
-					        }
-					    },
-                         {
-                             text: "20",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[7];
-                                 });
-                             }
-                         },
-                         {
-                             text: "25",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[7];
-                                 });
-                             }
-                         },
-                         {
-                             text: "30√ 按下继续",
-                             active: false,
-                             error: false,
-                             tap: function (ele, select) {
-                                 tap(ele, select,
-                                 function () {
-                                     model.item = model.arr[7];
-                                     fen += 10;
+                                     model.item = model.arr[10];
+ 
                                  });
                              }
                          }]
@@ -699,233 +567,348 @@ var spid="10-27-3";
 					{
 					    type: "select",
 					    id: 7,
-					    text: "两人同时上18楼，甲上到5楼时，乙恰好上到3楼。甲上到15楼时，乙上到了几楼？ ",
-					    select: [{
-					        text: "7",
-					        active: false,
-					        error: false,
-					        tap: function (ele, select) {
-					            tap(ele, select,
-								function () {
-								    model.item = model.arr[8];
-								});
-					        }
-					    },
-						{
-						    text: "8√ 按下继续",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[8];
-								    fen += 10;
-								});
-						    }
-						},
-						{
-						    text: "9",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[8];
-								});
-						    }
-						},
-						{
-						    text: "10",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[8];
-								});
-						    }
-						}]
+					    text: "比起夏天的制服，你比较喜欢冬天的衣服？",
+					    select: [
+                          {
+                              text: "是的 ",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[8];
+                                  });
+                              }
+                          },
+                          {
+                              text: "不是",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[11];
+                                  });
+                              }
+                          }]
 					},
 					{
 					    type: "select",
 					    id: 8,
-					    text: "在1～99中，任取两个和小于100的数，有多少种不同的取法？",
-					    select: [{
-					        text: "2400",
-					        active: false,
-					        error: false,
-					        tap: function (ele, select) {
-					            tap(ele, select,
-								function () {
-								    model.item = model.arr[9];
-								});
-					        }
-					    },
-						{
-						    text: "2401√ 按下继续",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[9];
-								    fen += 10;
-								});
-						    }
-						},
-						{
-						    text: "3900",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[9];
-								});
-						    }
-						},
-						{
-						    text: "4802",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[9];
-								});
-						    }
-						}]
+					    text: "你比较适合短发或长发？",
+					    select: [
+                         {
+                             text: "短发 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[9];
+                                 });
+                             }
+                         },
+                         {
+                             text: "长发",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[12];
+                                 });
+                             }
+                         }]
 					},
                     {
                         type: "select",
                         id: 9,
-                        text: "小明比爸爸大明小31岁，比妈妈小25岁，爸爸比妈妈大几岁？",
+                        text: "一晒太阳，脸不会变红，而会马上变黑。",
+                        select: [
+                         {
+                             text: "是的 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[10];
+                                 });
+                             }
+                         },
+                         {
+                             text: "不是",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[13];
+                                 });
+                             }
+                         }]
+                    },
+                    {
+                        type: "select",
+                        id: 10,
+                        text: "你哪一种衣服比较多？",
                         select: [{
-                            text: "6√ 按下继续",
+                            text: "衬衫",
                             active: false,
                             error: false,
                             tap: function (ele, select) {
                                 tap(ele, select,
 								function () {
-								    model.item = model.arr[10];
-								    fen += 10;
+								    model.item = model.arr[14];
 								});
                             }
                         },
 						{
-						    text: "8",
+						    text: "针织毛衣",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
 						        tap(ele, select,
 								function () {
-								    model.item = model.arr[10];
-								});
-						    }
-						},
-						{
-						    text: "10",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[10];
-								});
-						    }
-						},
-						{
-						    text: "12",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    model.item = model.arr[10];
+								    model.item = model.arr[13];
 								});
 						    }
 						}]
                     },
                     {
                         type: "select",
-                        id: 10,
-                        text: "有一杯橙汁，小明喝了半杯后，将它加满水；然后他又喝半杯，再加满水；最后全部喝完，小菜刀喝的橙汁多？还是水多？",
+                        id: 11,
+                        text: "天气一变冷，你的脸就会变红？",
                         select: [{
-                            text: "橙汁多",
+                            text: "是的",
                             active: false,
                             error: false,
                             tap: function (ele, select) {
                                 tap(ele, select,
 								function () {
-								    testEnd();
+								    model.item = model.arr[15];
 								});
                             }
                         },
 						{
-						    text: "水多",
+						    text: "不是",
 						    active: false,
 						    error: false,
 						    tap: function (ele, select) {
 						        tap(ele, select,
 								function () {
-								    testEnd();
-								});
-						    }
-						},
-						{
-						    text: "一样多",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    testEnd();
-								});
-						    }
-						},
-						{
-						    text: "不确定√ 按下继续",
-						    active: false,
-						    error: false,
-						    tap: function (ele, select) {
-						        tap(ele, select,
-								function () {
-								    fen += 10;
-								    testEnd();
+								    model.item = model.arr[12];
 								});
 						    }
 						}]
                     },
                     {
-                        type: "result",
-                        id: 11
+                        type: "select",
+                        id: 12,
+                        text: "仔细一看你的头发，好像有点带咖啡色？",
+                        select: [
+                          {
+                              text: " 是的 ",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[16];
+                                  });
+                              }
+                          },
+                          {
+                              text: "不是",
+                              active: false,
+                              error: false,
+                              tap: function (ele, select) {
+                                  tap(ele, select,
+                                  function () {
+                                      model.item = model.arr[15];
+                                  });
+                              }
+                          }]
                     }, {
-                        type: "result",
-                        id: 12
-                    }, {
-                        type: "result",
-                        id: 13
-                    }, {
-                        type: "result",
-                        id: 14
-                    }, {
-                        type: "result",
-                        id: 15
-                    }, {
-                        type: "result",
-                        id: 16
-                    }, {
-                        type: "result",
-                        id: 17
-                    }, {
-                        type: "result",
-                        id: 18
-                    }, {
+                        type: "select",
+                        id: 13,
+                        text: "常有人说你适合黑衣服，或是你很喜欢而常常穿？",
+                        select: [
+                         {
+                             text: "是的 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[17];
+                                 });
+                             }
+                         },
+                         {
+                             text: "不是 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[12];
+                                 });
+                             }
+                         }]
+                    },
+                    {
+                        type: "select",
+                        id: 14,
+                        text: "你的五官是属于？",
+                        select: [
+                         {
+                             text: "很有女孩味、温柔的脸 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[13];
+                                 });
+                             }
+                         },
+                         {
+                             text: "像小男孩般、很有个性的脸 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[18];
+                                 });
+                             }
+                         }]
+                    },
+                    {
+                        type: "select",
+                        id: 15,
+                        text: "你认为你的个性比较属于哪一种？",
+                        select: [
+                         {
+                             text: "开朗活泼 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[19];
+                                 });
+                             }
+                         },
+                         {
+                             text: "成熟稳重 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[16];
+                                 });
+                             }
+                         }]
+                    },
+                    {
+                        type: "select",
+                        id: 16,
+                        text: "脸颊的颜色是？",
+                        select: [
+                         {
+                             text: "没有什么颜色 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[20];
+                                 });
+                             }
+                         },
+                         {
+                             text: "平常就是粉红色 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[17];
+                                 });
+                             }
+                         }]
+                    },
+                    {
+                        type: "select",
+                        id: 17,
+                        text: "你的腿型接近哪一种？",
+                        select: [
+                         {
+                             text: "修长而笔直的长腿 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[21];
+                                 });
+                             }
+                         },
+                         {
+                             text: "略粗的双腿 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[18];
+                                 });
+                             }
+                         }]
+                    },
+                    {
+                        type: "select",
+                        id: 18,
+                        text: "你比较喜欢以下哪种打扮？",
+                        select: [
+                         {
+                             text: "中性化的打扮 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[22];
+                                 });
+                             }
+                         },
+                         {
+                             text: " 充满女人味的打扮 ",
+                             active: false,
+                             error: false,
+                             tap: function (ele, select) {
+                                 tap(ele, select,
+                                 function () {
+                                     model.item = model.arr[21];
+                                 });
+                             }
+                         }]
+                    },
+                    {
                         type: "result",
                         id: 19
                     }, {
                         type: "result",
                         id: 20
+                    }, {
+                        type: "result",
+                        id: 21
+                    }, {
+                        type: "result",
+                        id: 22
                     }
                 ];
                 vm.item = vm.arr[0];
@@ -946,61 +929,21 @@ var spid="10-27-3";
                 vm.showxz = function () {
                     model.xunzhang = true;
                 }
-               /* vm.$watch("item", function (newval) {
+               vm.$watch("item", function (newval) {
                     if (newval.type == 'result') {
-                        tarShare((newval.id-16));
+                        tarShare((newval.id-18));
 						return false;
                     };
-                })*/
+                })
             });
-			var ylist = [{
-				"biao": "0分",
-				"t1": "",
-				"t2": "我宁愿相信你是天才，答题的时候手抖了吗？",      
-			},{
-				"biao": "1-59分",
-				"t1": "",
-				"t2": "再接再厉哦！",            
-			},{
-				"biao": "60分",
-				"t1": "",
-				"t2": "不多不少，及格就好。",            
-			},{
-				"biao": "66分",
-				"t1": "",
-				"t2": "得这个分数真顺啊！",            
-			},{
-				"biao": "61-79分",
-				"t1": "",
-				"t2": "考试及格。",            
-			},{
-				"biao": "80分",
-				"t1": "",
-				"t2": "恭喜您，达标了。",            
-			},{
-				"biao": "81-90分",
-				"t1": "",
-				"t2": "恭喜您，成绩优良。",            
-			},{
-				"biao": "91-98分",
-				"t1": "",
-				"t2": "恭喜您得到高分，貌似平时很努力哦！",            
-			},{
-				"biao": "99分",
-				"t1": "",
-				"t2": "离神人只差一步，您太谦虚了。",            
-			},{
-				"biao": "100分",
-				"t1": "",
-				"t2": "您真是神人级别！",            
-			}];
+	
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
 				  mebtnopenurl = "http://ad20141031.github.io/test/"+spid+"/result.html?s="+score;
 				  WeixinJSBridge.call('showOptionMenu');
 				  
-			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
+			    //var url = dataForWeixin.url+"list/share.html?spid=10-25-4&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
 				//location.href = url;
 				return false;
 			}
@@ -1013,41 +956,22 @@ var spid="10-27-3";
 				location.href = urls;
 				return false;
 			}
-			function showAns(ans){
-				ans = ans-1;
-				if(ans<0 || ans>5){
-					ans = 1;
+
+			function testEnd() {
+				if (fen >= 80) {
+					var scores = 4;
+				} else if (fen >=50) {
+					var scores = 3;
+				} else if (fen >=20) {
+					var scores = 2;
+				} else {
+					var scores = 1;
 				}
-				$("#sans").show();
-				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
-				$("#sec").html(ylist[ans].t2);
-			}
-						function testEnd() {
-				 if (fen == 0) {
-                   var scores = 1;
-                }else if (fen >= 1 && fen <= 59) {
-                   var scores = 1;
-                }else if (fen == 60) {
-                    var scores = 2;
-                }else if (fen == 66) {
-                   var scores = 3;
-                }else if (fen >= 61 && fen <= 79) {
-                   var scores = 4;
-                }else if (fen == 80) {
-                   var scores = 5;
-                }else if (fen >= 81 && fen <= 90) {
-                  var scores = 6;
-                }else if (fen >= 91 && fen <= 98) {
-                    var scores = 7;
-                }else if (fen == 99) {
-                    var scores = 8;
-                }else if (fen == 100) {
-                    var scores = 9;
-                }
 				tarShare(scores);
 			}
     </script>
-    <div style="font-size: 20px;
+    
+    <div style="font-size: 30px;
                       text-align:center;
                       padding-top: 20%;
 color: red;
@@ -1057,17 +981,17 @@ width: 100%;
 height: 100%;
 top: 0px;
 left: 0px;
-z-index: 10000;display:none;"  id="tips">测试完成啦！分享到朋友圈后结果自动弹出 并有详细分析哦！</div>
+z-index: 10000;display:none;"  id="tips">测试完成啦！分享到朋友圈后结果自动弹出，并有详细分析哦！</br>:-D 不要不好意思啦~~</div>
 
     <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
     <div id="spn" style="position:fixed; bottom:0;left:0;z-index:9999;height:50px;width:320px;"></div>
 
    	<script type="text/javascript" src="../js/share.js"></script>
+
 	<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
 </script></div>
-
 </body>
 </html>
