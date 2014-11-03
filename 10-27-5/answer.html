@@ -343,12 +343,12 @@ var spid="10-27-3";
         </div>
     </div>
 	<script type="text/javascript" >
-		var mebtnopenurl = "http://ad20141031.github.io/test/"+spid+"/result.html";
+		var mebtnopenurl = "http://go20141103.github.io/test/"+spid+"/result.html";
 		 var dataForWeixin = {
 		 	appId: "",
-			  server: "http://ad20141031.github.io",
-			  imgUrl: "http://ad20141031.github.io/test/"+spid+"/icon.jpg",
-			   url: "http://ad20141031.github.io/test/"+spid+"/index.html",
+			  server: "http://go20141103.github.io",
+			  imgUrl: "http://go20141103.github.io/test/"+spid+"/icon.jpg",
+			   url: "http://go20141103.github.io/test/"+spid+"/index.html",
 			  title: "小学数学，你能得几分",
 			  desc: "很准的呦,都来试试吧"
 		};
@@ -997,7 +997,7 @@ var spid="10-27-3";
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
-				  mebtnopenurl = "http://ad20141031.github.io/test/"+spid+"/result.html?s="+score;
+				  mebtnopenurl = "http://go20141103.github.io/test/"+spid+"/result.html?s="+score;
 				  WeixinJSBridge.call('showOptionMenu');
 				  
 			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
@@ -1006,9 +1006,9 @@ var spid="10-27-3";
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://ad20141031.github.io/test/list/";
+					var urls = "http://go20141103.github.io/test/list/";
 				}else{
-					var urls = "http://ad20141031.github.io/test/list/";
+					var urls = "http://go20141103.github.io/test/list/";
 				}
 				location.href = urls;
 				return false;
