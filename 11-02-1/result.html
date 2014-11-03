@@ -1,36 +1,17 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>哈佛情商测试</title>
-    	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-	   <script type="text/javascript">
-	   var spid="11-02-1";
-	   	</script>	
-    	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
-		//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
-	
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
-	<script type="text/javascript" src="../js/count.js"></script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>哈佛情商测试</title>
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+<script type="text/javascript">
+var spid="11-02-1";
+</script>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
   <style>
         * {
             font-family: '微软雅黑';
@@ -314,100 +295,20 @@
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
         </div>
     </div>
-	<script type="text/javascript" >
-		var mebtnopenurl = "http://go20141103.github.io/test/"+spid+"/result.html";
-		 var dataForWeixin = {
-		 	appId: "",
-			  server: "http://go20141103.github.io",
-			  imgUrl: "http://go20141103.github.io/test/"+spid+"/icon.jpg",
-			   url: "http://go20141103.github.io/test/"+spid+"/index.html",
-			  title: "哈佛性格测试来了，超准的测试!",
-			  desc: "很准的呦,都来试试吧"
-		};
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
-		function showQ(){
-			$("#zhao").hide();
-		}
-	 </script>
-        <script>
-            var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
-            var fen = 0;
-            function tap(elemvm, select, cb) {
-                var a = false;
-                for (var i = 0; i < select.length; i++) {
-                    a = a || select[i].active;
-                };
-                if (!a) {
-                    elemvm.active = true;
-                    setTimeout(function () {
-                        cb && cb()
-                    }, 500)
-                }
-            }
-            function getQueryString(name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-                var r = location.search.substr(1).match(reg);
-                if (r != null) return unescape(decodeURI(r[2])); return null;
-            }
 
-			var ylist = [{
-				"biao": "EQ：80分",
-				"t1": "低于普通人水平",
-				"t2": "自我意识差，没有自信，无确定的目标，也不打算付诸实践，严重依赖他人。",      
-			},{
-				"biao": "EQ：120分",
-				"t1": "比普通人稍高！",
-				"t2": "易受他人影响，自己的目标不明确。比低情商者善于原谅，能控制大脑。能应付较轻的焦虑情绪。",            
-			},{
-				"biao": "EQ：150分",
-				"t1": "不错！属于高水平了！",
-				"t2": "自信而不自满，很乐观，很幽默，能站在别人的角度想问题，有较好的人际关系，做事不怕难，心里承受能力强，能应对大多数的问题。",            
-			},{
-				"biao": "EQ：200分",
-				"t1": "啧啧，这情商高得有点吓人",
-				"t2": "肯于帮助别人，知道什么时候该拒绝，善于读懂别人的面部表情。情商高的人无论遇到何等逆境，都会坚持下去，迅速调整情绪，恢复活力，具有很强的心理韧性。",            
-			},{
-				"biao": "EQ：250分",
-				"t1": "你情商可以和哈佛博士媲美了",
-				"t2": "自动自发，目光远大，对自己有清醒的认识，能承受压力。",            
-			}];
-            document.body.className = "";
-			function tarShare(score){
-				var url = dataForWeixin.url+"fapang/"+score+"/share.html";
-				location.href = url;
-				return false;
-			}
-			function tarHref(type){
-				if(type==1){
-					var urls = "http://go20141103.github.io/test/list/";
-				}else{
-					var urls = "http://go20141103.github.io/test/list/";
-				}
-				location.href = urls;
-				return false;
-			}
-			function showAns(ans){
-				ans = ans-1;
-				if(ans<0 || ans>5){
-					ans = 1;
-				}
-				$("#sans").show();
-				$("#fis").html("<span>"+ylist[ans].biao+"</span></br>"+ylist[ans].t1);
-				$("#sec").html(ylist[ans].t2);
-			//	shareCount(spid);
-			//	scoreCount(spid,ans);
-			}
-			var s = getQueryString("s");
-			showAns(s);
-			
-    </script>
-    
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-	" ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
+	
+<script type="text/javascript" src="./11-02-1.js"></script>	
+<script>
+var s = getQueryString("s");
+showAns(s);
+</script>
+
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
 
 
-	<div style="display:none;">
+<div style="display:none;">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
