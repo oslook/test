@@ -345,15 +345,6 @@ var spid="10-27-5";
         </div>
     </div>
 	<script type="text/javascript" >
-var shareDomains = ["AD201410291936.jd-app.com"];
-var shareDomain = "http://"+this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
-		 var dataForWeixin = {
-			  server: "http://AD201410291936.jd-app.com",
-			  imgUrl: shareDomain+"/test/"+spid+"/icon.jpg",
-			   url: shareDomain+"/test/"+spid+"/index.html",
-			  title: "小学数学，你能得几分，刚才没进来的进来试试吧",
-			  desc: "好难的哦,都来试试吧"
-		};
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
 		function showQ(){
 			$("#zhao").hide();
@@ -379,6 +370,16 @@ var shareDomain = "http://"+this.shareDomains[parseInt(Math.random() * this.shar
                 var r = location.search.substr(1).match(reg);
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
+            var shareDomains = ["AD201410291936.jd-app.com"];
+var shareDomain = "http://"+this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
+		 var dataForWeixin = {
+			  server: "http://AD201410291936.jd-app.com",
+			  imgUrl: shareDomain+"/test/"+spid+"/icon.jpg",
+			   url: shareDomain+"/test/"+spid+"/?uuid="+ID,
+			  title: "小学数学，你能得几分，刚才没进来的进来试试吧",
+			  desc: "好难的哦,都来试试吧"
+		};
+
             var model = avalon.define("test", function (vm) {
 					vm.arr = [
                     {
