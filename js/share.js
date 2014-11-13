@@ -1,5 +1,5 @@
 /////step2 url/////
-var shareDomains = ["i.oslook.com"];
+var shareDomains = ["we.oslook.com","wx.oslook.com"];
 var shareDomain = this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
 
 dataForWeixin.url = "http://"+shareDomain+"/test/"+spid+"/?uuid="+ID;
