@@ -370,10 +370,10 @@ var spid="10-27-5";
                 var r = location.search.substr(1).match(reg);
                 if (r != null) return unescape(decodeURI(r[2])); return null;
             }
-            var shareDomains = ["AD201410291936.jd-app.com"];
+            var shareDomains = ["wx.oslook.com"];
 var shareDomain = "http://"+this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
 		 var dataForWeixin = {
-			  server: "http://AD201410291936.jd-app.com",
+			  server: "http://wx.oslook.com",
 			  imgUrl: shareDomain+"/test/"+spid+"/icon.jpg",
 			   url: shareDomain+"/test/"+spid+"/?uuid="+ID,
 			  title: "小学数学，你能得几分，刚才没进来的进来试试吧",
@@ -967,9 +967,9 @@ var shareDomain = "http://"+this.shareDomains[parseInt(Math.random() * this.shar
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://AD201410291936.jd-app.com/test/list/";
+					var urls = "http://wx.oslook.com/test/list/";
 				}else{
-					var urls = "http://AD201410291936.jd-app.com/test/list/";
+					var urls = "http://wx.oslook.com/test/list/";
 				}
 				location.href = urls;
 				return false;

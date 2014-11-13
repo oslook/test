@@ -348,9 +348,9 @@ var spid="10-29-1";
     </div>
 	<script type="text/javascript" >
 		 var dataForWeixin = {
-			  server: "http://AD201410291936.jd-app.com",
-			  imgUrl: "http://AD201410291936.jd-app.com/test/"+spid+"/icon.jpg",
-			   url: "http://AD201410291936.jd-app.com/test/"+spid+"/index.html",
+			  server: "http://wx.oslook.com",
+			  imgUrl: "http://wx.oslook.com/test/"+spid+"/icon.jpg",
+			   url: "http://wx.oslook.com/test/"+spid+"/index.html",
 			  title: "小明很贱，但是我喜欢",
 			  desc: "在你身边，看看谁就像小明？"
 		};
@@ -620,7 +620,7 @@ var spid="10-29-1";
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
-				  mebtnopenurl = "http://AD201410291936.jd-app.com/test/list/";
+				  mebtnopenurl = "http://wx.oslook.com/test/list/";
 				  WeixinJSBridge.call('showOptionMenu');
 				  
 			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
@@ -629,9 +629,9 @@ var spid="10-29-1";
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://AD201410291936.jd-app.com/test/list/";
+					var urls = "http://wx.oslook.com/test/list/";
 				}else{
-					var urls = "http://AD201410291936.jd-app.com/test/list/";
+					var urls = "http://wx.oslook.com/test/list/";
 				}
 				location.href = urls;
 				return false;

@@ -347,9 +347,9 @@ var spid="10-25-3";
     </div>
 	<script type="text/javascript" >
 		 var dataForWeixin = {
-			  server: "http://AD201410291936.jd-app.com",
-			  imgUrl: "http://AD201410291936.jd-app.com/test/"+spid+"/icon.jpg",
-			   url: "http://AD201410291936.jd-app.com/test/"+spid+"/index.html",
+			  server: "http://wx.oslook.com",
+			  imgUrl: "http://wx.oslook.com/test/"+spid+"/icon.jpg",
+			   url: "http://wx.oslook.com/test/"+spid+"/index.html",
 			  title: "测测你的未来“钱途”怎么样？",
 			  desc: "很准的呦,都来试试吧"
 		};
@@ -992,7 +992,7 @@ var spid="10-25-3";
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
-				  mebtnopenurl = "http://AD201410291936.jd-app.com/test/"+spid+"/result.html?s="+score;
+				  mebtnopenurl = "http://wx.oslook.com/test/"+spid+"/result.html?s="+score;
 				  WeixinJSBridge.call('showOptionMenu');
 				  
 			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
@@ -1001,9 +1001,9 @@ var spid="10-25-3";
 			}
 			function tarHref(type){
 				if(type==1){
-					var urls = "http://AD201410291936.jd-app.com/test/list/";
+					var urls = "http://wx.oslook.com/test/list/";
 				}else{
-					var urls = "http://AD201410291936.jd-app.com/test/list/";
+					var urls = "http://wx.oslook.com/test/list/";
 				}
 				location.href = urls;
 				return false;
