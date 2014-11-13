@@ -2,34 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>小学数学，你能得几分</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>小学数学，你能得几分</title>
 <script type="text/javascript">
-var spid="10-27-3";
+var spid="10-27-5";
 </script>
-    <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-    	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
-		//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
-	<script type="text/javascript" src="../js/count.js"></script>
+<script>
+var _hmt = _hmt || [];
+_hmt.push(['_setAutoPageview', false]);
+_hmt.push(['_trackPageview', '/test/'+spid+'/answer']);
+</script>
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
   <style>
         * {
             font-family: '微软雅黑';
@@ -343,15 +330,18 @@ var spid="10-27-3";
         </div>
     </div>
 	<script type="text/javascript" >
-		var mebtnopenurl = "http://wx.oslook.com/test/"+spid+"/result.html";
-		 var dataForWeixin = {
-		 	appId: "",
-			  server: "http://wx.oslook.com",
-			  imgUrl: "http://wx.oslook.com/test/"+spid+"/icon.jpg",
-			   url: "http://wx.oslook.com/test/"+spid+"/index.html",
-			  title: "小学数学，你能得几分",
-			  desc: "很准的呦,都来试试吧"
-		};
+var basedns = window.location.hostname;
+var mebtnopenurl = basedns +"/test/"+spid+"/result.html";
+var dataForWeixin = {
+appId: "",
+server: basedns,
+imgUrl: "http://wxfiles.oss-cn-hangzhou.aliyuncs.com/test/"+spid+"/icon.jpg",
+url: basedns+"/test/"+spid+"/index.html",
+title: "小学数学，你能得几分",
+desc: "很准的呦,都来试试吧"
+};
+
+
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
 		function showQ(){
 			$("#zhao").hide();
@@ -857,7 +847,7 @@ var spid="10-27-3";
                             tap: function (ele, select) {
                                 tap(ele, select,
 								function () {
-								    testEnd();
+								    tarHref(1);
 								});
                             }
                         },
@@ -868,7 +858,7 @@ var spid="10-27-3";
 						    tap: function (ele, select) {
 						        tap(ele, select,
 								function () {
-								    testEnd();
+								    tarHref(1);
 								});
 						    }
 						},
@@ -879,7 +869,7 @@ var spid="10-27-3";
 						    tap: function (ele, select) {
 						        tap(ele, select,
 								function () {
-								    testEnd();
+								    tarHref(1);
 								});
 						    }
 						},
@@ -891,7 +881,7 @@ var spid="10-27-3";
 						        tap(ele, select,
 								function () {
 								    fen += 10;
-								    testEnd();
+								    tarHref(1);
 								});
 						    }
 						}]
@@ -997,22 +987,12 @@ var spid="10-27-3";
             document.body.className = "";
 			function tarShare(score){
 				  $('#tips').show();
-				  mebtnopenurl = "http://wx.oslook.com/test/"+spid+"/result.html?s="+score;
+				  mebtnopenurl = basedns+"/test/"+spid+"/result.html?s="+score;
 				  WeixinJSBridge.call('showOptionMenu');
 				  
-			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
-				//location.href = url;
 				return false;
 			}
-			function tarHref(type){
-				if(type==1){
-					var urls = "http://wx.oslook.com/test/list/";
-				}else{
-					var urls = "http://wx.oslook.com/test/list/";
-				}
-				location.href = urls;
-				return false;
-			}
+			
 			function showAns(ans){
 				ans = ans-1;
 				if(ans<0 || ans>5){
@@ -1057,17 +1037,13 @@ width: 100%;
 height: 100%;
 top: 0px;
 left: 0px;
-z-index: 10000;display:none;"  id="tips">测试完成啦！分享到朋友圈后结果自动弹出 并有详细分析哦！</div>
+z-index: 10000;display:none;"  id="tips">测试完成啦！【分享到朋友圈】后结果自动弹出 并有详细分析哦！</div>
 
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;left:0;z-index:9999;height:50px;width:320px;"></div>
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;" onclick="_hmt.push(['_trackEvent', 'ad', 'click', 'banner']);" ></div>
 
-   	<script type="text/javascript" src="../js/share.js"></script>
-	<div style="display:none;">
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
-</script></div>
+<script type="text/javascript" src="../js/share.js"></script>
+<div style="display:none;"><script type="text/javascript">tongji();</script></div>
 
 </body>
 </html>

@@ -1,3 +1,26 @@
+/////step2 url/////
+var shareDomains = ["wx.oslook.com"];
+var shareDomain = this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
+
+dataForWeixin.url = "http://"+shareDomain+"/test/"+spid+"/?uuid="+ID;
+
+
+/////step3 url/////
+//var shortdata='type=jsonp&mode=0&long=http://wx.oslook.com/test/'+ spid + '/index.html?uuid='+ID;
+//console.log(shortdata);
+//$.ajax({  
+// 	type : "get",
+//	async:true, 	  
+//    url:"http://tao.lc/api.php",  
+//    dataType:'jsonp',  
+//    data: shortdata,  
+//    jsonp:'callback',  
+//    success:function(data) {  
+//		dataForWeixin.url=data.short; 
+//    },  
+//    timeout:3000
+//}); 
+    	
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 WeixinJSBridge.call('hideOptionMenu');
 WeixinJSBridge.call('hideToolbar');
@@ -14,9 +37,10 @@ s.generalShare({
 if(e.err_msg=="general_share:ok"){
 //share ok:
 setTimeout(function () {location.href = mebtnopenurl;}, 1500);
+_hmt.push(['_trackEvent', 'wxshare', 'android_share', 'wxsg'+spid]);
+_czc.push(['_trackEvent', 'wxshare', 'android_share', 'wxsg'+spid]);
 }else{
 //share err:
-
 };
 });
 });
@@ -30,6 +54,9 @@ WeixinJSBridge.invoke('sendAppMessage', {
 "title": dataForWeixin.title
 });
 setTimeout(function () {location.href = mebtnopenurl;}, 1500);
+_hmt.push(['_trackEvent', 'wxshare', 'ios_share', 'wxsa'+spid]);
+_czc.push(['_trackEvent', 'wxshare', 'ios_share', 'wxsa'+spid]);
+
 });
 
 WeixinJSBridge.on('menu:share:timeline', function(argv) {
@@ -43,7 +70,10 @@ WeixinJSBridge.invoke('shareTimeline', {
 "title": dataForWeixin.title
 });
 setTimeout(function () {location.href = mebtnopenurl;}, 1500);
+_hmt.push(['_trackEvent', 'wxshare', 'tl_share', 'wxst'+spid]);
+_czc.push(['_trackEvent', 'wxshare', 'tl_share', 'wxst'+spid]);
 });
 
 }, false);
+
 

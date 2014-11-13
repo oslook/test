@@ -2,36 +2,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测测手机对你有多重要？</title>
-<script type="text/javascript">
-var spid="10-27-3";
-</script>	
-       <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-    	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
-		//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>测测手机对你有多重要？</title>
 
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/avalon.mobile.min.js"></script>
-    <script src="../js/count.js"></script>	
- <style>
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+<script type="text/javascript">
+var spid="11-01-1";
+</script>	
+	
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
+  <style>
        * {
             font-family: '微软雅黑';
         }
@@ -314,100 +297,22 @@ var spid="10-27-3";
             <div class="t-c" id="sec">
                
             </div>
-            <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注oslook,不再寂寞！</a></div>
-			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
+            <!--{<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注我们</a></div>}-->
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
         </div>
     </div>
-	<script type="text/javascript" >
-		 var dataForWeixin = {
-			  server: "http://wx.oslook.com",
-			  TLImg: "",
-			  url: "http://wx.oslook.com/test/",
-			  title: "手机对你来说有多重要？",
-			  desc: "很准的呦,都来试试吧"
-		};
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
-		function showQ(){
-			$("#zhao").hide();
-		}
-	 </script>
-        <script>
-            var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
-            var fen = 0;
-            function tap(elemvm, select, cb) {
-                var a = false;
-                for (var i = 0; i < select.length; i++) {
-                    a = a || select[i].active;
-                };
-                if (!a) {
-                    elemvm.active = true;
-                    setTimeout(function () {
-                        cb && cb()
-                    }, 500)
-                }
-            }
-            function getQueryString(name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-                var r = location.search.substr(1).match(reg);
-                if (r != null) return unescape(decodeURI(r[2])); return null;
-            }
-			var ylist = [{
-				"biao": "A",
-				"t1": "你能击退手机诱惑",
-				"t2": "我能击退手机诱惑，你并不特喜欢玩手机，但是你却容易被手机的魔法功力吸引；当你无聊的时候喜欢玩手机打发时间，玩着玩着就容易上瘾了，但是你内心清楚不能沉迷于手机，不仅浪费时间，而且辐射大。为了阻止手机影响你的正常生活，你会控制自己少玩手机游戏，少上微博、微信、少看手机电视等，所以别担心，通过努力你能摆脱手机的诱惑。",      
-			},{
-				"biao": "B",
-				"t1": "手机诱惑不了你",
-				"t2": "手机等高科技产品对你正常生活影响并不大，也许你的日常生活工作忙碌，没有多余的时间玩手机，不大可能得手机综合依赖症。但也因为你不关注手机等科技产品，也不容易得知最新的信息，有时候会比较落伍。对你而言，手机只是通讯工具，没有任何的特殊情感，摆脱手机对你生活的影响是轻而易举的事情。",            
-			},{
-				"biao": "C",
-				"t1": "手机能诱惑到你",
-				"t2": "你对手机有着特殊的感情，在你看来手机不仅是通讯工具，更是你的朋友，记录你生活的点点滴滴。你认为手机是神奇的发明，可以用手机联络朋友，可以通过手机关注外界的最新消息，不开心时也可以躲在手机为你设置的虚幻世界里，所以你容易陷入手机情结无法自拔。你把手机看的过于重要，要摆脱手机诱惑要加把劲才行。",            
-			},{
-				"biao": "D",
-				"t1": "你难敌手机诱惑",
-				"t2": "手机等电子产品成为你生活中必不可少的部分，甚至已经开始主宰你的生活，当你丢失手机时内心会丢失安全感，无所适从的感觉油然而生，这不是一种好现象。如果再这样下去你会成为手机的奴隶，沉迷于手机给你设置的虚拟世界，慢慢地对现实生活漠不关心，而且过度地玩手机对你的健康没好处，尽早摆脱手机的诱惑吧，把手机当做通讯工具使用。",            
-			}];
-
-            document.body.className = "";
-			function tarShare(score){
-				var url = dataForWeixin.url+"lucky/"+score+"/share.html";
-				location.href = url;
-				return false;
-			}
-			function tarHref(type){
-				if(type==1){
-					var urls = "http://wx.oslook.com/test/list/";
-				}else{
-					var urls = "http://wx.oslook.com/test/list/";
-				}
-				location.href = urls;
-				return false;
-			}
-			function showAns(ans){
-				ans = ans-1;
-				if(ans<0 || ans>3){
-					ans = 1;
-				}
-				$("#sans").show();
-				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
-				$("#sec").html(ylist[ans].t2);
-				shareCount(spid);
-				scoreCount(spid,ans);
-			}
-			var s = getQueryString("s");
-			showAns(s);
-			    </script>
-
-            <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-	" ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
+<script type="text/javascript" src="./10-27-4.js"></script>	
+<script type="text/javascript" src="../js/share.js"></script>	
+<script>
+var s = getQueryString("s");
+showAns(s);
+</script>
     
-	<div style="display:none;">
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
-</script></div>
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
+    
+<div style="display:none;"><script type="text/javascript">tongji();</script></div>
 
 </body>
 </html>

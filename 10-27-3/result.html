@@ -8,31 +8,12 @@
 <script type="text/javascript">
 var spid="10-27-3";
 </script>	
- <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-    	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
-		//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
-
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/avalon.mobile.min.js"></script>
-    <script src="../js/count.js"></script>	
- <style>
-       * {
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
+  <style>
+		        * {
             font-family: '微软雅黑';
         }
 
@@ -248,7 +229,6 @@ var spid="10-27-3";
                 margin-top: 0.5em;
                 margin-bottom: 0.5em;
             }
-
         a,
         a:link,
         a:visited {
@@ -284,7 +264,7 @@ var spid="10-27-3";
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("../image/mane.png") no-repeat;
+			background:url("http://storage.jcloud.com/osimage/mane.png?Expires=1729669068&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=l2UuK%2B0O4H9U0ePmBPzCTLKonpk%3D") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -302,7 +282,7 @@ var spid="10-27-3";
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="http://storage.jcloud.com/osimage/load.gif?Expires=1729669176&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=zzONuGzdEYaz7PL6SH%2BB8dUQW%2Bs%3D" />
 		正在显示结果......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
@@ -316,122 +296,22 @@ var spid="10-27-3";
             <div class="t-c" id="sec">
                
             </div>
-            <div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注oslook,不再寂寞！</a></div>
-			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
+            <!--{<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注我们</a></div>}-->
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
         </div>
     </div>
-	<script type="text/javascript" >
-		 var dataForWeixin = {
-			  server: "http://wx.oslook.com",
-			  TLImg: "",
-			  url: "http://wx.oslook.com/test/",
-			  title: "测测你的幸福指数有多高？",
-			  desc: "很准的呦,都来试试吧"
-		};
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
-		function showQ(){
-			$("#zhao").hide();
-		}
-	 </script>
-        <script>
-            var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
-            var fen = 0;
-            function tap(elemvm, select, cb) {
-                var a = false;
-                for (var i = 0; i < select.length; i++) {
-                    a = a || select[i].active;
-                };
-                if (!a) {
-                    elemvm.active = true;
-                    setTimeout(function () {
-                        cb && cb()
-                    }, 500)
-                }
-            }
-            function getQueryString(name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-                var r = location.search.substr(1).match(reg);
-                if (r != null) return unescape(decodeURI(r[2])); return null;
-            }
-			var ylist = [{
-				"biao": "A",
-				"t1": "幸福指数：78%，有爱即幸福",
-				"t2": "一直在追求着一份真正爱情的你，其实离爱情也是最远的，在你的心中，只有找到了自己的爱情，才会变得幸福起来。其他的即便是有亲情温暖，有一帮子朋友嘻嘻哈哈在一起，日子过得也很快乐，但是爱情是却是无可替代的，缺少了爱情，幸福也将缺失掉一大半。所以如果明年，可以找到爱情，那么或许你才会感觉到幸福降临。",      
-			},{
-				"biao": "B",
-				"t1": "幸福指数：31%，幸福是浮云",
-				"t2": "曾经天真地以为，幸福就近在咫尺，只要自己伸出双手，就可以拥抱到他。可是一朝肥皂泡破灭，你才真正看清，原来幸福就像是天上飘着的浮云，看以看见，但也只能看到它越飘越远。经历了以前的种种，你越来越觉得自己看得清，幸福不过是浮云，即使是到了现在或以后，这种状况也不会有什么改变，倒不如不要有什么期盼地好。",            
-			},{
-				"biao": "C",
-				"t1": "幸福指数：23%，幸福不存在",
-				"t2": "所谓幸福，各人自有各的看法。而你对幸福，却早已经没有什么概念。越来越觉得，人生没有什么趣味的你，早就认定自己是得不到什么幸福的了，所以这日子过一天也就算一天吧。这种处于积极与消极之间的思想已经在你的心中根深蒂固了，除非以后，你真的感受到了前所未有的幸福畅快感觉，你才会认同这个世界上属于你的幸福会存在。",            
-			},{
-				"biao": "D",
-				"t1": "我的幸福指数：47%，幸福在前方",
-				"t2": "虽然你在过去的一年里遭遇了许多狗血的事情，但是不管怎么样，你始终相信着自己总有一天会变得越来越顺利，就如你坚信着自己总有一天会得到幸福一样。在你的自信与坚强之下，脚下的路即使目前还坷坎，但也会走走越平坦，幸福离自己也越来越近。乌云即将散去，迎接你的将是温暖灿烂的阳光。",            
-			},{
-				"biao": "E",
-				"t1": "我的幸福指数：13%，幸福是什么",
-				"t2": "幸福？请问什么是幸福？大概当别人提及这两个字的时候，你胸中的怒火便似乎要喷出来了，因为在你的心中，幸福什么的早就已经远离自己而去了。过去的经历让你已经变得不再相信什么幸福狗屁玩艺，幸福什么的就是注定要被丢进太平洋的，跟自己半毛钱关系也没有。所以在未来的一年里，还不如现实一些，追求着现实的人民币。",            
-			},{
-				"biao": "F",
-				"t1": "我的幸福指数：43%，追求着幸福",
-				"t2": "你是一个非常独立且聪明的人，你很清楚地知道自己想要的是什么，所以你会朝着这个目标，一步步奋进，或许在这之前，你注定是要经历一些风雨的，但是你相信在最后一定会幸福。接下来，你所追求的东西，或许还不能真的实现，但是不管怎么样你都会继续在路上努力，虽然看起来还会坎坷，但或许拼搏着的时候，也会有种成就的幸福感吧。",            
-			},{
-				"biao": "G",
-				"t1": "我的幸福指数：50%，看淡的幸福",
-				"t2": "看起来有些参透人生真悟的你，是有些通佛性参禅意的，对幸福的认识，也赞同所谓幸福都是相对于不幸来说的。对于平淡的日子之中不存在什么不幸，一切照旧，那么也将没有什么幸福可言。但是正是看得淡了，要求低了，对幸福的感知也越来越深。都说能吃是福，对你来说，身体健康，家人平安，你就幸福了。",            
-			},{
-				"biao": "H",
-				"t1": "我的幸福指数：90%，物质小幸福",
-				"t2": "你是一个相当注重物质生活的人，然而现代社会的变化常常让人无所适从，不断上涨的物价房价，却唯独不涨工资，这样压力之下的都市生活，难免也使你对自己目前的生活品质喜忧参半，接下来，也不会有所进步，不过好在，你会觉得目前的生活虽然与自己理想中的还是有一定距离，但也算不错了。",            
-			},{
-				"biao": "I",
-				"t1": "我的幸福指数：65%，平淡的幸福",
-				"t2": "目前来说，你的心境是成熟且平淡的，你知道很多事情并不是自己能够强求而来的，所以还不如就近选择，过着平平淡淡却不失幸福的日子。对幸福的定义，你也由之前追求的物质享受，变成了跟自己喜欢的人呆在一起，虽然也会柴米油盐地变得越来越平庸，但是倘若自己可以平静地享受，那么此时的自己就是幸福的。",            
-			},{
-				"biao": "J",
-				"t1": "我的幸福指数：86%，努力要幸福",
-				"t2": "有的人注定是要拥有有爱自己的人陪在身边，才会觉得幸福，但是也有的人，他才不会管什么爱情不爱情，爱情都是一阵风，刮过了就算了。不过，你也不是轻易会放弃自己的人，所以提及幸福二字，情路不顺的你，不管有没有爱情，都会让自己的生活过得有规律，去做喜欢做的事情，看喜欢的风景，吃好吃的食物，也许这也是一种幸福。",            
-			}];
-            document.body.className = "";
-			function tarShare(score){
-				var url = dataForWeixin.url+"lucky/"+score+"/share.html";
-				location.href = url;
-				return false;
-			}
-			function tarHref(type){
-				if(type==1){
-					var urls = "http://wx.oslook.com/test/list/";
-				}else{
-					var urls = "http://wx.oslook.com/test/list/";
-				}
-				location.href = urls;
-				return false;
-			}
-			function showAns(ans){
-				ans = ans-1;
-				if(ans<0 || ans>9){
-					ans = 1;
-				}
-				$("#sans").show();
-				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
-				$("#sec").html(ylist[ans].t2);
-				shareCount(spid);
-				scoreCount(spid,ans);
-			}
-			var s = getQueryString("s");
-			showAns(s);
-			    </script>
-
-            <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-	" ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
+<script type="text/javascript" src="./10-27-3.js"></script>	
+<script type="text/javascript" src="../js/share.js"></script>	
+<script>
+var s = getQueryString("s");
+showAns(s);
+</script>
     
-	<div style="display:none;">
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
-</script></div>
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
+
+
+<div style="display:none;"><script type="text/javascript">tongji();</script></div>
 </body>
 </html>

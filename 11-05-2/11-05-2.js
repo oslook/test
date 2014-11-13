@@ -1,16 +1,17 @@
+///////////////first setting//////////////////////////////
+var basedns = window.location.hostname;
+var mebtnopenurl ="http://" +basedns +"/test/"+spid+"/result.html";
+var dataForWeixin = {
+appId: "",
+server: "http://"+basedns,
+imgUrl: "http://wxfiles.oss-cn-hangzhou.aliyuncs.com/test/"+spid+"/icon.jpg",
+url: "http://"+basedns+"/test/"+spid+"/index.html",
+title: "你会读心术吗?太可怕了，超准的测试!",
+desc: "很准的呦,都来试试吧"
+};
 
-///////////////////////////////////////////////////////////////
-function tongji(){
 
-////baidu
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
 
-///cnzz
-var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cspan id='cnzz_stat_icon_1253546100'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1253546100' type='text/javascript'%3E%3C/script%3E"));
-
-}
 ///////////////////////////////////////////////////////////////
 
 var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
@@ -36,19 +37,6 @@ var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
 var r = location.search.substr(1).match(reg);
 if (r != null) return unescape(decodeURI(r[2])); return null;
 }
-
-///////////////first setting//////////////////////////////
-var basedns = "AD201410291936.jd-app.com"//window.location.hostname;
-var mebtnopenurl ="http://" +basedns +"/test/"+spid+"/result.html";
-var dataForWeixin = {
-appId: "",
-server: "http://"+basedns,
-imgUrl: "http://wxfiles.oss-cn-hangzhou.aliyuncs.com/test/"+spid+"/icon.jpg",
-url: "http://"+basedns+"/test/"+spid+"/?uuid="+ID,
-title: "你会读心术吗?太可怕了，超准的测试!",
-desc: "很准的呦,都来试试吧"
-};
-
 
 /////////////////////////////////////////
 

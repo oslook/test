@@ -2,35 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>小学数学，你能得几分</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>小学数学，你能得几分</title>
 <script type="text/javascript">
 var spid="10-27-5";
-</script>	
-    <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-    	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
-		//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
-
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script src="../js/avalon.mobile.min.js"></script>
- 	<script type="text/javascript" src="../js/count.js"></script>   
+</script>
+<script>
+var _hmt = _hmt || [];
+_hmt.push(['_setAutoPageview', false]);
+_hmt.push(['_trackPageview', '/test/'+spid+'/result']);
+</script>
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>	
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
   <style>
 		        * {
             font-family: '微软雅黑';
@@ -281,7 +267,7 @@ var spid="10-27-5";
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("../image/mane.png") no-repeat;
+			background:url("http://storage.jcloud.com/osimage/mane.png?Expires=1729669068&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=l2UuK%2B0O4H9U0ePmBPzCTLKonpk%3D") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -298,7 +284,7 @@ var spid="10-27-5";
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="http://storage.jcloud.com/osimage/load.gif?Expires=1729669176&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=zzONuGzdEYaz7PL6SH%2BB8dUQW%2Bs%3D" />
 		正在显示结果......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
@@ -311,127 +297,23 @@ var spid="10-27-5";
             <div class="t-c" id="sec">
                
             </div>
-
+			<div class="t-btn"><a href="javascript:;" onclick="tarHref(1)">关注我们！</a></div>            
+            <div class="t-btn" onclick="_hmt.push(['_trackEvent', 'test', 'answer', '10-27-5']);"><a href="./answer.html">查看答案</a></div>
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">各种趣味测试快来啊！</a></div>
-               <div class="t-btn"><a href="./answer.html">查看答案</a></div>
-
         </div>
     </div>
-	<script type="text/javascript" >
-		 var dataForWeixin = {
-			  server: "http://wx.oslook.com",
-			  TLImg: "",
-			  url: "http://wx.oslook.com/test/",
-			  title: "小学数学，你能得几分",
-			  desc: "很准的呦,都来试试吧"
-		};
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
-		function showQ(){
-			$("#zhao").hide();
-		}
-	 </script>
-        <script>
-            var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
-            var fen = 0;
-            function tap(elemvm, select, cb) {
-                var a = false;
-                for (var i = 0; i < select.length; i++) {
-                    a = a || select[i].active;
-                };
-                if (!a) {
-                    elemvm.active = true;
-                    setTimeout(function () {
-                        cb && cb()
-                    }, 500)
-                }
-            }
-            function getQueryString(name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-                var r = location.search.substr(1).match(reg);
-                if (r != null) return unescape(decodeURI(r[2])); return null;
-            }
-			var ylist = [{
-				"biao": "0分",
-				"t1": "",
-				"t2": "我宁愿相信你是天才，答题的时候手抖了吗？",      
-			},{
-				"biao": "1-59分",
-				"t1": "",
-				"t2": "再接再厉哦！",            
-			},{
-				"biao": "60分",
-				"t1": "",
-				"t2": "不多不少，及格就好。",            
-			},{
-				"biao": "66分",
-				"t1": "",
-				"t2": "得这个分数真顺啊！",            
-			},{
-				"biao": "61-79分",
-				"t1": "",
-				"t2": "考试及格。",            
-			},{
-				"biao": "80分",
-				"t1": "",
-				"t2": "恭喜您，达标了。",            
-			},{
-				"biao": "81-90分",
-				"t1": "",
-				"t2": "恭喜您，成绩优良。",            
-			},{
-				"biao": "91-98分",
-				"t1": "",
-				"t2": "恭喜您得到高分，貌似平时很努力哦！",            
-			},{
-				"biao": "99分",
-				"t1": "",
-				"t2": "离神人只差一步，您太谦虚了。",            
-			},{
-				"biao": "100分",
-				"t1": "",
-				"t2": "您真是神人级别！",            
-			}];
-            document.body.className = "";
-			function tarShare(score){
-				var url = dataForWeixin.url+"shuxue/"+score+"/share.html";
-				location.href = url;
-				return false;
-			}
-			function tarHref(type){
-				if(type==1){
-					var urls = "http://wx.oslook.com/test/list/";
-				}else{
-					var urls = "http://wx.oslook.com/test/list/";
-				}
-				location.href = urls;
-				return false;
-			}
-			function showAns(ans){
-				ans = ans-1;
-				if(ans<0 || ans>10){
-					ans = 1;
-				}
-				$("#sans").show();
-				$("#fis").html("<span>"+ylist[ans].biao+"</span>"+ylist[ans].t1);
-				$("#sec").html(ylist[ans].t2);
-							shareCount(spid);
-				scoreCount(spid,ans);
-				
-			}
-
-			var s = getQueryString("s");
-			showAns(s);
- </script>
-
-            <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
-	" ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;"></div>
+<script type="text/javascript" src="./10-27-5.js"></script>	
+<script type="text/javascript" src="../js/share.js"></script>	
+<script>
+var s = getQueryString("s");
+showAns(s);
+</script>
     
-	<div style="display:none;">
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
-</script></div>
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;
+" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;" onclick="_hmt.push(['_trackEvent', 'ad', 'click', 'banner']);" ></div>
 
+
+<div style="display:none;"><script type="text/javascript">tongji();</script></div>
 </body>
 </html>

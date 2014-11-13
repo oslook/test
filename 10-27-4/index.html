@@ -2,38 +2,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>测测手机对你有多重要？</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>测测手机对你有多重要？</title>
 <script type="text/javascript">
 var spid="10-27-4";
 </script>	
-      	   <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
-    	<script type="text/javascript">
-	var test = new adwojs({
-		 eid:'spn', //节点id
-		 aid: '019d70f4408d4fa18c5ae574644db483', //android安卓PID
-		 pid: '029aad4ebdb34f3fa38c29b79408788d', //iOS PID
-		 bt: false,
-		 af:true, //是否自动适合ipad平板广告，默认值为true。
-		 width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
-         height:50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
-		 
-	});
-	test.send();
-
-	//关闭按钮
-	function closeADFunc() {
-	document.getElementById('hideADbtn').style.display='none';
-	document.getElementById('spn').style.display='none';
-	}
-	</script>	
-
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
-	<script type="text/javascript" src="../js/count.js"></script>
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/avalon.mobile.min.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
   <style>
-       * {
+		        * {
             font-family: '微软雅黑';
         }
 
@@ -285,7 +265,7 @@ var spid="10-27-4";
 		.mane{
 			width: 84%;
 			margin-bottom:10px;
-			background:url("./image/mane.png") no-repeat;
+			background:url("http://storage.jcloud.com/osimage/mane.png?Expires=1729669068&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=l2UuK%2B0O4H9U0ePmBPzCTLKonpk%3D") no-repeat;
 			height:60px;
 			color:#ffffff;
 			font-size:21px;
@@ -302,7 +282,7 @@ var spid="10-27-4";
 </head>
 <body class="loading" onload="showQ();">
 	<div id="zhao" style="background:#1A1A1A;height: 100%;position: fixed;top: 0;width: 100%;z-index: 1;text-align: center;color: #FFFFFF;font-size: 30px;padding-top: 100px;font-weight: bold;display:block;">
-		<img style="position: relative;top: 40px;width:80px" src="../image/load.gif" />
+		<img style="position: relative;top: 40px;width:80px" src="http://storage.jcloud.com/osimage/load.gif?Expires=1729669176&AccessKey=185a64bb82664ae298c2aa5368673ae8&Signature=zzONuGzdEYaz7PL6SH%2BB8dUQW%2Bs%3D" />
 		加载中......	</div>
     <div id="loading">加载中</div>
     <div class="head"></div>
@@ -346,374 +326,15 @@ var spid="10-27-4";
 			<div class="t-btn"><a href="javascript:;" onclick="tarHref(2)">我还想玩其他好玩的</a></div>
         </div>
     </div>
-	<script type="text/javascript" >
-		var mebtnopenurl = "http://wx.oslook.com/test/"+spid+"/result.html";
-		 var dataForWeixin = {
-		 	appId: "",
-			  server: "http://wx.oslook.com",
-			  imgUrl: "http://wx.oslook.com/test/"+spid+"/icon.jpg",
-			   url: "http://wx.oslook.com/test/"+spid+"/index.html",
-			  title: "手机对你来说有多重要？",
-			  desc: "很准的呦,都来试试吧"
-		};
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {WeixinJSBridge.call('hideOptionMenu');});
-		function showQ(){
-			$("#zhao").hide();
-		}
-		
-		//openCount(spid);
-	 </script>
-        <script>
-            var ID = getQueryString("sid") || Date.now() + "" + Math.floor(Math.random() * 1000);
-            var fen = 0;
-            function tap(elemvm, select, cb) {
-                var a = false;
-                for (var i = 0; i < select.length; i++) {
-                    a = a || select[i].active;
-                };
-                if (!a) {
-                    elemvm.active = true;
-                    setTimeout(function () {
-                        cb && cb()
-                    }, 500)
-                }
-            }
-            function getQueryString(name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-                var r = location.search.substr(1).match(reg);
-                if (r != null) return unescape(decodeURI(r[2])); return null;
-            }
-            var model = avalon.define("test", function (vm) {
-                vm.arr = [
-                    {
-                        type: "hello",
-                        text: "现在手机成为了人们生活中必不可少的部分，甚至已经开始主宰了人们的生活。过度地玩手机对人们的健康没好处，尽早摆脱手机的诱惑吧。测测手机对你来说有多重要",
-                        select: [
-                            {
-                                text: "开始测试",
-                                active: false,
-                                tap: function (ele, select) {
-                                    tap(ele, select, function () {
-                                        model.item = model.arr[1];
-                                        model.result.sex = 0;
-                                    });
-                                }
-                            }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 1,
-                        text: "你睡觉时没有关手机的习惯？",
-                        select: [
-                            {
-                                text: "不是",
-                                active: false,
-                                tap: function (ele, select) {
-                                    tap(ele, select, function () {
-                                        model.item = model.arr[2];
-                                    });
-                                }
-                            }, {
-                                text: "是的",
-                                active: false,
-                                tap: function (ele, select) {
-                                    tap(ele, select, function () {
-                                        model.item = model.arr[3];
-                                    });
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        type: "select",
-                        id: 2,
-                        text: "当你忘记带手机出门会没安全感？",
-                        select: [
-                          {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[4];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[6];
-                                  });
-                              }
-                          }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 3,
-                        text: "有段时间你特别喜欢玩手机游戏？",
-                        select: [
-                          {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[5];
-                                  });
-                              }
-                          }, {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[8];
-                                  });
-                              }
-                          }
-                        
-                        ]
-                    }, {
-                        type: "select",
-                        id: 4,
-                        text: "你工作或休息时会时不时看看手机，害怕错过信息电话？",
-                        select: [
-                           {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[7];
-                                   });
-                               }
-                           }, {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[9];
-                                   });
-                               }
-                           }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 5,
-                        text: "你经常在聚餐的时候玩手机？",
-                        select: [
-                          {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[6];
-                                  });
-                              }
-                          }, {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[8];
-                                  });
-                              }
-                          }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 6,
-                        text: "你在无聊的时候喜欢摇微信打发时间？",
-                        select: [
-                           {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[7];
-                                   });
-                               }
-                           }, {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[9];
-                                   });
-                               }
-                           }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 7,
-                        text: "你特别喜欢把自己的身边发生的趣事发到微信上？",
-                        select: [
-                           {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[10];
-                                   });
-                               }
-                           }, {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[13];
-                                   });
-                               }
-                           }
-                        ]
-                    }, {
-                        type: "select",
-                        id: 8,
-                        text: "你坐车时会时不时摸摸自己的手机？",
-                        select: [
-                           {
-                               text: "不是",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[11];
-                                   });
-                               }
-                           }, {
-                               text: "是的",
-                               active: false,
-                               tap: function (ele, select) {
-                                   tap(ele, select, function () {
-                                       model.item = model.arr[10];
-                                   });
-                               }
-                           }
-                        ]
-                    },{
-                        type: "select",
-                        id: 9,
-                        text: "当你一天没收到信息或者电话时会怀疑自己的手机出问题了？",
-                        select: [
-                          {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[12];
-                                  });
-                              }
-                          }, {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[13];
-                                  });
-                              }
-                          }
-                        ]
-                    },{
-                        type: "select",
-                        id: 10,
-                        text: "你经常关注新上市品牌手机？",
-                        select: [
-                          {
-                              text: "不是",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[12];
-                                  });
-                              }
-                          }, {
-                              text: "是的",
-                              active: false,
-                              tap: function (ele, select) {
-                                  tap(ele, select, function () {
-                                      model.item = model.arr[14];
-                                  });
-                              }
-                          }
-                        ]
-                    },
-                    {
-                        type: "result",
-                        id: 11
-                    }, {
-                        type: "result",
-                        id: 12
-                    }, {
-                        type: "result",
-                        id: 13
-                    }, {
-                        type: "result",
-                        id: 14
-                    }
-                ];
-                vm.item = vm.arr[0];
-                vm.result = {
-                    sex: 0
-                }
-                vm.shared = false;
-                vm.sharebox = function () {
-                    model.showshare = true;
-                }
-                vm.livetip = false;
-                vm.hidelivetip = function () {
-                    model.livetip = false;
-                }
-                vm.livenow = function () {
 
-                }
-                vm.showxz = function () {
-                    model.xunzhang = true;
-                }
-                vm.$watch("item", function (newval) {
-                    if (newval.type == 'result') {
-                        tarShare((newval.id-10));
-						return false;
-                    };
-                })
-            });
+<div style="font-size: 30px;text-align:center;padding-top: 20%;color: red;background: rgba(0,0,0,0.7);position: fixed;width: 100%;height: 100%;top: 0px;left: 0px;z-index: 10000;display:none;" 
+id="tips" ontouchstart="document.getElementById('tips').style.display='none';">测试完成啦！分享到朋友圈后结果自动弹出，并有详细分析哦！</br>:-D 不要不好意思啦~~</div>
 
-            document.body.className = "";
-			function tarShare(score){
-				  $('#tips').show();
-				  mebtnopenurl = "http://wx.oslook.com/test/"+spid+"/result.html?s="+score;
-				  WeixinJSBridge.call('showOptionMenu');
-				  
-			    //var url = dataForWeixin.url+"list/share.html?spid="+spid+"&s=" +score+"&t=" + encodeURIComponent(dataForWeixin.title) + "&d=" +encodeURIComponent(dataForWeixin.desc) ;
-				//location.href = url;
-				return false;
-			}
-			function tarHref(type){
-				if(type==1){
-					var urls = "http://wx.oslook.com/test/list/";
-				}else{
-					var urls = "http://wx.oslook.com/test/list/";
-				}
-				location.href = urls;
-				return false;
-			}
-			    </script>
-    <div style="font-size: 20px;
-                      text-align:center;
-                      padding-top: 20%;
-color: red;
-background: rgba(0,0,0,0.7);
-position: fixed;
-width: 100%;
-height: 100%;
-top: 0px;
-left: 0px;
-z-index: 10000;display:none;"  id="tips" ontouchstart="document.getElementById('tips').style.display='none';">测试完成啦！分享到朋友圈后结果自动弹出 并有详细分析哦！</div>
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0; left:0;z-index:9999;height:50px;width:320px;" onclick="clickad();"></div>
+<script type="text/javascript" src="./10-27-4.js"></script>
+<script type="text/javascript" src="../js/share.js"></script>
 
-    <img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
-    <div id="spn" style="position:fixed; bottom:0;left:0;z-index:9999;height:50px;width:320px;"></div>
-
-   	<script type="text/javascript" src="../js/share.js"></script>
-	<div style="display:none;">
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
-</script></div>
-
+<div style="display:none;"><script type="text/javascript">tongji();</script></div>
 </body>
 </html>
