@@ -1,0 +1,77 @@
+1. 反盗链
+防止别人盗用带宽资源的方法：
+
+RewriteBase /
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www.)?yoursite.com/.*$ [NC]
+RewriteRule .(gif|jpg|swf|flv|png)$ /feed/ [R=302,L]
+2. 防止目录浏览
+通过htaccess文件来禁用目录浏览：
+
+Options All -Indexes
+3. 301永久重定向
+网站URL结构调整时要做301重定向：
+
+Redirect 301 http://www.yoursite.com/article.html http://www.yoursite.com/archives/article
+4. 显示个性化的 404 错误页面
+设置自定义的错误页面，最简单的方法就是更改htaccess：
+
+ErrorDocument 404 /404.html
+5. 设置目录的默认页面
+为不同的目录设置不同的默认页面：
+
+DirectoryIndex about.html
+6. 基于referer来限制网站访问
+当发现有网站给你带来垃圾流量的话，应该屏蔽他们：
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} spamteam.com [NC,OR]
+RewriteCond %{HTTP_REFERER} trollteam.com [NC,OR]
+RewriteRule .* – [F]
+</ifModule>
+7. 限制PHP上传文件大小
+第一个是设置最大的上传文件大小，第二个是设置最大的POST请求大小，第三个PHP脚本最长的执行时间，最后一个是脚本解析上传文件的最长时间：
+
+php_value upload_max_filesize 20M
+php_value post_max_size 20M
+php_value max_execution_time 200
+php_value max_input_time 200
+8. 压缩文件
+你可以通过压缩文件来减少网络流量，也页面装载时间：
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+9. 缓存文件
+
+<FilesMatch “.(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$”>
+Header set Cache-Control “max-age=2592000″
+</FilesMatch>
+10. 添加尾部的反斜杠
+大家都说添加尾部反斜杠有益于SEO，对seo不是很熟悉：
+
+<IfModule mod_rewrite.c>
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+</IfModule>
+====
+2014/11/22 7:48
+var shareDomains = ["chuheridangwu.sinaapp.com", "handihexiatu.sinaapp.com", "shuizhipanzhongcan.sinaapp.com", "lilijiexinkua.sinaapp.com", "bairiyishanjin.sinaapp.com", "huangheruhailiu.sinaapp.com","yuqiongqianlimu.sinaapp.com","gengshangyicenglou.sinaapp.com","ad201410310100.sinaapp.com"];
+var shareDomain = this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
+var tmpver = parseInt(Math.random() * 10) + 1;
+dataForWeixin.url = "http://"+tmpver+"."+shareDomain+"/test/"+spid+"/?uuid="+ID;
+//dataForWeixin.url = "http://106.186.124.50/"+ID+"/test/"+spid+"/";
+dataForWeixin.url = "http://wx"+ID+"uwenti.com/test/"+spid+"/?uuid="+ID;
+
+====
+2014/11/22 7:48
+var shareDomains = ["uwenti.com", "shuxueke.net", "521cloud.com"];
+var shareDomain = this.shareDomains[parseInt(Math.random() * this.shareDomains.length)];
+dataForWeixin.url = "http://wx"+ID+"."+shareDomain+"/test/"+spid+"/?uuid="+ID;

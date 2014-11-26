@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="description" content="Test : ">
+<title>趣味小测试</title>
+<script>
+var _hmt = _hmt || [];
+_hmt.push(['_setAutoPageview', false]);
+_hmt.push(['_trackPageview', '/test/main']);
+//alert(Date.now());
+</script>
+</head>
+<body>
+<p>趣味测试，值得关注.</p>
+<a  href="./list/">大量趣味测试，请点击进入！</a>
+
+<script type="text/javascript">
+
+var dataForWeixin = {
+	  appId: "",
+	  TLImg: "http://g.oslook.xyz/test/assets/image/oslook_test_small.png",
+	  url: "http://"+window.location.hostname+"/test/list/",,
+	  title: "趣味小测试",
+	  desc: "奥斯测试提供最热门的趣味小测试，如果觉得好请分享好友哦。"
+};
+
+var onBridgeReady = function(){
+	WeixinJSBridge.call('showOptionMenu');
+	WeixinJSBridge.on('menu:share:appmessage', function(argv){
+		WeixinJSBridge.invoke('sendAppMessage', {
+			"appid": dataForWeixin.appId,
+			"img_url": dataForWeixin.TLImg,
+			"img_width": "120",
+			"img_height": "120",
+			"link": dataForWeixin.url,
+			"title": dataForWeixin.title,
+			"desc": dataForWeixin.desc 
+		});
+ setTimeout(function () {location.href = "http://"+window.location.hostname+"/test/list/";}, 1500); 
+	});
+	WeixinJSBridge.on('menu:share:timeline', function(argv){            
+		WeixinJSBridge.invoke('shareTimeline', {
+			"appid": dataForWeixin.appId,
+			"img_url":dataForWeixin.TLImg,
+			"img_width": "120",
+			"img_height": "120",
+			"link": dataForWeixin.url,
+			"title": dataForWeixin.title,
+			"desc": dataForWeixin.desc
+		});
+setTimeout(function () {location.href ="http://"+window.location.hostname +"/test/list/";}, 1500);  
+	});
+};
+if(document.addEventListener){
+	document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+}else if(document.attachEvent){
+	document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+	document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+}   
+</script>
+
+<div id="spn" style="position:fixed; bottom:0;left:0;height:50px;width:320px;" onclick="_hmt.push(['_trackEvent', 'ad', 'click', 'banner']);" ></div>
+
+<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe790b64cf9b706fab95d6dc6fa5838fe' type='text/javascript'%3E%3C/script%3E"));
+</script></div>
+
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>脑龄测试，看看你需要多长时间完成，敢来挑战吗？</title>
+<meta name="viewport" content="width=device-width,user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="email=no">
+<script type="text/javascript">
+var spid = "11-22-2";
+</script>
+<script>
+var _hmt = _hmt || [];
+_hmt.push(['_setAutoPageview', false]);
+_hmt.push(['_trackPageview', '/test/'+spid+'/index']);
+</script>
+<script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/count.js"></script>
+
+<style type="text/css">
+body{background-color:#ccc;position:relative;}
+body,div,h1,em,h2,p,span,dl,dt,dd,strong{margin:0px;padding:0px;}
+h1{width:100%;text-align:center;line-height:100px;}
+em,i,strong{font-style:normal;}
+span,a,strong{list-style:none;text-decoration:none;}
+.list0{color:#ff0000;}
+.list1{color:#ffff00;}
+.list2{color:#339900;}
+.list3{color:#0000ff;}
+.list4{color:#000000;}
+.list5{color:#ffffff;}
+#game{width:100%;text-align:center;float:left;margin-top:10px;}
+#game h2{width:50%;line-height:78px;font-size:50px;font-weight:bold;display:inline-block;text-align:center;padding-bottom:10px;}
+.titText{opacity:1;}
+.fontList{position:relative;margin-top:50px;width:200px;margin:0 auto;}
+.fontList span{position:absolute;cursor:pointer;font-size:28px;font-weight:bold;border:1px #666 solid;padding:2px 5px;}
+.about{float:left;width:100%;margin-top:50px;position:relative;text-align:center;}
+.result{height:5px;border:1px #999 solid;width:80px;background-color:#fffede;display:inline-block;margin:0 20px;}
+.result span{background-color:#fce182;width:0%;height:5px;float:left;}
+.time{line-height:26px;font-size:18px;display:inline-block;}
+.time em.msecond{font-size:16px;}
+.over{display:inline-block;font-size:14px;line-height:26px;}
+.over i{padding:0 2px;}
+.errorTip{background-color:#999;}
+.successTip{background-color:#15a702;}
+.download img{width:16%;float:left;margin:2% 0 2% 2%;}
+.eval{width:80%;margin:18px 0 0 15%;float:left;font-family:"microsoft yahei"}
+.eval_time{font-size:14px;line-height:32px;}
+.eval_time span{font-size:18px;padding:0 3px;}
+.eval_age{font-size:18px;line-height:28px;}
+.eval_age span{font-size:24px;padding:0 4px;}
+.eval_intro{font-size:12px;margin-top:10px;}
+.eval_intro a{background-color:#339966;line-height:32px;width:40%;margin-right:10%;text-align:center;color:#fff;display:inline-block;border-radius:5px;}
+.photo{width:110%;margin-top:-15px;margin-left:-15%;}
+#eval{display:none;}
+.download {display:block;width:100%;height:64px;font-size:14px;color:white;background:rgba(0,0,0,0.5);overflow:hidden;zoom:1;z-index:99;padding:6px 0;position:fixed;left:0px;bottom:0px;display:none;}
+.download dl{width:60px;float:left;margin-left:1%;}
+.download dl dt{width:100%;float:left;}
+.download dl dt img{float:left;width:100%;}
+.download dl dd{width:100%;float:left;text-align:center;font-weight:bold;color:#000;}
+.download strong{background-color:#98cb00;border-radius:5px;width:96px;text-align:center;line-height:18px;color:white;font-size:10px;margin-right:2%;float:right;padding:6px 0;margin-top:6px;}
+.download strong i{font-size:14px;}
+.download span{width:47%;float:left;text-align:center;line-height:20px;margin-top:10px;margin-left:1%;}
+.dtit{font-weight:bold;margin-top:4%;}
+
+.daotime{width:100%;float:left;text-align:center;display:none;}
+.textTip{line-height:40px;margin-top:30px;float:left;width:100%;}
+.numTip{font-size:60px;border:2px #000 solid;width:80px;height:80px;line-height:80px;text-align:center;position:absolute;left:50%;margin-left:-40px;border-radius:44px;margin-top:180px;}
+.play{display:none;}
+.howpaly{position:relative;width:100%;}
+.howpaly h2{width:100%;float:left;text-align:center;line-height:52px;background:rgba(0,0,0,0.5);color:#fff;}
+.howpaly p{width:100%;float:left;line-height:50px;text-align:center;font-size:14px;}
+.howpaly p i{font-weight:bold;}
+.howpaly img{margin:0 auto;width:204px;position:absolute;left:50%;margin-left:-102px;margin-top:90px;}
+.howpaly span{width:40%;background-color:#339966;border-radius:6px;line-height:46px;color:#fff;font-size:16px;text-align:center;float:left;margin-left:30%;margin-top:210px;font-weight:bold;}
+.howpaly{display:none;}
+.sharetip{width:100%;height:100%;position:fixed;top:0px;left:0px;z-index:1000;background:rgba(0,0,0,0.8);display:none;}
+.sharetip img{width:100%;position:absolute;left:0px;top:0px;z-index:10;}
+.sharetip span{width:60%;position:absolute;bottom:10%;left:10%;z-index:10;color:#eeecec;font-size:12px;font-weight:bold;}
+.adtip{width:100%;height:auto;position:fixed;left:0px;bottom:100px;background:rgba(0,255,0,0.2);display:none;}
+.adtip dl{width:100%;float:left;padding:6px 0;}
+.adtip dl dt{width:100%;float:left;text-align:center;color:#009100;line-height:26px;font-size:20px;font-weight:bold;}
+.adtip dl dt a{color:#ff6600;}
+.adtip dl dd{width:90%;margin-left:5%;font-size:12px;color:#767777;line-height:16px;}
+.downtip{z-index:1000;background:rgba(0,0,0,0.8);position:fixed;width:100%;height:100%;left:0px;top:0px;display:none;}
+.downtip img{width:100%;}
+</style>
+<body>
+    
+    
+<!-- 如何把玩 -->
+<div class="howpaly">
+	<h2>如何把玩？</h2>
+	<p>点击与标题字体<<i>颜色</i>>相应的<<i>文字</i>></p>
+	<img src="http://g.oslook.xyz/test/assets/11-22-2/zs.gif" />
+	<span class="startw">开始玩耍</span>
+</div>
+
+<!-- 倒计时 -->
+<div class="daotime">
+	<p class="textTip">最短时间内完成<span>20</span>次挑战！</p>
+	<div class="numTip">3</div>
+</div>
+<div class="play">
+	<div class="about">
+		<div class="time"><em class="min">00</em>:<em class="second">00</em>:<em class="msecond">00</em></div>
+		<div class="result"><span></span></div>
+		<div class="over">还剩<i></i>题</div>
+	</div>
+	<div id="game">
+		<h2 class="titText"></h2>
+		<div class="fontList">
+			<span class="font"></span>
+		</div>
+	</div>
+	<div id="eval" class="eval">
+		<div class="eval_time"><em class="yu">哟</em>！你竟然用了<span class="et">50:00</span>秒！！！</div>
+		<div class="eval_age">经鉴定，<br>你的大脑年龄为<span class="eg">20</span>岁！</div>
+		<div class="eval_intro"><a href="javascript:void(0)" class="share">分享得瑟一下</a><a href="javascript:void(0)" class="reload">刷记录再来一次</a></div>
+		<img src="#" class="photo">
+	</div>
+	<!-- 广告提示 -->
+	<div class="adtip">
+		<dl>
+		<a>本游戏版权，归原作者所有</a>
+		</dl>
+	</div>
+	<!-- 分享提示 -->
+	<div class="sharetip">
+		<img src="http://g.oslook.xyz/test/assets/image/sharetip.png" />
+		<span><i class="sharetime"></i></span>
+	</div>
+<div style="font-size: 16px;text-align:center;padding-top: 15%;background: rgba(31,213,2,0.6);position: fixed;width: 90%;height: 100px;top: 160px;left: 10px;z-index: 10000;display:none;" 
+id="tips" ontouchstart="document.getElementById('tips').style.display='none';"></div>
+
+</div>
+
+<img id="hideADbtn" src="../image/closebtn.png" style="position:fixed; z-index:9999; bottom:50px; left:0;" ontouchstart="closeADFunc();">
+<div id="spn" style="position:fixed; bottom:0;left:0;z-index:9999;height:50px;width:320px;" onclick="clickad();"></div>
+
+<script type="text/javascript" src="./11-22-2.js"></script>
+<script type="text/javascript" src="../js/share.js"></script>
+
+<div style="display:none;"><script type="text/javascript">tongji();</script></div>
+
+</body>
+</html>

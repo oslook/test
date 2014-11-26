@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <script src="http://static.adwo.com/jssdk/jssdk.min.js"></script>
+    <script type="text/javascript">      
+        var test = new adwojs({
+            eid: 'spn',
+            aid: '019d70f4408d4fa18c5ae574644db483', //申请的android平台pid
+            pid: '029aad4ebdb34f3fa38c29b79408788d', //申请的iphone平台pid
+            bt: false,
+            af:true, //是否自动适合ipad平板广告，默认值为true。
+            width: 320, //广告图片宽度(除320外，还有720宽度，用于ipad中显示)
+            height: 50  //广告图片高度(除50外，还有110高度，用于ipad中显示)
+        });
+        test.send();
+    </script>
+</head>
+<body>
+    <div id="spn"></div>
+</body>
+</html>
